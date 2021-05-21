@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbO-6v-BEP" userLabel="LoginView">
+                                <rect key="frame" x="35.5" y="242.5" width="343" height="411"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your email or phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D95-5u-Rdi" userLabel="EmailText">
+                                        <rect key="frame" x="16" y="98" width="311" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="F45-Ts-Jq6"/>
+                                            <constraint firstAttribute="height" constant="64" id="oHO-Fs-4LG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                                <point key="value" x="0.0" y="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" name="DarkGrey"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-UY-O3P" userLabel="PasswordText">
+                                        <rect key="frame" x="16" y="178" width="311" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="1Dh-LM-ur7"/>
+                                            <constraint firstAttribute="height" constant="64" id="5k8-qC-icn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                                <point key="value" x="0.0" y="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" name="DarkGrey"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-OY-bbr">
+                                        <rect key="frame" x="16" y="258" width="48" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="DQN-5S-KKX"/>
+                                            <constraint firstAttribute="width" constant="46" id="IQN-hB-ipP"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
+                                        <rect key="frame" x="78" y="263.5" width="91.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="DarkGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-cZ-6gR">
+                                        <rect key="frame" x="16" y="312" width="311" height="67"/>
+                                        <color key="backgroundColor" name="DisabledButtonGrey"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="Ukz-d2-v2z"/>
+                                            <constraint firstAttribute="width" constant="311" id="oxs-Dl-3ho"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="130-Lz-Sjm">
+                                        <rect key="frame" x="139.5" y="-30" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="K4F-5Y-vDi"/>
+                                            <constraint firstAttribute="height" constant="64" id="T6o-iL-eMy"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
+                                                <point key="value" x="0.0" y="-4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="130-Lz-Sjm" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="-30.219999999999999" id="3B1-Yt-QFM"/>
+                                    <constraint firstItem="pfK-UY-O3P" firstAttribute="top" secondItem="D95-5u-Rdi" secondAttribute="bottom" constant="16" id="HAy-g0-4js"/>
+                                    <constraint firstAttribute="bottom" secondItem="DIj-cZ-6gR" secondAttribute="bottom" constant="32" id="JcS-lS-NFN"/>
+                                    <constraint firstItem="130-Lz-Sjm" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="M44-9B-4fd"/>
+                                    <constraint firstItem="pfK-UY-O3P" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="UNA-Oa-jL8"/>
+                                    <constraint firstItem="T9r-OY-bbr" firstAttribute="leading" secondItem="rbO-6v-BEP" secondAttribute="leading" constant="16" id="UvC-3G-dCo"/>
+                                    <constraint firstItem="C0T-6P-pqw" firstAttribute="leading" secondItem="T9r-OY-bbr" secondAttribute="trailing" constant="16" id="XLp-h0-dq1"/>
+                                    <constraint firstAttribute="height" constant="410.77999999999997" id="YVy-L2-7L8"/>
+                                    <constraint firstAttribute="width" constant="343" id="cDX-g2-Hid"/>
+                                    <constraint firstItem="DIj-cZ-6gR" firstAttribute="top" secondItem="pfK-UY-O3P" secondAttribute="bottom" constant="70" id="gCF-sh-ibW"/>
+                                    <constraint firstItem="T9r-OY-bbr" firstAttribute="top" secondItem="pfK-UY-O3P" secondAttribute="bottom" constant="16" id="hDc-mw-2O6"/>
+                                    <constraint firstItem="D95-5u-Rdi" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="iMh-n0-4uf"/>
+                                    <constraint firstItem="C0T-6P-pqw" firstAttribute="centerY" secondItem="T9r-OY-bbr" secondAttribute="centerY" id="n3L-PD-MUJ"/>
+                                    <constraint firstItem="D95-5u-Rdi" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="97.780000000000001" id="qbf-7A-9Wx"/>
+                                    <constraint firstItem="DIj-cZ-6gR" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="szf-Ud-lFK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                        <color key="value" name="ViewShadowGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="VodafoneRed"/>
+                        <constraints>
+                            <constraint firstItem="rbO-6v-BEP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cLa-Th-QvU"/>
+                            <constraint firstItem="rbO-6v-BEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1A-08-89Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="DarkGrey">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DisabledButtonGrey">
+            <color red="0.68999999999999995" green="0.68999999999999995" blue="0.68999999999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ViewShadowGrey">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VodafoneRed">
+            <color red="0.90196078431372551" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
