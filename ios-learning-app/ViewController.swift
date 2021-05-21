@@ -13,26 +13,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var EmailLogin: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        EmailLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
+        PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
     }
     
-    func enableButton() {
+    func enableLoginButton() {
         LoginButton.isEnabled = true
         LoginButton.backgroundColor = UIColor(named: "VodafoneRed")
     }
     
-    func disableButton() {
+    func disableLoginButton() {
         LoginButton.isEnabled = false
         LoginButton.backgroundColor = UIColor(named: "DisabledButtonGrey")
+    }
+    
+    @objc func textFieldsDidChange() {
+        
     }
 
     @IBAction func switchPressed(_ sender: UISwitch) {
         if (sender.isOn){
-            enableButton()
+            enableLoginButton()
         } else {
-            disableButton()
+            disableLoginButton()
         }
     }
 

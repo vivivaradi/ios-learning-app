@@ -14,6 +14,7 @@
 		D4931BE82657A6720017AD81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4931BE72657A6720017AD81 /* Assets.xcassets */; };
 		D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4931BE92657A6720017AD81 /* LaunchScreen.storyboard */; };
 		D4931BF42657BCFF0017AD81 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4931BF32657BCFF0017AD81 /* Roboto-Regular.ttf */; };
+		D4931BF72657EFB20017AD81 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4931BF62657EFB20017AD81 /* TextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D4931BEA2657A6720017AD81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4931BEC2657A6720017AD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4931BF32657BCFF0017AD81 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D4931BF62657EFB20017AD81 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D4931BDD2657A6700017AD81 /* ios-learning-app */ = {
 			isa = PBXGroup;
 			children = (
+				D4931BF52657EF880017AD81 /* extensions */,
 				D4931BF22657BCEE0017AD81 /* fonts */,
 				D4931BDE2657A6700017AD81 /* AppDelegate.swift */,
 				D4931BE02657A6700017AD81 /* SceneDelegate.swift */,
@@ -76,6 +79,14 @@
 				D4931BF32657BCFF0017AD81 /* Roboto-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		D4931BF52657EF880017AD81 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4931BF62657EFB20017AD81 /* TextFieldExtension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4931BE32657A6700017AD81 /* ViewController.swift in Sources */,
+				D4931BF72657EFB20017AD81 /* TextFieldExtension.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 			);
