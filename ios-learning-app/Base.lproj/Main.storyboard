@@ -72,6 +72,9 @@
                                             <constraint firstAttribute="height" constant="28" id="DQN-5S-KKX"/>
                                             <constraint firstAttribute="width" constant="46" id="IQN-hB-ipP"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="3uw-tX-wfz"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
                                         <rect key="frame" x="78" y="263.5" width="91.5" height="17"/>
@@ -95,6 +98,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9P-5D-SuQ"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="130-Lz-Sjm">
                                         <rect key="frame" x="139.5" y="-30" width="64" height="64"/>
@@ -154,6 +160,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="EmailLogin" destination="D95-5u-Rdi" id="558-3O-Whv"/>
+                        <outlet property="LoginButton" destination="DIj-cZ-6gR" id="YHs-TN-wkx"/>
+                        <outlet property="PasswordLogin" destination="pfK-UY-O3P" id="Af5-y8-3P1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
