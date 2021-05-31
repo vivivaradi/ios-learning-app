@@ -32,16 +32,13 @@ class ViewController: UIViewController {
     }
     
     @objc func textFieldsDidChange() {
-        
-    }
-
-    @IBAction func switchPressed(_ sender: UISwitch) {
-        if (sender.isOn){
+        if (EmailLogin.isContentValid() && PasswordLogin.isContentValid()) {
             enableLoginButton()
         } else {
             disableLoginButton()
         }
     }
+
 
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
