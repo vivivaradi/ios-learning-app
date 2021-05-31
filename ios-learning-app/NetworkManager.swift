@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import Moya
+
+protocol Networkable {
+    var provider = MultiMoyaProvider
+}
+
+class NetworkManager: Networkable {
+    
+
+}

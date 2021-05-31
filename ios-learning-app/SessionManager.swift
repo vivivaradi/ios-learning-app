@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class SessionManager {
+    
+    static let session = SessionManager()
+    
+    var accessToken : String?
+}
