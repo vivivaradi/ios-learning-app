@@ -28,6 +28,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbO-6v-BEP" userLabel="LoginView">
                                 <rect key="frame" x="35.5" y="242.5" width="343" height="411"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldShadow" translatesAutoresizingMaskIntoConstraints="NO" id="CqO-6K-aXi" userLabel="PasswordFieldShadow">
+                                        <rect key="frame" x="16" y="178" width="311" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="GZh-kf-fr6"/>
+                                            <constraint firstAttribute="width" constant="311" id="hDj-Ik-Jdp"/>
+                                        </constraints>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldShadow" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-pY-TFX" userLabel="EmailFieldShadow">
                                         <rect key="frame" x="16" y="98" width="311" height="64"/>
                                         <constraints>
@@ -130,13 +137,6 @@
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldShadow" translatesAutoresizingMaskIntoConstraints="NO" id="CqO-6K-aXi" userLabel="PasswordFieldShadow">
-                                        <rect key="frame" x="16" y="178" width="311" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="GZh-kf-fr6"/>
-                                            <constraint firstAttribute="width" constant="311" id="hDj-Ik-Jdp"/>
-                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
