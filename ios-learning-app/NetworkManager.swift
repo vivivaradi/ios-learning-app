@@ -15,8 +15,10 @@ protocol Networkable {
 }
 
 class NetworkManager: Networkable {
-    var provider: MultiMoyaProvider
+    var provider: MultiMoyaProvider = MultiMoyaProvider()
     
+    init() {
     
+    }
 
 }
