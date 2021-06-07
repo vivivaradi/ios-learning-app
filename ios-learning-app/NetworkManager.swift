@@ -15,9 +15,11 @@ protocol Networkable {
 }
 
 class NetworkManager: Networkable {
+    
+    static let shared = NetworkManager()
     var provider: MultiMoyaProvider = MultiMoyaProvider()
     
-    init() {
+    private init() {
     
     }
 

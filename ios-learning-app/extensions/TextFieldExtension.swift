@@ -16,9 +16,9 @@ extension UITextField {
                 return true
             }
         }
-        if (self.textContentType == UITextContentType.emailAddress && self.text != nil) {
-            let emailPattern = #"^\S+@\S+\.\S+$"#
-            let result = self.text?.range(of: emailPattern, options: .regularExpression)
+        if (self.textContentType == UITextContentType.telephoneNumber && self.text != nil) {
+            let telNumPattern = #"^\S+@\S+\.\S+$"# //TODO
+            let result = self.text?.range(of: telNumPattern, options: .regularExpression)
             return result != nil
         }
         return false

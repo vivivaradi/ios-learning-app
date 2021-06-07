@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupStyle()
         EmailLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
         PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
     }
@@ -41,6 +42,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+    }
+    
+    // MARK: - UI setup
+    
+    @IBOutlet weak var LoginCard: UIView!
+    func setupStyle() {
+        LoginCard.layer.cornerRadius = 5
+        LoginButton.layer.cornerRadius = 5
     }
 }
 

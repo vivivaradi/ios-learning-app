@@ -35,33 +35,21 @@
                                             <constraint firstAttribute="width" constant="311" id="hDj-Ik-Jdp"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldShadow" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-pY-TFX" userLabel="EmailFieldShadow">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldShadow" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-pY-TFX" userLabel="PhoneNumberFieldShadow">
                                         <rect key="frame" x="16" y="98" width="311" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="R2y-C8-XoR"/>
                                             <constraint firstAttribute="width" constant="311" id="mYk-2N-8tV"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D95-5u-Rdi" userLabel="EmailText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D95-5u-Rdi" userLabel="PhoneNumber">
                                         <rect key="frame" x="16" y="136" width="311" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="8Xa-3y-1HY" userLabel="height = 21"/>
                                             <constraint firstAttribute="width" constant="311" id="F45-Ts-Jq6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
-                                                <point key="value" x="0.0" y="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                                <color key="value" name="DarkGrey"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-UY-O3P" userLabel="PasswordText">
                                         <rect key="frame" x="16" y="216" width="311" height="21"/>
@@ -71,18 +59,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
-                                                <point key="value" x="0.0" y="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                                <color key="value" name="DarkGrey"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T9r-OY-bbr">
                                         <rect key="frame" x="16" y="258" width="48" height="28"/>
@@ -95,7 +71,7 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
-                                        <rect key="frame" x="78" y="263.5" width="92.5" height="17"/>
+                                        <rect key="frame" x="78" y="263.5" width="91.5" height="17"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" name="DarkGrey"/>
                                         <nil key="highlightedColor"/>
@@ -111,11 +87,6 @@
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9P-5D-SuQ"/>
                                         </connections>
@@ -126,17 +97,6 @@
                                             <constraint firstAttribute="width" constant="64" id="K4F-5Y-vDi"/>
                                             <constraint firstAttribute="height" constant="64" id="T6o-iL-eMy"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="layer.shadowOffset">
-                                                <point key="value" x="0.0" y="-4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -161,18 +121,6 @@
                                     <constraint firstItem="DIj-cZ-6gR" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="szf-Ud-lFK"/>
                                     <constraint firstItem="D95-5u-Rdi" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="135.78" id="ziB-0c-er1"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                        <color key="value" name="ViewShadowGrey"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="VodafoneRed"/>
@@ -185,6 +133,7 @@
                     <connections>
                         <outlet property="EmailLogin" destination="D95-5u-Rdi" id="558-3O-Whv"/>
                         <outlet property="LoginButton" destination="DIj-cZ-6gR" id="YHs-TN-wkx"/>
+                        <outlet property="LoginCard" destination="rbO-6v-BEP" id="fNT-Y2-UHN"/>
                         <outlet property="PasswordLogin" destination="pfK-UY-O3P" id="Af5-y8-3P1"/>
                     </connections>
                 </viewController>
@@ -202,9 +151,6 @@
         </namedColor>
         <namedColor name="DisabledButtonGrey">
             <color red="0.68999999761581421" green="0.68999999761581421" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ViewShadowGrey">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="VodafoneRed">
             <color red="0.90196078431372551" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
