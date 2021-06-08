@@ -7,7 +7,37 @@
 //
 
 import Foundation
+import Moya
 
 enum MockService {
     case loginUser(msisdn: String)
+}
+
+// MARK: TargetType protocol implementation
+extension MockService: TargetType {
+    var baseURL: URL {
+        <#code#>
+    }
+    
+    var path: String {
+        <#code#>
+    }
+    
+    var method: Method {
+        <#code#>
+    }
+    
+    var sampleData: Data {
+        <#code#>
+    }
+    
+    var task: Task {
+        <#code#>
+    }
+    
+    var headers: [String : String]? {
+        <#code#>
+    }
+    
+    
 }

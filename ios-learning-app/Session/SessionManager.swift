@@ -12,5 +12,6 @@ class SessionManager {
     
     static let session = SessionManager()
     
-    var accessToken : String?
+    var accessToken : String? = nil
+    var msisdn : String? = nil
 }
