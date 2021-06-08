@@ -16,28 +16,47 @@ enum MockService {
 // MARK: TargetType protocol implementation
 extension MockService: TargetType {
     var baseURL: URL {
-        <#code#>
+        return URL(string: "https://mock.com")!
     }
     
     var path: String {
-        <#code#>
+        switch self {
+        case .loginUser(_): return "/login"
+        }
     }
     
-    var method: Method {
-        <#code#>
+    var method: Moya.Method {
+        switch self {
+        case .loginUser(_):
+            return .get
+        }
     }
     
     var sampleData: Data {
-        <#code#>
+        switch self {
+        case .loginUser(let msisdn):
+            return "{}".utf8Encoded
+        }
     }
     
     var task: Task {
-        <#code#>
+        switch self {
+        case let .loginUser(msisdn):
+            return .requestParameters(parameters: ["msisdn" : msisdn], encoding: JSONEncoding.default)
+        }
     }
     
     var headers: [String : String]? {
-        <#code#>
+        return ["Content-type": "application/json"]
     }
     
     
+}
+
+// MARK: - Helpers
+private extension String {
+
+    var utf8Encoded: Data {
+        return data(using: .utf8)!
+    }
 }
