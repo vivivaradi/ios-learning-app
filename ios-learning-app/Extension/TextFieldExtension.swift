@@ -17,7 +17,7 @@ extension UITextField {
             }
         }
         if (self.textContentType == UITextContentType.telephoneNumber && self.text != nil) {
-            let telNumPattern = #"^\S+@\S+\.\S+$"# //TODO
+            let telNumPattern = "(20|30|31|50|70)([0-9]{7})$" 
             let result = self.text?.range(of: telNumPattern, options: .regularExpression)
             return result != nil
         }

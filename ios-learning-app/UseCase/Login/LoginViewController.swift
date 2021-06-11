@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var EmailLogin: UITextField!
+    @IBOutlet weak var MSISDN: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
     
@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupStyle()
-        EmailLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
+        MSISDN.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
         PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
     }
     
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func textFieldsDidChange() {
-        if (EmailLogin.isContentValid() && PasswordLogin.isContentValid()) {
+        if (MSISDN.isContentValid() && PasswordLogin.isContentValid()) {
             enableLoginButton()
         } else {
             disableLoginButton()
@@ -48,6 +48,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var LoginCard: UIView!
     func setupStyle() {
+        self.view.backgroundColor = UIColor(named: "VodafoneRed")
         LoginCard.layer.cornerRadius = 5
         LoginButton.layer.cornerRadius = 5
     }

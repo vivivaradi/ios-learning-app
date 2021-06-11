@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-enum MockService {
+enum LoginAPI {
     case loginUser(msisdn: String)
 }
 
 // MARK: TargetType protocol implementation
-extension MockService: TargetType {
+extension LoginAPI: TargetType {
     var baseURL: URL {
         return URL(string: "https://mock.com")!
     }
