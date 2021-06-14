@@ -14,6 +14,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
     
+    let networkProvider = NetworkManager.shared.provider
+    let sessionManager = SessionManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,6 +45,13 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let msisdn = MSISDN.text!
+        networkProvider.request(LoginAPI.loginUser(msisdn: msisdn)) { result in
+            switch result {
+            case let .success(response):
+                sessionManager.startSession(token: response.data.accessToken, telnum: msisdn)
+            }
+        }
     }
     
     // MARK: - UI setup

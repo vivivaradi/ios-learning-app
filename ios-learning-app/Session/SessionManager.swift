@@ -8,10 +8,25 @@
 
 import Foundation
 
+protocol Sessionable {
+    var accessToken: String? { get }
+    var msisdn: String? { get }
+}
+
 class SessionManager {
     
-    static let session = SessionManager()
+    static let shared = SessionManager()
     
     var accessToken : String? = nil
     var msisdn : String? = nil
+    
+    func startSession(token: String, telnum: String) {
+        accessToken = token
+        msisdn = telnum
+    }
+    
+    func endSession() {
+        accessToken = nil
+        msisdn = nil
+    }
 }
