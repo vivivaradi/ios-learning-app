@@ -48,8 +48,13 @@ class LoginViewController: UIViewController {
         let msisdn = MSISDN.text!
         networkProvider.request(LoginAPI.loginUser(msisdn: msisdn)) { result in
             switch result {
-            case let .success(response):
+            case let .success(response): {
                 sessionManager.startSession(token: response.data.accessToken, telnum: msisdn)
+                let dashboard = UIStoryboard(name: "Login", bundle: nil)
+                let dashboardViewController = dashboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
+                present(dashboardViewController, animated: true, completion: nil)
+            }
+                
             }
         }
     }
