@@ -7,15 +7,14 @@
 //
 
 import UIKit
+import Moya
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var MSISDN: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
-    
-    let networkProvider = NetworkManager.shared.provider
-    let sessionManager = SessionManager.shared
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,18 +42,25 @@ class LoginViewController: UIViewController {
         }
     }
 
+    @IBAction func switchPressed(_ sender: UISwitch) {
+    }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         let msisdn = MSISDN.text!
-        networkProvider.request(LoginAPI.loginUser(msisdn: msisdn)) { result in
+        networkProvider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
             switch result {
-            case let .success(response): {
-                sessionManager.startSession(token: response.data.accessToken, telnum: msisdn)
-                let dashboard = UIStoryboard(name: "Login", bundle: nil)
-                let dashboardViewController = dashboard.instantiateViewController(withIdentifier: "DashboardVC") as UIViewController
-                present(dashboardViewController, animated: true, completion: nil)
-            }
-                
+            case let .success(moyaResponse):
+                do {
+                    let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
+                    let data = try successfulResponse.map(LoginResponse.self)
+                    self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
+                } catch let error {
+                    print(error)
+                }
+
+                // do something in your app
+            case let .failure(error):
+                print(error)
             }
         }
     }

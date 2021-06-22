@@ -10,7 +10,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="ueA-Je-Jze">
             <objects>
-                <viewController storyboardIdentifier="DashboardVC" id="oQU-kJ-ac7" customClass="DashboardViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="oQU-kJ-ac7" customClass="DashboardViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8g5-Ao-HZc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

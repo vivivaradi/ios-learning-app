@@ -10,11 +10,11 @@ import Foundation
 import Moya
 
 
-protocol Networkable {
+protocol NetworkingManager {
     var provider : MultiMoyaProvider { get }
 }
 
-class NetworkManager: Networkable {
+class NetworkManager: NetworkingManager {
     
     static let shared = NetworkManager()
     var provider: MultiMoyaProvider = MultiMoyaProvider()
