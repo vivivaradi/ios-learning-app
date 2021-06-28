@@ -19,10 +19,13 @@ protocol SessioningManager {
 
 class SessionManager: SessioningManager {
     
-    static let shared = SessionManager()
+    var accessToken : String?
+    var msisdn : String?
     
-    var accessToken : String? = nil
-    var msisdn : String? = nil
+    init() {
+        accessToken = nil
+        msisdn = nil
+    }
     
     func startSession(token: String, telnum: String) {
         accessToken = token

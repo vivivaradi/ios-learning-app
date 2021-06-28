@@ -15,12 +15,10 @@ protocol NetworkingManager {
 }
 
 class NetworkManager: NetworkingManager {
+    var provider: MultiMoyaProvider
     
-    static let shared = NetworkManager()
-    var provider: MultiMoyaProvider = MultiMoyaProvider()
-    
-    private init() {
-    
+    init() {
+        provider = MultiMoyaProvider()
     }
 
 }
