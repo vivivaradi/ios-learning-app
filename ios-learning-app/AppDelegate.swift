@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var container: Container = {
+        let container = Container()
+        return container
+    }
+    
+    fileprivate let assemblies: [Assembly] = [
+        ManagerAssembly()
+    ]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //MARK: - Setup DI
+        let assembler = Assembler.init(container: container)
+        assembler.apply(assemblies: assemblies + autoUiAssemblies)
+        SwinjectStoryboard.defaultContainer = container
+        
         return true
     }
 

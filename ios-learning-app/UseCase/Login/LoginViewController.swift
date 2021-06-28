@@ -10,6 +10,8 @@ import UIKit
 import Moya
 
 class LoginViewController: UIViewController {
+    
+    var viewModel: LoginViewModelType
 
     @IBOutlet weak var MSISDN: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
@@ -19,7 +21,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupStyle()
+        self.setupStyle()
         MSISDN.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
         PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
     }

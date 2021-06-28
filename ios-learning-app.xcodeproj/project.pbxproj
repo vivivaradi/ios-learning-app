@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EB4BEAB9E8B0C59B2038F7D /* Pods_ios_learning_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */; };
+		D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */; };
+		D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */; };
 		D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5DFE2670067300C17DF9 /* LoginAPI.swift */; };
 		D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */; };
 		D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */; };
@@ -25,6 +27,7 @@
 		D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974F8268272740095EAE0 /* LoginViewModel.swift */; };
 		D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FA268279F10095EAE0 /* LoginResponse.swift */; };
 		D4A974FE26828DA10095EAE0 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FD26828DA10095EAE0 /* Container.swift */; };
+		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC42679CD2400DF121B /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +36,8 @@
 		15FF72AB7015A5B890955155 /* Pods-ios-learning-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.release.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.release.xcconfig"; sourceTree = "<group>"; };
 		302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_learning_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA16EAFF84F288D80EF3D9 /* Pods-ios-learning-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.debug.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.debug.xcconfig"; sourceTree = "<group>"; };
+		D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
+		D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAssemble.swift; sourceTree = "<group>"; };
 		D43F5DFE2670067300C17DF9 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		D4A974F8268272740095EAE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D4A974FA268279F10095EAE0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		D4A974FD26828DA10095EAE0 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +80,15 @@
 				302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4179AD02689DAFA008A4B67 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
+				D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		D43F5DFD2670065D00C17DF9 /* API */ = {
@@ -134,6 +149,7 @@
 		D4931BDD2657A6700017AD81 /* ios-learning-app */ = {
 			isa = PBXGroup;
 			children = (
+				D4179AD02689DAFA008A4B67 /* Assembly */,
 				D4A974FC26828D950095EAE0 /* DI */,
 				D4CF2EA626826E41008B72B3 /* Style */,
 				D4D7CCC22679CCF500DF121B /* Mock */,
@@ -215,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */,
+				D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -351,12 +368,15 @@
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,
 				D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */,
+				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
 				D4931BF72657EFB20017AD81 /* TextFieldExtension.swift in Sources */,
+				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
 				D4A974FE26828DA10095EAE0 /* Container.swift in Sources */,
+				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
 			);

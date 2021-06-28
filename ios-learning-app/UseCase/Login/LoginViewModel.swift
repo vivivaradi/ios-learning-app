@@ -12,16 +12,19 @@ import Swinject
 protocol LoginViewModelType {
     var sessionManager: SessioningManager { get }
     var networkManager: NetworkingManager { get }
+    
+    func performLogin(msisdn: String, password: String)
 }
 
 class LoginViewModel: LoginViewModelType {
-    let container = Container.shared
     
     var sessionManager: SessioningManager
     var networkManager: NetworkingManager
     
     init() {
-        sessionManager = container.resolve(SessioningManager.self)!
-        networkManager = container.resolve(NetworkingManager.self)!
+    }
+    
+    func performLogin(msisdn: String, password: String) {
+        <#code#>
     }
 }

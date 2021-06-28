@@ -10,5 +10,6 @@ target 'ios-learning-app' do
   pod 'Moya', '~> 14.0'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod 'SwinjectAutoregistration'
 
 end
