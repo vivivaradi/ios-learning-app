@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Moya
 
 class LoginViewController: UIViewController {
     
@@ -16,7 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var MSISDN: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var LoginButton: UIButton!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +49,11 @@ class LoginViewController: UIViewController {
         guard let msisdn = MSISDN.text else {
             return
         }
-        let loginSuccessful = viewModel.performLogin(msisdn: msisdn)
-        if (loginSuccessful) {
-            // navigate to dashboard
+        viewModel.performLogin(msisdn: msisdn)
+        if (viewModel.sessionManager.accessToken != nil) {
+            let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
+            present(vc, animated: true, completion: nil)
         } else {
             // show error
         }

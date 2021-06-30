@@ -13,10 +13,7 @@ import SwinjectStoryboard
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var container: Container = {
-        let container = Container()
-        return container
-    }
+    var container = Container()
     
     fileprivate let assemblies: [Assembly] = [
         ManagerAssembly()

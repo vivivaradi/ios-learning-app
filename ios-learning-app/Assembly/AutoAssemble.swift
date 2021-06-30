@@ -13,7 +13,7 @@ import SwinjectStoryboard
 
 class LoginAssembly: Assembly {
     func assemble(container: Container) {
-        container.autoregister(LoginViewModelType, initializer: LoginViewModel.init)
+        container.autoregister(LoginViewModelType.self, initializer: LoginViewModel.init)
         container.storyboardInitCompleted(LoginViewController.self, initCompleted: { r, c in
             c.viewModel = r.resolve(LoginViewModelType.self)!
         })
@@ -22,7 +22,7 @@ class LoginAssembly: Assembly {
 
 class DashboardAssembly: Assembly {
     func assemble(container: Container) {
-        container.autoregister(DashboardViewModelType, initializer: DashboardViewModel.init)
+        container.autoregister(DashboardViewModelType.self, initializer: DashboardViewModel.init)
         container.storyboardInitCompleted(DashboardViewController.self, initCompleted: { r, c in
             c.viewModel = r.resolve(DashboardViewModelType.self)!
         })

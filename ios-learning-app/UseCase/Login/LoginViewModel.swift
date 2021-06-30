@@ -8,6 +8,7 @@
 
 import Foundation
 import Swinject
+import Moya
 
 protocol LoginViewModelType {
     var sessionManager: SessioningManager { get }
@@ -24,7 +25,7 @@ class LoginViewModel: LoginViewModelType {
     init() {
     }
     
-    func performLogin(msisdn: String, password: String) -> Bool {
+    func performLogin(msisdn: String) {
        networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
             switch result {
             case let .success(moyaResponse):
@@ -32,15 +33,15 @@ class LoginViewModel: LoginViewModelType {
                     let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
                     let data = try successfulResponse.map(LoginResponse.self)
                     self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
-                    return true
+                    
                 } catch let error {
                     print(error)
-                    return false
+                    
                 }
 
             case let .failure(error):
                 print(error)
-                return false
+                
             }
         }
     }
