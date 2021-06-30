@@ -48,22 +48,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let msisdn = MSISDN.text!
-        networkProvider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
-            switch result {
-            case let .success(moyaResponse):
-                do {
-                    let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
-                    let data = try successfulResponse.map(LoginResponse.self)
-                    self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
-                } catch let error {
-                    print(error)
-                }
-
-                // do something in your app
-            case let .failure(error):
-                print(error)
-            }
+        guard let msisdn = MSISDN.text else {
+            return
+        }
+        let loginSuccessful = viewModel.performLogin(msisdn: msisdn)
+        if (loginSuccessful) {
+            // navigate to dashboard
+        } else {
+            // show error
         }
     }
     

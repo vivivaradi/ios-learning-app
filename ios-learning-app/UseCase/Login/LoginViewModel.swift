@@ -13,7 +13,7 @@ protocol LoginViewModelType {
     var sessionManager: SessioningManager { get }
     var networkManager: NetworkingManager { get }
     
-    func performLogin(msisdn: String, password: String)
+    func performLogin(msisdn: String)
 }
 
 class LoginViewModel: LoginViewModelType {
@@ -24,7 +24,24 @@ class LoginViewModel: LoginViewModelType {
     init() {
     }
     
-    func performLogin(msisdn: String, password: String) {
-        <#code#>
+    func performLogin(msisdn: String, password: String) -> Bool {
+       networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
+            switch result {
+            case let .success(moyaResponse):
+                do {
+                    let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
+                    let data = try successfulResponse.map(LoginResponse.self)
+                    self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
+                    return true
+                } catch let error {
+                    print(error)
+                    return false
+                }
+
+            case let .failure(error):
+                print(error)
+                return false
+            }
+        }
     }
 }

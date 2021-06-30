@@ -26,7 +26,6 @@
 		D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */; };
 		D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974F8268272740095EAE0 /* LoginViewModel.swift */; };
 		D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FA268279F10095EAE0 /* LoginResponse.swift */; };
-		D4A974FE26828DA10095EAE0 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FD26828DA10095EAE0 /* Container.swift */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC42679CD2400DF121B /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
@@ -56,7 +55,6 @@
 		D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMoyaProvider.swift; sourceTree = "<group>"; };
 		D4A974F8268272740095EAE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D4A974FA268279F10095EAE0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		D4A974FD26828DA10095EAE0 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				D4179AD02689DAFA008A4B67 /* Assembly */,
-				D4A974FC26828D950095EAE0 /* DI */,
 				D4CF2EA626826E41008B72B3 /* Style */,
 				D4D7CCC22679CCF500DF121B /* Mock */,
 				D4E8C6FC267378F100F88572 /* UseCase */,
@@ -183,14 +180,6 @@
 			name = Extension;
 			path = "/Users/newmobileapp/Documents/ios-learning-app/ios-learning-app/Extension";
 			sourceTree = "<absolute>";
-		};
-		D4A974FC26828D950095EAE0 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				D4A974FD26828DA10095EAE0 /* Container.swift */,
-			);
-			path = DI;
-			sourceTree = "<group>";
 		};
 		D4CF2EA626826E41008B72B3 /* Style */ = {
 			isa = PBXGroup;
@@ -375,7 +364,6 @@
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
-				D4A974FE26828DA10095EAE0 /* Container.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
