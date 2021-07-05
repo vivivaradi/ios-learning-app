@@ -18,7 +18,7 @@ class NetworkManager: NetworkingManager {
     var provider: MultiMoyaProvider
     
     init() {
-        provider = MultiMoyaProvider()
+        provider = MultiMoyaProvider(stubClosure: MultiMoyaProvider.delayedStub(1))
     }
 
 }

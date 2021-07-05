@@ -26,8 +26,8 @@
 		D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */; };
 		D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974F8268272740095EAE0 /* LoginViewModel.swift */; };
 		D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FA268279F10095EAE0 /* LoginResponse.swift */; };
+		D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
-		D4D7CCC42679CD2400DF121B /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -294,12 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */,
 				D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */,
 				D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */,
 				D4931BE82657A6720017AD81 /* Assets.xcassets in Resources */,
 				D4931BF42657BCFF0017AD81 /* Roboto-Regular.ttf in Resources */,
 				D4931BE62657A6700017AD81 /* Login.storyboard in Resources */,
-				D4D7CCC42679CD2400DF121B /* access_token.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

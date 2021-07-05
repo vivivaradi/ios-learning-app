@@ -11,7 +11,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
-    var viewModel: DashboardViewModelType
+    var viewModel: DashboardViewModelType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

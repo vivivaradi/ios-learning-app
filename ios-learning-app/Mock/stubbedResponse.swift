@@ -10,8 +10,8 @@ import Foundation
 
 func stubbedResponse(_ filename: String) -> Data {
     let bundle = Bundle.main
-    if let path = bundle.path(forResource: filename, ofType: "json"),
-        let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+    if let path = bundle.url(forResource: filename, withExtension: nil),
+        let data = try? Data(contentsOf: path) {
         return data
     }
     return Data()

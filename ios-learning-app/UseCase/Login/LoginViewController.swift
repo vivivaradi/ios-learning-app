@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var viewModel: LoginViewModelType
+    var viewModel: LoginViewModelType!
 
     @IBOutlet weak var MSISDN: UITextField!
     @IBOutlet weak var PasswordLogin: UITextField!
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
             return
         }
         viewModel.performLogin(msisdn: msisdn)
-        if (viewModel.sessionManager.accessToken != nil) {
+        if (viewModel.hasActiveSession()) {
             let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
             present(vc, animated: true, completion: nil)

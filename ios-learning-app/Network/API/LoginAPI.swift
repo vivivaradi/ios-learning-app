@@ -16,7 +16,7 @@ enum LoginAPI {
 // MARK: TargetType protocol implementation
 extension LoginAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "https://mock.com")!
+        return URL(string: "https://vivi.mock.com")!
     }
     
     var path: String {
@@ -42,12 +42,12 @@ extension LoginAPI: TargetType {
     var task: Task {
         switch self {
         case let .loginUser(msisdn):
-            return .requestParameters(parameters: ["msisdn" : msisdn], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["msisdn" : msisdn], encoding: URLEncoding.default)
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        return ["Content-Type": "application/json"]
     }
     
     

@@ -9,12 +9,11 @@
 import Foundation
 
 protocol SessioningManager {
-    var accessToken: String? { get }
-    var msisdn: String? { get }
     
     func startSession(token: String, telnum: String)
-    
     func endSession()
+    func isSessionActive() -> Bool
+    
 }
 
 class SessionManager: SessioningManager {
@@ -22,10 +21,7 @@ class SessionManager: SessioningManager {
     var accessToken : String?
     var msisdn : String?
     
-    init() {
-        accessToken = nil
-        msisdn = nil
-    }
+    init() {}
     
     func startSession(token: String, telnum: String) {
         accessToken = token
@@ -35,5 +31,9 @@ class SessionManager: SessioningManager {
     func endSession() {
         accessToken = nil
         msisdn = nil
+    }
+    
+    func isSessionActive() -> Bool {
+        return accessToken != nil && msisdn != nil
     }
 }

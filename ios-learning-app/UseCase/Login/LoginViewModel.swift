@@ -11,18 +11,20 @@ import Swinject
 import Moya
 
 protocol LoginViewModelType {
-    var sessionManager: SessioningManager { get }
-    var networkManager: NetworkingManager { get }
     
     func performLogin(msisdn: String)
+    func hasActiveSession() -> Bool
 }
 
 class LoginViewModel: LoginViewModelType {
     
-    var sessionManager: SessioningManager
-    var networkManager: NetworkingManager
+    var sessionManager: SessioningManager!
+    var networkManager: NetworkingManager!
     
-    init() {
+    init(sessionManager: SessioningManager,
+         networkManager: NetworkingManager) {
+        self.sessionManager = sessionManager
+        self.networkManager = networkManager
     }
     
     func performLogin(msisdn: String) {
@@ -44,5 +46,9 @@ class LoginViewModel: LoginViewModelType {
                 
             }
         }
+    }
+    
+    func hasActiveSession() -> Bool {
+        return sessionManager.isSessionActive()
     }
 }
