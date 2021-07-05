@@ -45,15 +45,19 @@ class LoginViewController: UIViewController {
     @IBAction func switchPressed(_ sender: UISwitch) {
     }
     
+    fileprivate func navigateToDashboard() {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard let msisdn = MSISDN.text else {
             return
         }
         viewModel.performLogin(msisdn: msisdn)
         if (viewModel.hasActiveSession()) {
-            let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
-            present(vc, animated: true, completion: nil)
+            navigateToDashboard()
         } else {
             // show error
         }
