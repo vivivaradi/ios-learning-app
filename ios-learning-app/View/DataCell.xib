@@ -18,7 +18,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrE-hW-Ywx">
                         <rect key="frame" x="16" y="16" width="249" height="20"/>
-                        <accessibility key="accessibilityConfiguration" identifier="DataTextLabel">
+                        <accessibility key="accessibilityConfiguration" identifier="dataLabel">
                             <accessibilityTraits key="traits" image="YES" staticText="YES"/>
                         </accessibility>
                         <constraints>
@@ -31,7 +31,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7g-Yz-8lg">
                         <rect key="frame" x="16" y="52" width="44" height="16"/>
-                        <accessibility key="accessibilityConfiguration" identifier="DataPriceLabel"/>
+                        <accessibility key="accessibilityConfiguration" identifier="priceLabel"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="7N9-Dw-LZL"/>
                             <constraint firstAttribute="width" constant="44" id="Qeu-2I-FRF"/>
@@ -51,12 +51,18 @@
                 <constraints>
                     <constraint firstItem="X7g-Yz-8lg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="07h-RO-QBf"/>
                     <constraint firstAttribute="bottom" secondItem="X7g-Yz-8lg" secondAttribute="bottom" constant="16" id="G7B-R3-D0e"/>
+                    <constraint firstItem="X7g-Yz-8lg" firstAttribute="top" secondItem="QrE-hW-Ywx" secondAttribute="bottom" constant="16" id="Ih1-0e-XrQ"/>
                     <constraint firstItem="QrE-hW-Ywx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JDb-fN-Ggh"/>
                     <constraint firstAttribute="trailing" secondItem="hGq-Fq-YEf" secondAttribute="trailing" constant="16" id="hLN-Lv-xdi"/>
                     <constraint firstItem="QrE-hW-Ywx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jmg-j9-hpR"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dataLabel" destination="QrE-hW-Ywx" id="alo-vN-dWs"/>
+                <outlet property="logoImage" destination="hGq-Fq-YEf" id="VlI-xQ-t6n"/>
+                <outlet property="priceLabel" destination="X7g-Yz-8lg" id="6n1-oU-OhS"/>
+            </connections>
             <point key="canvasLocation" x="132" y="152"/>
         </tableViewCell>
     </objects>

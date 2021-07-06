@@ -10,11 +10,17 @@ import UIKit
 
 class DataCell: UITableViewCell {
 
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        priceLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+        priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)
+        dataLabel.font = UIFont(name: "Roboto-Regular", size: 16)
+        dataLabel.textColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 1)
+        logoImage.image = UIImage(named: "ListLogoPlaceholder")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

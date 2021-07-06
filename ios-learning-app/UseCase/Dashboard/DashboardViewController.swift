@@ -14,20 +14,30 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: DashboardViewModelType!
     
+    var packages = [
+        DataPackage(name: "Osztható PluszAdat 300MB", price: 750),
+        DataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: Constants.dataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dataCellIdentifier)
     }
 }
 
 extension DashboardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return packages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let package = packages[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataCellIdentifier, for: indexPath) as! DataCell
+        cell.dataLabel.text = package.name
+        cell.priceLabel.text = "\(package.price) Ft"
+        return cell
     }
     
     

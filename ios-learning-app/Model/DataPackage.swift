@@ -8,12 +8,8 @@
 
 import Foundation
 
-class DataPackage {
+struct DataPackage {
     let name : String
     let price: Int
     
-    init(name: String, price: Int) {
-        self.name = name
-        self.price = price
-    }
 }
