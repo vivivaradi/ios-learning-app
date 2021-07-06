@@ -28,7 +28,7 @@ class LoginViewModel: LoginViewModelType {
     }
     
     func performLogin(msisdn: String) {
-       networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
+        self.networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
             switch result {
             case let .success(moyaResponse):
                 do {
@@ -49,6 +49,6 @@ class LoginViewModel: LoginViewModelType {
     }
     
     func hasActiveSession() -> Bool {
-        return sessionManager.isSessionActive()
+        return self.sessionManager.isSessionActive()
     }
 }

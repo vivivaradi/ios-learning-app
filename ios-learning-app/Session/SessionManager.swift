@@ -24,16 +24,16 @@ class SessionManager: SessioningManager {
     init() {}
     
     func startSession(token: String, telnum: String) {
-        accessToken = token
-        msisdn = telnum
+        self.accessToken = token
+        self.msisdn = telnum
     }
     
     func endSession() {
-        accessToken = nil
-        msisdn = nil
+        self.accessToken = nil
+        self.msisdn = nil
     }
     
     func isSessionActive() -> Bool {
-        return accessToken != nil && msisdn != nil
+        return self.accessToken != nil && self.msisdn != nil
     }
 }

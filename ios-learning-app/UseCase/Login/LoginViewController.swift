@@ -20,22 +20,22 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setupStyle()
-        MSISDN.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
-        PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
+        self.MSISDN.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
+        self.PasswordLogin.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
     }
     
     func enableLoginButton() {
-        LoginButton.isEnabled = true
-        LoginButton.backgroundColor = UIColor(named: "VodafoneRed")
+        self.LoginButton.isEnabled = true
+        self.LoginButton.backgroundColor = UIColor(named: "VodafoneRed")
     }
     
     func disableLoginButton() {
-        LoginButton.isEnabled = false
-        LoginButton.backgroundColor = UIColor(named: "DisabledButtonGrey")
+        self.LoginButton.isEnabled = false
+        self.LoginButton.backgroundColor = UIColor(named: "DisabledButtonGrey")
     }
     
     @objc func textFieldsDidChange() {
-        if (MSISDN.isContentValid() && PasswordLogin.isContentValid()) {
+        if (self.MSISDN.isContentValid() && self.PasswordLogin.isContentValid()) {
             enableLoginButton()
         } else {
             disableLoginButton()
@@ -52,11 +52,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let msisdn = MSISDN.text else {
+        guard let msisdn = self.MSISDN.text else {
             return
         }
-        viewModel.performLogin(msisdn: msisdn)
-        if (viewModel.hasActiveSession()) {
+        self.viewModel.performLogin(msisdn: msisdn)
+        if (self.viewModel.hasActiveSession()) {
             navigateToDashboard()
         } else {
             // show error
