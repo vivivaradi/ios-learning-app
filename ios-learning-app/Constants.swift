@@ -9,6 +9,8 @@
 import Foundation
 
 struct Constants {
-    static let dataCellIdentifier = "RefillDataCell"
-    static let dataCellNibName = "RefillDataCell"
+    
+    //MARK: Custom cell constants
+    static let refillDataCellIdentifier = "RefillDataCell"
+    static let refillDataCellNibName = "RefillDataCell"
 }

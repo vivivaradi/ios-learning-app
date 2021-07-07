@@ -11,6 +11,8 @@
 		D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */; };
 		D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */; };
 		D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */; };
+		D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */; };
+		D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */; };
 		D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5DFE2670067300C17DF9 /* LoginAPI.swift */; };
 		D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */; };
 		D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */; };
@@ -43,6 +45,8 @@
 		D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
 		D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAssemble.swift; sourceTree = "<group>"; };
 		D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataPackage.swift; sourceTree = "<group>"; };
+		D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCell.swift; sourceTree = "<group>"; };
+		D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentDataCell.xib; sourceTree = "<group>"; };
 		D43F5DFE2670067300C17DF9 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		D42BBF392695A29E003DBAB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D42BBF3B2695AD44003DBAB5 /* CurrentDataCell */,
 				D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */,
 			);
 			path = Cells;
@@ -130,6 +135,15 @@
 				D47DCF0826948C73000D2713 /* RefillDataCell.xib */,
 			);
 			path = RefillDataCell;
+			sourceTree = "<group>";
+		};
+		D42BBF3B2695AD44003DBAB5 /* CurrentDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */,
+				D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */,
+			);
+			path = CurrentDataCell;
 			sourceTree = "<group>";
 		};
 		D43F5DFD2670065D00C17DF9 /* API */ = {
@@ -358,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */,
+				D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */,
 				D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */,
 				D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */,
 				D4931BE82657A6720017AD81 /* Assets.xcassets in Resources */,
@@ -421,6 +436,7 @@
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
+				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,
 				D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */,
 				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,

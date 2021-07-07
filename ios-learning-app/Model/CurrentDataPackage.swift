@@ -10,5 +10,8 @@ import Foundation
 
 struct CurrentDataPackage {
     let name: String
+    let totalData: Int
+    let usedData: Int
+    let expirationDate: Date
     
 }

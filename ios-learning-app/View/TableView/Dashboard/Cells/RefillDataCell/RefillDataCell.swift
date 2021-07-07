@@ -25,6 +25,12 @@ class RefillDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(price: Int, name: String) {
+        self.priceLabel.text = "\(price) Ft"
+        self.dataLabel.text = name
+    }
+    
+    //MARK: UI setup
     private func setupStyle() {
            // Initialization code
            priceLabel.font = UIFont(name: "Roboto-Regular", size: 12)

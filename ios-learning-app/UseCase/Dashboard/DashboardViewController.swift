@@ -23,7 +23,7 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
-        self.tableView.register(UINib(nibName: Constants.dataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dataCellIdentifier)
+        self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
     }
 }
 
@@ -34,9 +34,8 @@ extension DashboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let package = packages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataCellIdentifier, for: indexPath) as! RefillDataCell
-        cell.dataLabel.text = package.name
-        cell.priceLabel.text = "\(package.price) Ft"
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as! RefillDataCell
+        cell.configure(price: package.price, name: package.name)
         return cell
     }
     
