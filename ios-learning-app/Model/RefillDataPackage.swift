@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DataPackage {
+struct RefillDataPackage {
     let name : String
     let price: Int
     

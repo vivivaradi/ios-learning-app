@@ -9,6 +9,6 @@
 import Foundation
 
 struct Constants {
-    static let dataCellIdentifier = "DataCell"
-    static let dataCellNibName = "DataCell"
+    static let dataCellIdentifier = "RefillDataCell"
+    static let dataCellNibName = "RefillDataCell"
 }

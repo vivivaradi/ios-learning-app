@@ -10,13 +10,14 @@
 		2EB4BEAB9E8B0C59B2038F7D /* Pods_ios_learning_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */; };
 		D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */; };
 		D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */; };
+		D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */; };
 		D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5DFE2670067300C17DF9 /* LoginAPI.swift */; };
 		D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */; };
 		D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */; };
-		D47DCF0926948C73000D2713 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* DataCell.swift */; };
-		D47DCF0A26948C73000D2713 /* DataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* DataCell.xib */; };
+		D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* RefillDataCell.swift */; };
+		D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* RefillDataCell.xib */; };
 		D47DCF0C26949662000D2713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0B26949662000D2713 /* Constants.swift */; };
-		D47DCF0F269499EE000D2713 /* DataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0E269499EE000D2713 /* DataPackage.swift */; };
+		D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */; };
 		D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4931BDE2657A6700017AD81 /* AppDelegate.swift */; };
 		D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4931BE02657A6700017AD81 /* SceneDelegate.swift */; };
 		D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4931BE22657A6700017AD81 /* LoginViewController.swift */; };
@@ -41,13 +42,14 @@
 		76DA16EAFF84F288D80EF3D9 /* Pods-ios-learning-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.debug.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.debug.xcconfig"; sourceTree = "<group>"; };
 		D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
 		D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAssemble.swift; sourceTree = "<group>"; };
+		D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataPackage.swift; sourceTree = "<group>"; };
 		D43F5DFE2670067300C17DF9 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		D47DCF0726948C73000D2713 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
-		D47DCF0826948C73000D2713 /* DataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCell.xib; sourceTree = "<group>"; };
+		D47DCF0726948C73000D2713 /* RefillDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCell.swift; sourceTree = "<group>"; };
+		D47DCF0826948C73000D2713 /* RefillDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillDataCell.xib; sourceTree = "<group>"; };
 		D47DCF0B26949662000D2713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D47DCF0E269499EE000D2713 /* DataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackage.swift; sourceTree = "<group>"; };
+		D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataPackage.swift; sourceTree = "<group>"; };
 		D4931BDB2657A6700017AD81 /* ios-learning-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-learning-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4931BDE2657A6700017AD81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4931BE02657A6700017AD81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,39 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		D42BBF372695A275003DBAB5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D42BBF382695A295003DBAB5 /* Dashboard */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		D42BBF382695A295003DBAB5 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D42BBF392695A29E003DBAB5 /* Cells */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		D42BBF392695A29E003DBAB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				D47DCF0726948C73000D2713 /* RefillDataCell.swift */,
+				D47DCF0826948C73000D2713 /* RefillDataCell.xib */,
+			);
+			path = RefillDataCell;
+			sourceTree = "<group>";
+		};
 		D43F5DFD2670065D00C17DF9 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +172,7 @@
 		D47DCF02269478A5000D2713 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D47DCF0726948C73000D2713 /* DataCell.swift */,
-				D47DCF0826948C73000D2713 /* DataCell.xib */,
+				D42BBF372695A275003DBAB5 /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,7 +180,8 @@
 		D47DCF0D269499D0000D2713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D47DCF0E269499EE000D2713 /* DataPackage.swift */,
+				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
+				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,7 +361,7 @@
 				D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */,
 				D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */,
 				D4931BE82657A6720017AD81 /* Assets.xcassets in Resources */,
-				D47DCF0A26948C73000D2713 /* DataCell.xib in Resources */,
+				D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */,
 				D4931BF42657BCFF0017AD81 /* Roboto-Regular.ttf in Resources */,
 				D4931BE62657A6700017AD81 /* Login.storyboard in Resources */,
 			);
@@ -385,19 +420,20 @@
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
-				D47DCF0926948C73000D2713 /* DataCell.swift in Sources */,
+				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,
 				D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */,
 				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
 				D4931BF72657EFB20017AD81 /* TextFieldExtension.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
+				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
-				D47DCF0F269499EE000D2713 /* DataPackage.swift in Sources */,
+				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,8 +15,8 @@ class DashboardViewController: UIViewController {
     var viewModel: DashboardViewModelType!
     
     var packages = [
-        DataPackage(name: "Osztható PluszAdat 300MB", price: 750),
-        DataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
+        RefillDataPackage(name: "Osztható PluszAdat 300MB", price: 750),
+        RefillDataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
     ]
     
     override func viewDidLoad() {
@@ -34,11 +34,13 @@ extension DashboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let package = packages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataCellIdentifier, for: indexPath) as! DataCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataCellIdentifier, for: indexPath) as! RefillDataCell
         cell.dataLabel.text = package.name
         cell.priceLabel.text = "\(package.price) Ft"
         return cell
     }
     
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
 }
