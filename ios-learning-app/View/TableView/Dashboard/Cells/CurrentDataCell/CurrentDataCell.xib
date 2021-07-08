@@ -9,15 +9,113 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CurrentDataCell" customModule="ios_learning_app" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="174"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="270" id="KGk-i7-Jjw" customClass="CurrentDataCell" customModule="ios_learning_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="270"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="174"/>
+                <rect key="frame" x="0.0" y="0.0" width="354" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-uX-t2o" userLabel="ContainerView">
+                        <rect key="frame" x="22" y="78" width="310" height="184"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" image="MyDataCardLogoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="2kd-tz-xDL" userLabel="CellLogoPlaceholder">
+                                <rect key="frame" x="16" y="16" width="20" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyJ-gQ-4pP" userLabel="MyDataLabel">
+                                <rect key="frame" x="52" y="16" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="F6P-O1-61G">
+                                <rect key="frame" x="16" y="52.5" width="216" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-cK-soT" userLabel="RemainingDataLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-PK-ENT" userLabel="TotalDataLabel">
+                                        <rect key="frame" x="0.0" y="22.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SaN-1G-qH2">
+                                <rect key="frame" x="16" y="103.5" width="278" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="biY-Hf-sEa"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op9-TD-aUc" userLabel="DaysLabel">
+                                <rect key="frame" x="16" y="121" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2kd-tz-xDL" firstAttribute="leading" secondItem="ti8-uX-t2o" secondAttribute="leading" constant="16" id="28q-Bm-eIr"/>
+                            <constraint firstAttribute="trailing" secondItem="op9-TD-aUc" secondAttribute="trailing" constant="202" id="Hjo-eV-yPs"/>
+                            <constraint firstItem="op9-TD-aUc" firstAttribute="top" secondItem="SaN-1G-qH2" secondAttribute="bottom" constant="8" id="Kmh-AH-8D3"/>
+                            <constraint firstItem="wyJ-gQ-4pP" firstAttribute="leading" secondItem="2kd-tz-xDL" secondAttribute="trailing" constant="16" id="OKg-5j-oWh"/>
+                            <constraint firstItem="SaN-1G-qH2" firstAttribute="top" secondItem="F6P-O1-61G" secondAttribute="bottom" constant="8" id="Rb4-NX-w0z"/>
+                            <constraint firstAttribute="trailing" secondItem="SaN-1G-qH2" secondAttribute="trailing" constant="16" id="UOt-uT-4Hc"/>
+                            <constraint firstItem="SaN-1G-qH2" firstAttribute="leading" secondItem="ti8-uX-t2o" secondAttribute="leading" constant="16" id="WaU-Ie-Jg3"/>
+                            <constraint firstItem="2kd-tz-xDL" firstAttribute="top" secondItem="ti8-uX-t2o" secondAttribute="top" constant="16" id="XM4-IF-muW"/>
+                            <constraint firstItem="F6P-O1-61G" firstAttribute="leading" secondItem="ti8-uX-t2o" secondAttribute="leading" constant="16" id="Xas-sJ-M8Y"/>
+                            <constraint firstItem="op9-TD-aUc" firstAttribute="leading" secondItem="ti8-uX-t2o" secondAttribute="leading" constant="16" id="cIe-DI-gmm"/>
+                            <constraint firstAttribute="bottom" secondItem="op9-TD-aUc" secondAttribute="bottom" constant="16" id="dkX-bf-now"/>
+                            <constraint firstAttribute="trailing" secondItem="wyJ-gQ-4pP" secondAttribute="trailing" constant="216" id="fMo-jA-JOg"/>
+                            <constraint firstItem="F6P-O1-61G" firstAttribute="top" secondItem="wyJ-gQ-4pP" secondAttribute="bottom" constant="16" id="tMU-9n-95X"/>
+                            <constraint firstAttribute="trailing" secondItem="F6P-O1-61G" secondAttribute="trailing" constant="78" id="ubv-tG-jqR"/>
+                            <constraint firstItem="wyJ-gQ-4pP" firstAttribute="top" secondItem="ti8-uX-t2o" secondAttribute="top" constant="16" id="wgK-PC-Fgy"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" image="ListLogoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="JkY-hb-Wre" userLabel="HeaderLogoPlaceholder">
+                        <rect key="frame" x="16" y="16" width="32" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-Cd-rGI" userLabel="WelcomeLabel">
+                        <rect key="frame" x="177" y="22" width="161" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ti8-uX-t2o" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7Vo-QB-GMl"/>
+                    <constraint firstItem="JkY-hb-Wre" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="O7M-CV-Y1g"/>
+                    <constraint firstItem="ti8-uX-t2o" firstAttribute="top" secondItem="FDg-Cd-rGI" secondAttribute="bottom" constant="38" id="P71-cn-xut"/>
+                    <constraint firstItem="FDg-Cd-rGI" firstAttribute="leading" secondItem="JkY-hb-Wre" secondAttribute="trailing" constant="129" id="RyO-t9-Ph0"/>
+                    <constraint firstAttribute="bottom" secondItem="ti8-uX-t2o" secondAttribute="bottom" constant="8" id="Trj-Kw-hFq"/>
+                    <constraint firstItem="FDg-Cd-rGI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="bWq-Zg-m7Z"/>
+                    <constraint firstItem="ti8-uX-t2o" firstAttribute="top" secondItem="JkY-hb-Wre" secondAttribute="bottom" constant="32" id="cbm-fD-Y8K"/>
+                    <constraint firstItem="ti8-uX-t2o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="78" id="dbr-eo-Gvh"/>
+                    <constraint firstAttribute="trailing" secondItem="FDg-Cd-rGI" secondAttribute="trailing" constant="16" id="kO5-aa-EXp"/>
+                    <constraint firstItem="JkY-hb-Wre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ua7-bO-3Om"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="132" y="152"/>
+            <connections>
+                <outlet property="cellLogoImage" destination="2kd-tz-xDL" id="faG-IQ-vPP"/>
+                <outlet property="headerLogoImage" destination="JkY-hb-Wre" id="Gnt-Ne-p51"/>
+                <outlet property="myDataLabel" destination="wyJ-gQ-4pP" id="AHI-v0-eFN"/>
+                <outlet property="progressView" destination="SaN-1G-qH2" id="WZw-fD-RAb"/>
+                <outlet property="remainingDataLabel" destination="k6J-cK-soT" id="tUY-y3-mtP"/>
+                <outlet property="remainingDaysLabel" destination="op9-TD-aUc" id="FM1-oW-g3C"/>
+                <outlet property="totalDataLabel" destination="TRQ-PK-ENT" id="ohz-gt-5GJ"/>
+                <outlet property="welcomeLabel" destination="FDg-Cd-rGI" id="9t0-G5-ODu"/>
+            </connections>
+            <point key="canvasLocation" x="139.13043478260872" y="182.8125"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ListLogoPlaceholder" width="32" height="32"/>
+        <image name="MyDataCardLogoPlaceholder" width="20" height="20"/>
+    </resources>
 </document>
