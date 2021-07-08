@@ -25,14 +25,19 @@ class DashboardViewController: UIViewController {
         
         setupStyle()
         
+        setupTableView()
+    }
+    
+    private func setupStyle() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+    }
+    
+    
+    private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.currentDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.currentDataCellIdentifier)
-    }
-    
-    func setupStyle() {
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
     }
 }
 
