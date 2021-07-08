@@ -10,10 +10,11 @@ import UIKit
 
 class RefillDataCell: UITableViewCell {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupStyle()
@@ -32,12 +33,15 @@ class RefillDataCell: UITableViewCell {
     
     //MARK: UI setup
     private func setupStyle() {
-           // Initialization code
            priceLabel.font = UIFont(name: "Roboto-Regular", size: 12)
            priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)
            dataLabel.font = UIFont(name: "Roboto-Regular", size: 16)
            dataLabel.textColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 1)
            logoImage.image = UIImage(named: "ListLogoPlaceholder")
-       }
+        self.containerView.layer.cornerRadius = 5
+
+        self.containerView.layer.borderWidth = 0.5
+
+        self.containerView.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
     
 }

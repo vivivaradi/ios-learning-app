@@ -11,8 +11,9 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
     var viewModel: DashboardViewModelType!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var packages = [
         RefillDataPackage(name: "Osztható PluszAdat 300MB", price: 750),
@@ -22,8 +23,15 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupStyle()
+        
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
+    }
+    
+    func setupStyle() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
 }
 

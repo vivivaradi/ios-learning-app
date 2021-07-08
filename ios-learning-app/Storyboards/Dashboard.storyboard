@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oQU-kJ-ac7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,21 +12,20 @@
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="oQU-kJ-ac7" customClass="DashboardViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8g5-Ao-HZc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m9D-6X-drU" userLabel="TableView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m9D-6X-drU" userLabel="TableView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="m9D-6X-drU" firstAttribute="leading" secondItem="PuQ-Qs-Q2e" secondAttribute="leading" id="0q6-3o-8Dl"/>
-                            <constraint firstItem="PuQ-Qs-Q2e" firstAttribute="trailing" secondItem="m9D-6X-drU" secondAttribute="trailing" id="9mU-9m-fbb"/>
-                            <constraint firstItem="m9D-6X-drU" firstAttribute="top" secondItem="PuQ-Qs-Q2e" secondAttribute="top" id="JY4-sY-Cou"/>
-                            <constraint firstItem="PuQ-Qs-Q2e" firstAttribute="bottom" secondItem="m9D-6X-drU" secondAttribute="bottom" id="Usb-lH-enW"/>
-                            <constraint firstItem="m9D-6X-drU" firstAttribute="centerX" secondItem="8g5-Ao-HZc" secondAttribute="centerX" id="iN0-kz-JSY"/>
+                            <constraint firstItem="m9D-6X-drU" firstAttribute="top" secondItem="PuQ-Qs-Q2e" secondAttribute="top" id="8ay-aH-PWj"/>
+                            <constraint firstItem="m9D-6X-drU" firstAttribute="leading" secondItem="PuQ-Qs-Q2e" secondAttribute="leading" id="WH4-TY-ibg"/>
+                            <constraint firstItem="m9D-6X-drU" firstAttribute="bottom" secondItem="PuQ-Qs-Q2e" secondAttribute="bottom" id="kOe-Ox-mDN"/>
+                            <constraint firstItem="m9D-6X-drU" firstAttribute="trailing" secondItem="PuQ-Qs-Q2e" secondAttribute="trailing" id="zbI-4T-OYj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PuQ-Qs-Q2e"/>
                     </view>
