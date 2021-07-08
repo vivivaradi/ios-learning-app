@@ -13,4 +13,6 @@ struct Constants {
     //MARK: Custom cell constants
     static let refillDataCellIdentifier = "RefillDataCell"
     static let refillDataCellNibName = "RefillDataCell"
+    static let currentDataCellNibName = "CurrentDataCell"
+    static let currentDataCellIdentifier = "CurrentDataCell"
 }

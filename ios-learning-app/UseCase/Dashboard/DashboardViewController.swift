@@ -27,6 +27,7 @@ class DashboardViewController: UIViewController {
         
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
+        self.tableView.register(UINib(nibName: Constants.currentDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.currentDataCellIdentifier)
     }
     
     func setupStyle() {
