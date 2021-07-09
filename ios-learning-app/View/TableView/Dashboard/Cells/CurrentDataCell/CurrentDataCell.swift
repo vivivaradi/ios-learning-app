@@ -32,8 +32,11 @@ class CurrentDataCell: UITableViewCell {
     
     func configure(currentPackage: CurrentDataPackage) {
         self.myDataLabel.text = currentPackage.name
-        self.totalDataLabel.text = "left of \(currentPackage.totalData) bundle"
-        self.remainingDataLabel.text = "\(currentPackage.totalData - currentPackage.usedData)"
+        let totalDataString = DataConverter.addMeasurement(to: currentPackage.totalData)
+        self.totalDataLabel.text = "left of \(totalDataString) bundle"
+        let remainingData = currentPackage.totalData - currentPackage.usedData
+        let remainingDataString = DataConverter.addMeasurement(to: remainingData)
+        self.remainingDataLabel.text = remainingDataString
         self.progressView.progress = Float(currentPackage.usedData / currentPackage.totalData)
     }
     

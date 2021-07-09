@@ -26,9 +26,9 @@ class RefillDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(price: Int, name: String) {
-        self.priceLabel.text = "\(price) Ft"
-        self.dataLabel.text = name
+    func configure(from package: RefillDataPackage) {
+        self.priceLabel.text = "\(package.price) Ft"
+        self.dataLabel.text = package.name
     }
     
     //MARK: UI setup

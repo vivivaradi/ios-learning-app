@@ -15,6 +15,8 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var myPackage = CurrentDataPackage(name: "Osztható Adat 20 GB", totalData: 20480, usedData: 14782, expirationDate: Date())
+    
     var packages = [
         RefillDataPackage(name: "Osztható PluszAdat 300MB", price: 750),
         RefillDataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
@@ -49,7 +51,7 @@ extension DashboardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let package = packages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as! RefillDataCell
-        cell.configure(price: package.price, name: package.name)
+        cell.configure(from: package)
         return cell
     }
     
