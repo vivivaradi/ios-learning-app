@@ -10,6 +10,7 @@ import UIKit
 
 class CurrentDataCell: UITableViewCell {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var headerLogoImage: UIImageView!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var cellLogoImage: UIImageView!
@@ -47,6 +48,13 @@ class CurrentDataCell: UITableViewCell {
         self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")
         self.progressView.trackTintColor = UIColor(named: "ProgressBarGrey")
         self.progressView.progressTintColor = UIColor(named: "VodafoneRed")
+        self.containerView.layer.masksToBounds = false
+        self.containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.containerView.layer.shadowOpacity = 1
+
+        self.containerView.layer.shadowRadius = 6
+
+        self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
     }
     

@@ -103,6 +103,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cellLogoImage" destination="2kd-tz-xDL" id="faG-IQ-vPP"/>
+                <outlet property="containerView" destination="ti8-uX-t2o" id="UKy-bu-sjj"/>
                 <outlet property="headerLogoImage" destination="JkY-hb-Wre" id="Gnt-Ne-p51"/>
                 <outlet property="myDataLabel" destination="wyJ-gQ-4pP" id="AHI-v0-eFN"/>
                 <outlet property="progressView" destination="SaN-1G-qH2" id="WZw-fD-RAb"/>
