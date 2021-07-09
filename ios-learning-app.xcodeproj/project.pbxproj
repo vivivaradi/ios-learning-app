@@ -19,6 +19,8 @@
 		D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5AF269831D600B6E4EB /* DataConverter.swift */; };
 		D444D5B226985F4A00B6E4EB /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B126985F4900B6E4EB /* Package.swift */; };
 		D444D5B42698604400B6E4EB /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B32698604400B6E4EB /* SectionData.swift */; };
+		D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */; };
+		D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */; };
 		D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* RefillDataCell.swift */; };
 		D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* RefillDataCell.xib */; };
 		D47DCF0C26949662000D2713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0B26949662000D2713 /* Constants.swift */; };
@@ -56,6 +58,8 @@
 		D444D5AF269831D600B6E4EB /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
 		D444D5B126985F4900B6E4EB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D444D5B32698604400B6E4EB /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
+		D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		D47DCF0726948C73000D2713 /* RefillDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCell.swift; sourceTree = "<group>"; };
 		D47DCF0826948C73000D2713 /* RefillDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillDataCell.xib; sourceTree = "<group>"; };
 		D47DCF0B26949662000D2713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		D42BBF392695A29E003DBAB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D444D5B526987EDA00B6E4EB /* SectionHeaderCell */,
 				D42BBF3B2695AD44003DBAB5 /* CurrentDataCell */,
 				D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */,
 			);
@@ -187,6 +192,15 @@
 				D4A1FA0526657C0F0013FBBE /* SessionManager.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		D444D5B526987EDA00B6E4EB /* SectionHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */,
+				D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */,
+			);
+			path = SectionHeaderCell;
 			sourceTree = "<group>";
 		};
 		D47DCF02269478A5000D2713 /* View */ = {
@@ -380,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */,
 				D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */,
 				D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */,
 				D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */,
@@ -440,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */,
 				D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */,
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
 				D444D5B42698604400B6E4EB /* SectionData.swift in Sources */,

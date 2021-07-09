@@ -38,7 +38,7 @@ class CurrentDataCell: UITableViewCell {
         let remainingData = package.totalData - package.usedData
         let remainingDataString = DataConverter.addMeasurement(to: remainingData)
         self.remainingDataLabel.text = remainingDataString
-        self.progressView.progress = Float(package.usedData / package.totalData)
+        self.progressView.progress = (Float(package.usedData) / Float(package.totalData))
     }
     
     //MARK: UI setup
@@ -55,7 +55,7 @@ class CurrentDataCell: UITableViewCell {
         self.containerView.layer.shadowRadius = 6
 
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        
+        self.progressView.layer.cornerRadius = 10
     }
     
 }
