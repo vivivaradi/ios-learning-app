@@ -31,14 +31,14 @@ class CurrentDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(currentPackage: CurrentDataPackage) {
-        self.myDataLabel.text = currentPackage.name
-        let totalDataString = DataConverter.addMeasurement(to: currentPackage.totalData)
+    func configure(from package: CurrentDataPackage) {
+        self.myDataLabel.text = package.name
+        let totalDataString = DataConverter.addMeasurement(to: package.totalData)
         self.totalDataLabel.text = "left of \(totalDataString) bundle"
-        let remainingData = currentPackage.totalData - currentPackage.usedData
+        let remainingData = package.totalData - package.usedData
         let remainingDataString = DataConverter.addMeasurement(to: remainingData)
         self.remainingDataLabel.text = remainingDataString
-        self.progressView.progress = Float(currentPackage.usedData / currentPackage.totalData)
+        self.progressView.progress = Float(package.usedData / package.totalData)
     }
     
     //MARK: UI setup

@@ -8,10 +8,16 @@
 
 import Foundation
 
-struct CurrentDataPackage {
-    let name: String
+class CurrentDataPackage: Package {
     let totalData: Int
     let usedData: Int
     let expirationDate: Date
     
+    init(name: String, totalData: Int, usedData: Int, expirationDate: Date) {
+        self.totalData = totalData
+        self.usedData = usedData
+        self.expirationDate = expirationDate
+        super.init(name)
+        
+    }
 }

@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct RefillDataPackage {
-    let name : String
-    let price: Int
+class RefillDataPackage: Package {
+    var price: Int
     
+    init(name: String, price: Int) {
+        self.price = price
+        super.init(name)
+        
+    }
 }

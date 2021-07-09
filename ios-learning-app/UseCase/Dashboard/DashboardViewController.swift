@@ -14,17 +14,18 @@ class DashboardViewController: UIViewController {
     var viewModel: DashboardViewModelType!
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var myPackage = CurrentDataPackage(name: "Osztható Adat 20 GB", totalData: 20480, usedData: 14782, expirationDate: Date())
-    
-    var refillPackages = [
-        RefillDataPackage(name: "Osztható PluszAdat 300MB", price: 750),
-        RefillDataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
-    ]
-    
-    var dataPackages = [
-        RefillDataPackage(name: "Navigate Pass", price: 1000),
-        RefillDataPackage(name: "Music Pass", price: 1000)
+ 
+    var sections = [
+        SectionData(title: "", data: [
+            CurrentDataPackage(name: "Osztható Adat 20 GB", totalData: 20480, usedData: 14782, expirationDate: Date())]),
+        SectionData(title: "Refills", data: [
+            RefillDataPackage(name: "Osztható PluszAdat 300MB", price: 750),
+            RefillDataPackage(name: "Osztható PluszAdat 1GB", price: 1800)
+        ]),
+        SectionData(title: "Unlimited Content Packages", data: [
+            RefillDataPackage(name: "Navigate Pass", price: 1000),
+            RefillDataPackage(name: "Music Pass", price: 1000)
+        ])
     ]
     
     override func viewDidLoad() {
@@ -51,28 +52,32 @@ class DashboardViewController: UIViewController {
 
 extension DashboardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return refillPackages.count
+        let count = sections[section].itemCount
+        return count
     }
     
-    fileprivate func configureCell(_ tableView: UITableView, _ indexPath: IndexPath, _ package: RefillDataPackage, identifier: String) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as! RefillDataCell
-        cell.configure(from: package)
-        return cell
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell
-        
-        switch (indexPath.section) {
-        case 0: {
-            let package = myPackage
-            cell = configureCell(tableView, indexPath, <#T##package: RefillDataPackage##RefillDataPackage#>, identifier: <#T##String#>)
+    
+        if (indexPath.section == 0) {
+            let cellData = sections[indexPath.section].data[indexPath.row] as! CurrentDataPackage
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.currentDataCellIdentifier, for: indexPath) as! CurrentDataCell
+            cell.configure(from: cellData)
+            return cell
+        } else {
+            let cellData = sections[indexPath.section].data[indexPath.row] as! RefillDataPackage
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as! RefillDataCell
+            cell.configure(from: cellData)
+            return cell
         }
-        let package = refillPackages[indexPath.row]
-        return configureCell(tableView, indexPath, package, identifier: <#String#>)
+            
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].title
     }
 }

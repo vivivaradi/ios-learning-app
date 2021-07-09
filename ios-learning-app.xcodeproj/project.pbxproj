@@ -17,6 +17,8 @@
 		D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */; };
 		D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */; };
 		D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5AF269831D600B6E4EB /* DataConverter.swift */; };
+		D444D5B226985F4A00B6E4EB /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B126985F4900B6E4EB /* Package.swift */; };
+		D444D5B42698604400B6E4EB /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B32698604400B6E4EB /* SectionData.swift */; };
 		D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* RefillDataCell.swift */; };
 		D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* RefillDataCell.xib */; };
 		D47DCF0C26949662000D2713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0B26949662000D2713 /* Constants.swift */; };
@@ -52,6 +54,8 @@
 		D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		D444D5AF269831D600B6E4EB /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
+		D444D5B126985F4900B6E4EB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		D444D5B32698604400B6E4EB /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		D47DCF0726948C73000D2713 /* RefillDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCell.swift; sourceTree = "<group>"; };
 		D47DCF0826948C73000D2713 /* RefillDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillDataCell.xib; sourceTree = "<group>"; };
 		D47DCF0B26949662000D2713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 			children = (
 				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
 				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
+				D444D5B126985F4900B6E4EB /* Package.swift */,
+				D444D5B32698604400B6E4EB /* SectionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			files = (
 				D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */,
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
+				D444D5B42698604400B6E4EB /* SectionData.swift in Sources */,
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
@@ -454,6 +461,7 @@
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
+				D444D5B226985F4A00B6E4EB /* Package.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
