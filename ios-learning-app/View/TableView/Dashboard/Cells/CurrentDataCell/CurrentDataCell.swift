@@ -56,7 +56,14 @@ class CurrentDataCell: UITableViewCell {
         
         self.progressView.trackTintColor = UIColor(named: "ProgressBarGrey")
         self.progressView.progressTintColor = UIColor(named: "VodafoneRed")
-        self.progressView.layer.cornerRadius = 10
+        self.progressView.clipsToBounds = true
+        self.progressView.layer.cornerRadius = 8
+        self.progressView.layer.sublayers?.forEach({ layer in
+            layer.cornerRadius = 8
+        })
+        self.progressView.subviews.forEach { view in
+            view.clipsToBounds = true
+        }
         
         self.containerView.layer.masksToBounds = false
         self.containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
