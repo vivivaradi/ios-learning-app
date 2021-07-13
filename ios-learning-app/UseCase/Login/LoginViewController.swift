@@ -71,6 +71,7 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor(named: "VodafoneRed")
         LoginCard.layer.cornerRadius = 5
         LoginButton.layer.cornerRadius = 5
+        self.LoginButton.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
     }
 }
 

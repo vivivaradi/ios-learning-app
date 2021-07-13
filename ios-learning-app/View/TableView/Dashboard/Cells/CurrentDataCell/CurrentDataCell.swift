@@ -45,6 +45,12 @@ class CurrentDataCell: UITableViewCell {
     func setupStyle() {
         self.headerLogoImage.image = UIImage(named: "ListLogoPlaceholder")
         self.welcomeLabel.text = "Welcome lorem ipsum!"
+        self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
+        self.myDataLabel.font = UIFont(name: Constants.roboto, size: 20)
+        self.remainingDataLabel.font = UIFont(name: Constants.roboto, size: 36)
+        self.totalDataLabel.font = UIFont(name: Constants.roboto, size: 16)
+        self.remainingDaysLabel.font = UIFont(name: Constants.roboto, size: 16)
+        self.remainingDaysLabel.textColor = UIColor(red: 0.686, green: 0.686, blue: 0.686, alpha: 1)
         self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")
         self.progressView.trackTintColor = UIColor(named: "ProgressBarGrey")
         self.progressView.progressTintColor = UIColor(named: "VodafoneRed")

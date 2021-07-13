@@ -19,4 +19,7 @@ struct Constants {
     static let refillDataCellNibName = "RefillDataCell"
     static let currentDataCellNibName = "CurrentDataCell"
     static let sectionHeaderCellNibName = "SectionHeaderCell"
+    
+    //MARK: Font names
+    static let roboto = "Roboto-Regular"
 }
