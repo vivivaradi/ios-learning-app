@@ -13,8 +13,6 @@ class SectionHeaderCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        setupStyle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,9 +24,11 @@ class SectionHeaderCell: UITableViewCell {
     private func setupStyle() {
         self.titleLabel.font = UIFont(name: "Roboto-Regular", size: 20)
         self.backgroundColor = .white
+        self.layoutIfNeeded()
     }
     
     func configure(with title: String) {
         self.titleLabel.text = title
+        self.setupStyle()
     }
 }

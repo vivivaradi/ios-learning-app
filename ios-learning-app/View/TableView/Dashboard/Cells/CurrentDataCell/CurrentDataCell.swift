@@ -22,7 +22,6 @@ class CurrentDataCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupStyle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,6 +38,7 @@ class CurrentDataCell: UITableViewCell {
         let remainingDataString = DataConverter.addMeasurement(to: remainingData)
         self.remainingDataLabel.text = remainingDataString
         self.progressView.progress = (Float(package.usedData) / Float(package.totalData))
+        self.setupStyle()
     }
     
     //MARK: UI setup
@@ -56,6 +56,7 @@ class CurrentDataCell: UITableViewCell {
 
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.progressView.layer.cornerRadius = 10
+        self.layoutIfNeeded()
     }
     
 }

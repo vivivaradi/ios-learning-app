@@ -16,9 +16,7 @@ class RefillDataCell: UITableViewCell {
     @IBOutlet weak var dataLabel: UILabel!
 
     override func awakeFromNib() {
-        super.awakeFromNib()
-        setupStyle()
-    }
+        super.awakeFromNib()    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -29,6 +27,7 @@ class RefillDataCell: UITableViewCell {
     func configure(from package: RefillDataPackage) {
         self.priceLabel.text = "\(package.price) Ft"
         self.dataLabel.text = package.name
+        self.setupStyle()
     }
     
     //MARK: UI setup
@@ -43,6 +42,7 @@ class RefillDataCell: UITableViewCell {
         self.containerView.layer.borderWidth = 0.5
 
         self.containerView.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+        self.layoutIfNeeded()
        }
     
 }

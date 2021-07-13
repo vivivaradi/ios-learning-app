@@ -37,15 +37,16 @@ class DashboardViewController: UIViewController {
     }
     
     private func setupStyle() {
-        self.tableView.tableHeaderView?.backgroundColor = UIColor.white
         
     }
     
     
     private func setupTableView() {
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.currentDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.currentDataCellIdentifier)
+        self.tableView.register(UINib(nibName: Constants.sectionHeaderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sectionHeaderCellIdentifier)
     }
 }
 
@@ -73,7 +74,7 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return sections.count
     }
     
 
@@ -94,4 +95,9 @@ extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
 }
+
