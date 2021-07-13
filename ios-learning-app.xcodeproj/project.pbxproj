@@ -104,11 +104,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D40C6AB7269D9F35003EA7C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D47DCF0B26949662000D2713 /* Constants.swift */,
+				D444D5AF269831D600B6E4EB /* DataConverter.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D4179AD02689DAFA008A4B67 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
 				D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */,
+				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -132,9 +141,9 @@
 		D42BBF392695A29E003DBAB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D444D5B526987EDA00B6E4EB /* SectionHeaderCell */,
 				D42BBF3B2695AD44003DBAB5 /* CurrentDataCell */,
 				D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */,
+				D444D5B526987EDA00B6E4EB /* SectionHeaderCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -169,9 +178,9 @@
 		D43F5E04267010FF00C17DF9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */,
 				D4931BE92657A6720017AD81 /* LaunchScreen.storyboard */,
 				D4931BE42657A6700017AD81 /* Login.storyboard */,
-				D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -180,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				D43F5DFD2670065D00C17DF9 /* API */,
-				D4A1FA0326657C020013FBBE /* NetworkManager.swift */,
 				D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */,
+				D4A1FA0326657C020013FBBE /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -214,9 +223,9 @@
 		D47DCF0D269499D0000D2713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
 				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
 				D444D5B126985F4900B6E4EB /* Package.swift */,
+				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
 				D444D5B32698604400B6E4EB /* SectionData.swift */,
 			);
 			path = Model;
@@ -243,23 +252,22 @@
 		D4931BDD2657A6700017AD81 /* ios-learning-app */ = {
 			isa = PBXGroup;
 			children = (
-				D47DCF0D269499D0000D2713 /* Model */,
-				D47DCF02269478A5000D2713 /* View */,
 				D4179AD02689DAFA008A4B67 /* Assembly */,
-				D4CF2EA626826E41008B72B3 /* Style */,
-				D4D7CCC22679CCF500DF121B /* Mock */,
-				D4E8C6FC267378F100F88572 /* UseCase */,
-				D43F5E072670114600C17DF9 /* Session */,
-				D43F5E062670110F00C17DF9 /* Network */,
-				D43F5E04267010FF00C17DF9 /* Storyboards */,
 				D4931BF52657EF880017AD81 /* Extension */,
 				D4931BF22657BCEE0017AD81 /* Fonts */,
+				D4D7CCC22679CCF500DF121B /* Mock */,
+				D47DCF0D269499D0000D2713 /* Model */,
+				D43F5E062670110F00C17DF9 /* Network */,
+				D43F5E072670114600C17DF9 /* Session */,
+				D43F5E04267010FF00C17DF9 /* Storyboards */,
+				D4CF2EA626826E41008B72B3 /* Style */,
+				D40C6AB7269D9F35003EA7C5 /* Supporting Files */,
+				D4E8C6FC267378F100F88572 /* UseCase */,
+				D47DCF02269478A5000D2713 /* View */,
 				D4931BDE2657A6700017AD81 /* AppDelegate.swift */,
 				D4931BE02657A6700017AD81 /* SceneDelegate.swift */,
 				D4931BE72657A6720017AD81 /* Assets.xcassets */,
 				D4931BEC2657A6720017AD81 /* Info.plist */,
-				D47DCF0B26949662000D2713 /* Constants.swift */,
-				D444D5AF269831D600B6E4EB /* DataConverter.swift */,
 			);
 			path = "ios-learning-app";
 			sourceTree = "<group>";
