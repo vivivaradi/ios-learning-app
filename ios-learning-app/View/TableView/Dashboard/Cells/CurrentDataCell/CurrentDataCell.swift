@@ -31,7 +31,7 @@ class CurrentDataCell: UITableViewCell {
     }
     
     func configure(from package: CurrentDataPackage) {
-        self.myDataLabel.text = package.name
+        self.myDataLabel.text = package.name + "dhgfoisőthisprtoihsőrithgosprtioghsőrpthgsprtihgősrithgőroitgősroitgőrsoigsőorig"
         let totalDataString = DataConverter.addMeasurement(to: package.totalData)
         self.totalDataLabel.text = "left of \(totalDataString) bundle"
         let remainingData = package.totalData - package.usedData
@@ -65,7 +65,7 @@ class CurrentDataCell: UITableViewCell {
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.containerView.layer.cornerRadius = 5
         
-        //self.layoutIfNeeded()
+        self.layoutIfNeeded()
     }
     
 }
