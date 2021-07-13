@@ -85,6 +85,10 @@ extension DashboardViewController: UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerTitle = sections[section].title
         let view = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as! SectionHeaderCell

@@ -21,12 +21,15 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdi-qK-eJg" userLabel="NameLabel">
                                 <rect key="frame" x="16" y="16" width="42" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3cV-NR-Ahy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tst-bW-9Ix" userLabel="PriceLabel">
-                                <rect key="frame" x="16" y="47.666666666666664" width="42" height="20.333333333333336"/>
+                                <rect key="frame" x="16" y="52" width="42" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,27 +37,28 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-1M-0B0">
                                 <rect key="frame" x="313" y="26" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="XXb-1M-0B0" secondAttribute="height" multiplier="1:1" id="QrS-JW-c38"/>
+                                    <constraint firstAttribute="height" constant="32" id="2C3-zb-8Vw"/>
+                                    <constraint firstAttribute="width" constant="32" id="QKo-CM-6tn"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="tst-bW-9Ix" secondAttribute="bottom" constant="16" id="81b-kH-m3d"/>
-                            <constraint firstAttribute="bottom" secondItem="XXb-1M-0B0" secondAttribute="bottom" constant="26" id="9YW-wV-9eV"/>
-                            <constraint firstItem="Fdi-qK-eJg" firstAttribute="leading" secondItem="XUx-gP-n3D" secondAttribute="leading" constant="16" id="PHx-nj-IVa"/>
-                            <constraint firstItem="tst-bW-9Ix" firstAttribute="leading" secondItem="XUx-gP-n3D" secondAttribute="leading" constant="16" id="QIs-65-Yl2"/>
-                            <constraint firstAttribute="trailing" secondItem="XXb-1M-0B0" secondAttribute="trailing" constant="16" id="Wdi-dj-nbc"/>
-                            <constraint firstItem="XXb-1M-0B0" firstAttribute="top" secondItem="XUx-gP-n3D" secondAttribute="top" constant="26" id="XEP-Pg-Upq"/>
-                            <constraint firstItem="Fdi-qK-eJg" firstAttribute="top" secondItem="XUx-gP-n3D" secondAttribute="top" constant="16" id="off-xi-JFb"/>
+                            <constraint firstItem="Fdi-qK-eJg" firstAttribute="leading" secondItem="XUx-gP-n3D" secondAttribute="leading" constant="16" id="2So-V3-sae"/>
+                            <constraint firstItem="Fdi-qK-eJg" firstAttribute="leading" secondItem="tst-bW-9Ix" secondAttribute="leading" id="8Yl-sX-dZ0"/>
+                            <constraint firstAttribute="trailing" secondItem="XXb-1M-0B0" secondAttribute="trailing" constant="16" id="BOq-QL-x7Y"/>
+                            <constraint firstItem="Fdi-qK-eJg" firstAttribute="top" secondItem="XUx-gP-n3D" secondAttribute="top" constant="16" id="Mz6-td-rOK"/>
+                            <constraint firstItem="tst-bW-9Ix" firstAttribute="top" secondItem="Fdi-qK-eJg" secondAttribute="bottom" constant="16" id="NAL-hh-oBD"/>
+                            <constraint firstItem="XXb-1M-0B0" firstAttribute="centerY" secondItem="XUx-gP-n3D" secondAttribute="centerY" id="bCn-Sj-OKY"/>
+                            <constraint firstAttribute="bottom" secondItem="tst-bW-9Ix" secondAttribute="bottom" constant="16" id="hvA-ci-gUb"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="XUx-gP-n3D" secondAttribute="trailing" constant="16" id="4gm-02-x6e"/>
-                    <constraint firstAttribute="bottom" secondItem="XUx-gP-n3D" secondAttribute="bottom" constant="8" id="PYm-jV-wbc"/>
-                    <constraint firstItem="XUx-gP-n3D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RiX-z2-cmk"/>
-                    <constraint firstItem="XUx-gP-n3D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xML-Hf-gQT"/>
+                    <constraint firstAttribute="bottom" secondItem="XUx-gP-n3D" secondAttribute="bottom" constant="8" id="Vrh-wM-tz2"/>
+                    <constraint firstItem="XUx-gP-n3D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="al5-HK-z6P"/>
+                    <constraint firstItem="XUx-gP-n3D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oc7-eF-lcx"/>
+                    <constraint firstAttribute="trailing" secondItem="XUx-gP-n3D" secondAttribute="trailing" constant="16" id="zkX-qT-m3P"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -66,7 +70,7 @@
                 <outlet property="logoImage" destination="XXb-1M-0B0" id="wPZ-hV-V56"/>
                 <outlet property="priceLabel" destination="tst-bW-9Ix" id="xqy-fM-KUK"/>
             </connections>
-            <point key="canvasLocation" x="204" y="147.52623688155924"/>
+            <point key="canvasLocation" x="204" y="147.04433497536945"/>
         </tableViewCell>
     </objects>
 </document>
