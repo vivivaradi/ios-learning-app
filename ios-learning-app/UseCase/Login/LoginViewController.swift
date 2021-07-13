@@ -48,7 +48,8 @@ class LoginViewController: UIViewController {
     fileprivate func navigateToDashboard() {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
-        present(vc, animated: true, completion: nil)
+        UIApplication.shared.windows.first?.rootViewController = vc
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {

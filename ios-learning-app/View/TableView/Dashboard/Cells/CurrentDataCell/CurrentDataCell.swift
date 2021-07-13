@@ -56,6 +56,7 @@ class CurrentDataCell: UITableViewCell {
 
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.progressView.layer.cornerRadius = 10
+        self.containerView.layer.cornerRadius = 5
         self.layoutIfNeeded()
     }
     
