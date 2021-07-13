@@ -41,6 +41,7 @@
 		D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
+		D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
+		D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 			children = (
 				D4931BE22657A6700017AD81 /* LoginViewController.swift */,
 				D4A974F8268272740095EAE0 /* LoginViewModel.swift */,
+				D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */,
 			);
 			name = Login;
 			path = "/Users/newmobileapp/Documents/ios-learning-app/ios-learning-app/UseCase/Login";
@@ -482,6 +485,7 @@
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
+				D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,

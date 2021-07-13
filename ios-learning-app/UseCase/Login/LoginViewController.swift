@@ -42,8 +42,6 @@ class LoginViewController: UIViewController {
         }
     }
 
-    @IBAction func switchPressed(_ sender: UISwitch) {
-    }
     
     fileprivate func navigateToDashboard() {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
@@ -56,11 +54,12 @@ class LoginViewController: UIViewController {
         guard let msisdn = self.MSISDN.text else {
             return
         }
-        self.viewModel.performLogin(msisdn: msisdn)
-        if (self.viewModel.hasActiveSession()) {
-            navigateToDashboard()
-        } else {
-            // show error
+        self.viewModel.performLogin(msisdn: msisdn) { state in
+            switch (state) {
+            case .success: self.navigateToDashboard()
+            case .failure:
+                return
+            }
         }
     }
     

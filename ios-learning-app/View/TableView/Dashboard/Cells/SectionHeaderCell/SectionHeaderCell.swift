@@ -24,7 +24,7 @@ class SectionHeaderCell: UITableViewCell {
     private func setupStyle() {
         self.titleLabel.font = UIFont(name: Constants.roboto, size: 20)
         self.backgroundColor = .white
-        self.layoutIfNeeded()
+        //self.layoutIfNeeded()
     }
     
     func configure(with title: String) {

@@ -12,7 +12,7 @@ import Moya
 
 protocol LoginViewModelType {
     
-    func performLogin(msisdn: String)
+    func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void))
     func hasActiveSession() -> Bool
 }
 
@@ -27,7 +27,7 @@ class LoginViewModel: LoginViewModelType {
         self.networkManager = networkManager
     }
     
-    func performLogin(msisdn: String) {
+    func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void)) {
         self.networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
             switch result {
             case let .success(moyaResponse):
@@ -35,15 +35,16 @@ class LoginViewModel: LoginViewModelType {
                     let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
                     let data = try successfulResponse.map(LoginResponse.self)
                     self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
+                    completion(.success)
                     
                 } catch let error {
                     print(error)
-                    
+                    completion(.failure)
                 }
 
             case let .failure(error):
                 print(error)
-                
+                completion(.failure)
             }
         }
     }

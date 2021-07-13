@@ -66,9 +66,6 @@
                                             <constraint firstAttribute="height" constant="28" id="DQN-5S-KKX"/>
                                             <constraint firstAttribute="width" constant="46" id="IQN-hB-ipP"/>
                                         </constraints>
-                                        <connections>
-                                            <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="qlp-Me-zNp"/>
-                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
                                         <rect key="frame" x="78" y="263.33333333333337" width="92.666666666666686" height="17"/>

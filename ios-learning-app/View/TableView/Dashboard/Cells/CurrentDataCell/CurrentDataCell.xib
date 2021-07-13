@@ -32,33 +32,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="F6P-O1-61G">
-                                <rect key="frame" x="16" y="98.5" width="228" height="37.5"/>
+                                <rect key="frame" x="16" y="52" width="228" height="63"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-cK-soT" userLabel="RemainingDataLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-cK-soT" userLabel="RemainingDataLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="40.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-PK-ENT" userLabel="TotalDataLabel">
-                                        <rect key="frame" x="0.0" y="22.5" width="42" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="nSJ-3q-NkH"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-PK-ENT" userLabel="TotalDataLabel">
+                                        <rect key="frame" x="0.0" y="42.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Mj1-zo-cnH"/>
+                                </constraints>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SaN-1G-qH2">
-                                <rect key="frame" x="16" y="149.5" width="290" height="8"/>
+                                <rect key="frame" x="16" y="128.5" width="290" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="TWp-LB-yDA"/>
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op9-TD-aUc" userLabel="DaysLabel">
-                                <rect key="frame" x="16" y="171.5" width="42" height="20.5"/>
+                                <rect key="frame" x="16" y="150.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                             <constraint firstItem="SaN-1G-qH2" firstAttribute="leading" secondItem="F6P-O1-61G" secondAttribute="leading" id="bW6-tk-JIK"/>
                             <constraint firstItem="SaN-1G-qH2" firstAttribute="centerX" secondItem="ti8-uX-t2o" secondAttribute="centerX" id="hxx-rn-xMq"/>
                             <constraint firstItem="2kd-tz-xDL" firstAttribute="leading" secondItem="ti8-uX-t2o" secondAttribute="leading" constant="16" id="j2Q-uA-Vb6"/>
-                            <constraint firstItem="F6P-O1-61G" firstAttribute="top" secondItem="2kd-tz-xDL" secondAttribute="bottom" constant="62.5" id="j2V-6l-qsX"/>
+                            <constraint firstItem="F6P-O1-61G" firstAttribute="top" secondItem="2kd-tz-xDL" secondAttribute="bottom" constant="16" id="j2V-6l-qsX"/>
                             <constraint firstItem="SaN-1G-qH2" firstAttribute="top" secondItem="F6P-O1-61G" secondAttribute="bottom" constant="13.5" id="jqv-w3-Dg2"/>
                             <constraint firstItem="op9-TD-aUc" firstAttribute="top" secondItem="SaN-1G-qH2" secondAttribute="bottom" constant="14" id="mIW-Dr-Pxh"/>
                         </constraints>
