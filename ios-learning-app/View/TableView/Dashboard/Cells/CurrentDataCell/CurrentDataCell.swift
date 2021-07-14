@@ -11,8 +11,6 @@ import UIKit
 class CurrentDataCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var headerLogoImage: UIImageView!
-    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var cellLogoImage: UIImageView!
     @IBOutlet weak var myDataLabel: UILabel!
     @IBOutlet weak var remainingDataLabel: UILabel!
@@ -31,7 +29,7 @@ class CurrentDataCell: UITableViewCell {
     }
     
     func configure(from package: CurrentDataPackage) {
-        self.myDataLabel.text = package.name + "dhgfoisőthisprtoihsőrithgosprtioghsőrpthgsprtihgősrithgőroitgősroitgőrsoigsőorig"
+        self.myDataLabel.text = package.name
         let totalDataString = DataConverter.addMeasurement(to: package.totalData)
         self.totalDataLabel.text = "left of \(totalDataString) bundle"
         let remainingData = package.totalData - package.usedData
@@ -43,11 +41,9 @@ class CurrentDataCell: UITableViewCell {
     
     //MARK: UI setup
     func setupStyle() {
-        self.headerLogoImage.image = UIImage(named: "ListLogoPlaceholder")
+
         self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")
         
-        self.welcomeLabel.text = "Welcome lorem ipsum!"
-        self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
         self.myDataLabel.font = UIFont(name: Constants.roboto, size: 20)
         self.remainingDataLabel.font = UIFont(name: Constants.roboto, size: 36)
         self.totalDataLabel.font = UIFont(name: Constants.roboto, size: 16)
