@@ -41,6 +41,8 @@
 		D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
+		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
+		D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */; };
 		D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
+		D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
+		D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeaderCell.xib; sourceTree = "<group>"; };
 		D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D42BBF3B2695AD44003DBAB5 /* CurrentDataCell */,
+				D4F13B4A269F2CC700C90344 /* DashboardHeaderCell */,
 				D42BBF3A2695A2FD003DBAB5 /* RefillDataCell */,
 				D444D5B526987EDA00B6E4EB /* SectionHeaderCell */,
 			);
@@ -336,6 +341,15 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		D4F13B4A269F2CC700C90344 /* DashboardHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */,
+				D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */,
+			);
+			path = DashboardHeaderCell;
+			sourceTree = "<group>";
+		};
 		E988A046F700C45BC9F74151 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */,
+				D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */,
 				D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */,
 				D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */,
 				D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */,
@@ -483,6 +498,7 @@
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
+				D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
 				D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */,
