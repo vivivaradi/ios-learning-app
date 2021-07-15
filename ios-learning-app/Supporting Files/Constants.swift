@@ -14,11 +14,13 @@ struct Constants {
     static let refillDataCellIdentifier = "RefillDataCell"
     static let currentDataCellIdentifier = "CurrentDataCell"
     static let sectionHeaderCellIdentifier = "SectionHeaderCell"
+    static let dashboardHeaderCellIdentifier = "DashboardHeaderCell"
     
     //MARK: Custom cell nib names
     static let refillDataCellNibName = "RefillDataCell"
     static let currentDataCellNibName = "CurrentDataCell"
     static let sectionHeaderCellNibName = "SectionHeaderCell"
+    static let dashboardHeaderCellNibName = "DashboardHeaderCell"
     
     //MARK: Font names
     static let roboto = "Roboto-Regular"

@@ -47,6 +47,7 @@ class DashboardViewController: UIViewController {
         self.tableView.register(UINib(nibName: Constants.refillDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.refillDataCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.currentDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.currentDataCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.sectionHeaderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sectionHeaderCellIdentifier)
+        self.tableView.register(UINib(nibName: Constants.dashboardHeaderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dashboardHeaderCellIdentifier)
     }
 }
 
@@ -90,10 +91,17 @@ extension DashboardViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerTitle = sections[section].title
-        let view = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as! SectionHeaderCell
-        view.configure(with: headerTitle)
-        return view
+        if (section == 0) {
+            let view = tableView.dequeueReusableCell(withIdentifier: Constants.dashboardHeaderCellIdentifier) as! DashboardHeaderCell
+            view.configure()
+            return view
+        } else {
+            let headerTitle = sections[section].title
+            let view = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as! SectionHeaderCell
+            view.configure(with: headerTitle)
+            return view
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

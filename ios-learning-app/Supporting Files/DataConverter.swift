@@ -12,8 +12,9 @@ class DataConverter {
     
     static func addMeasurement(to data: Int) -> String {
         let dataString: String
+        let doubleData = Double(data) / 1024.0
         if (data > 1024) {
-            dataString = "\(Float(data) / 1024.0)GB"
+            dataString = "\(String(format: "%.1f", doubleData))GB"
         } else {
             dataString = "\(data)MB"
         }

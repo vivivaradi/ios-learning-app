@@ -10,6 +10,9 @@ import UIKit
 
 class DashboardHeaderCell: UITableViewCell {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var headerLogoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,16 @@ class DashboardHeaderCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func setupStyle() {
+        self.headerLogoImage.image = UIImage(named: "HeaderLogoPlaceholder")
+        self.welcomeLabel.text = "Welcome lorem ipsum!"
+        self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
+    }
+    
+    func configure() {
+        setupStyle()
     }
     
 }

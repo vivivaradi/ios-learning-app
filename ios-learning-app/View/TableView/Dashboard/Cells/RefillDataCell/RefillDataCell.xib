@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,7 +44,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fdi-qK-eJg" firstAttribute="leading" secondItem="XUx-gP-n3D" secondAttribute="leading" constant="16" id="2So-V3-sae"/>
                             <constraint firstItem="Fdi-qK-eJg" firstAttribute="leading" secondItem="tst-bW-9Ix" secondAttribute="leading" id="8Yl-sX-dZ0"/>
@@ -65,7 +67,6 @@
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="containerView" destination="XUx-gP-n3D" id="dGa-Q7-9ly"/>
-                <outlet property="contentView" destination="XUx-gP-n3D" id="bcd-EJ-VSq"/>
                 <outlet property="dataLabel" destination="Fdi-qK-eJg" id="NWH-ye-EdE"/>
                 <outlet property="logoImage" destination="XXb-1M-0B0" id="wPZ-hV-V56"/>
                 <outlet property="priceLabel" destination="tst-bW-9Ix" id="xqy-fM-KUK"/>
@@ -73,4 +74,9 @@
             <point key="canvasLocation" x="204" y="147.04433497536945"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
