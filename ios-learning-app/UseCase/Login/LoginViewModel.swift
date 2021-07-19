@@ -29,7 +29,10 @@ class LoginViewModel: LoginViewModelType {
     
     var fieldsAreValid: Observable<Bool> {
         return Observable.combineLatest(msisdnValue, passwordValue) { msisdn, password in
-            
+            guard msisdn != nil && password != nil else {
+                return false
+            }
+            return msisdn!.isMsisdnValid() && password!.isPasswordValid()
         }
     }
     
