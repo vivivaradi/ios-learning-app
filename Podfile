@@ -11,5 +11,7 @@ target 'ios-learning-app' do
   pod 'Swinject', '2.6.2'
   pod 'SwinjectStoryboard', '2.2.0'
   pod 'SwinjectAutoregistration', '2.6.1'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
 
 end

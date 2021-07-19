@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
             case .failure:
                 return
             }
-        }
+        } 
     }
     
     // MARK: - UI setup
