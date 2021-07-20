@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class ColorChangingButton: UIButton {
-    let red = UIColor(named: "VodafoneRed")
-    let gray = UIColor(named: "DisabledButtonGrey")
+    let red = Color.vodafoneRed
+    let gray = Color.lightGrey
     
     override var isEnabled: Bool {
         didSet {

@@ -181,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				D43F5DFE2670067300C17DF9 /* LoginAPI.swift */,
-				D4A974FA268279F10095EAE0 /* LoginResponse.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -236,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
+				D4A974FA268279F10095EAE0 /* LoginResponse.swift */,
 				D444D5B126985F4900B6E4EB /* Package.swift */,
 				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
 				D444D5B32698604400B6E4EB /* SectionData.swift */,

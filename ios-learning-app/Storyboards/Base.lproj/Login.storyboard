@@ -69,7 +69,7 @@
                                         </constraints>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
-                                        <rect key="frame" x="78" y="263.33333333333337" width="92.666666666666686" height="17"/>
+                                        <rect key="frame" x="78" y="263.33333333333337" width="91.333333333333314" height="17"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" name="DarkGrey"/>
                                         <nil key="highlightedColor"/>
@@ -135,6 +135,7 @@
                         <outlet property="loginCard" destination="rbO-6v-BEP" id="fNT-Y2-UHN"/>
                         <outlet property="msisdnField" destination="D95-5u-Rdi" id="558-3O-Whv"/>
                         <outlet property="passwordField" destination="pfK-UY-O3P" id="Af5-y8-3P1"/>
+                        <outlet property="rememberMeLabel" destination="C0T-6P-pqw" id="yH7-Go-SFL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

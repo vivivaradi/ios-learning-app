@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 open class MultiMoyaProvider: MoyaProvider<MultiTarget> {
     
@@ -19,5 +20,14 @@ open class MultiMoyaProvider: MoyaProvider<MultiTarget> {
                          plugins: [PluginType] = [],
                          trackInflights: Bool = false) {
         super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, callbackQueue: callbackQueue, session: session, plugins: plugins, trackInflights: trackInflights)
+    }
+}
+
+extension MultiMoyaProvider {
+    func requestMapped<T, M>(_ target: T, callbackQueue: DispatchQueue? = nil) -> Single<M> where T: TargetType, M: Codable {
+        return self.rx.request(MultiTarget(target), callbackQueue: callbackQueue)
+            .asObservable()
+            .map(M.self)
+            .asSingle()
     }
 }

@@ -53,10 +53,15 @@ class LoginViewController: UIViewController {
     // MARK: - UI setup
     
     @IBOutlet weak var loginCard: UIView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
     func setupStyle() {
-        self.view.backgroundColor = UIColor(named: "VodafoneRed")
-        loginCard.layer.cornerRadius = 5
-        loginButton.layer.cornerRadius = 5
+        self.view.backgroundColor = Color.vodafoneRed
+        self.msisdnField.textColor = Color.lightGrey
+        self.passwordField.textColor = Color.lightGrey
+        self.rememberMeLabel.textColor = Color.mediumGrey
+        self.rememberMeLabel.font = UIFont(name: Constants.roboto, size: 14)
+        self.loginCard.layer.cornerRadius = 5
+        self.loginButton.layer.cornerRadius = 5
         self.loginButton.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
     }
 }

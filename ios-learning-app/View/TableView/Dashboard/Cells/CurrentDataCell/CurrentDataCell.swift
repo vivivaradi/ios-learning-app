@@ -48,10 +48,10 @@ class CurrentDataCell: UITableViewCell {
         self.remainingDataLabel.font = UIFont(name: Constants.roboto, size: 36)
         self.totalDataLabel.font = UIFont(name: Constants.roboto, size: 16)
         self.remainingDaysLabel.font = UIFont(name: Constants.roboto, size: 16)
-        self.remainingDaysLabel.textColor = UIColor(red: 0.686, green: 0.686, blue: 0.686, alpha: 1)
+        self.remainingDaysLabel.textColor = Color.lightGrey
         
-        self.progressView.trackTintColor = UIColor(named: "ProgressBarGrey")
-        self.progressView.progressTintColor = UIColor(named: "VodafoneRed")
+        self.progressView.trackTintColor = Color.progressTintGrey
+        self.progressView.progressTintColor = Color.vodafoneRed
         self.progressView.clipsToBounds = true
         self.progressView.layer.cornerRadius = 8
         self.progressView.layer.sublayers?.forEach({ layer in
@@ -62,7 +62,7 @@ class CurrentDataCell: UITableViewCell {
         }
         
         self.containerView.layer.masksToBounds = false
-        self.containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.containerView.layer.shadowColor = Color.shadowColor.cgColor
         self.containerView.layer.shadowOpacity = 1
         self.containerView.layer.shadowRadius = 6
         self.containerView.layer.shadowOffset = CGSize(width: 0, height: 3)
