@@ -7,12 +7,24 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LoginInteractorType {
-    func login()
+    func login(msisdn: String) -> Single<LoginResponse>
     
 }
 
 class LoginInteractor: LoginInteractorType {
+    let networkManager: NetworkingManager!
+    
+    init(networkManager: NetworkingManager) {
+        self.networkManager = networkManager
+    }
+    
+    func login(msisdn: String) -> Single<LoginResponse> {
+        let endpoint = LoginAPI.loginUser(msisdn: msisdn)
+        return self.networkManager.provider.rx.requestMapped(endpoint)
+    }
+    
     
 }

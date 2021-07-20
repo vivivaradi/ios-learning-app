@@ -14,41 +14,22 @@ import RxCocoa
 
 protocol LoginViewModelType {
     
-    func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void))
+    func performLogin(msisdn: String) -> Single<LoginResponse>
     func hasActiveSession() -> Bool
 }
 
 class LoginViewModel: LoginViewModelType {    
     
     var sessionManager: SessioningManager!
-    var networkManager: NetworkingManager!
+    var loginInteractor: LoginInteractorType!
     
-    init(sessionManager: SessioningManager,
-         networkManager: NetworkingManager) {
+    init(sessionManager: SessioningManager, loginInteractor: LoginInteractorType) {
         self.sessionManager = sessionManager
-        self.networkManager = networkManager
+        self.loginInteractor = loginInteractor
     }
     
-    func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void)) {
-        self.networkManager.provider.request(MultiTarget(LoginAPI.loginUser(msisdn: msisdn))) { result in
-            switch result {
-            case let .success(moyaResponse):
-                do {
-                    let successfulResponse = try moyaResponse.filterSuccessfulStatusCodes()
-                    let data = try successfulResponse.map(LoginResponse.self)
-                    self.sessionManager.startSession(token: data.accessToken, telnum: msisdn)
-                    completion(.success)
-                    
-                } catch let error {
-                    print(error)
-                    completion(.failure)
-                }
-
-            case let .failure(error):
-                print(error)
-                completion(.failure)
-            }
-        }
+    func performLogin(msisdn: String) -> Single<LoginResponse>{
+        return self.loginInteractor.login(msisdn: msisdn)
     }
     
     func hasActiveSession() -> Bool {

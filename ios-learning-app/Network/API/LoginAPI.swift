@@ -34,7 +34,7 @@ extension LoginAPI: TargetType {
     
     var sampleData: Data {
         switch self {
-        case .loginUser(let msisdn):
+        case .loginUser(_):
             return stubbedResponse("access_token")
         }
     }

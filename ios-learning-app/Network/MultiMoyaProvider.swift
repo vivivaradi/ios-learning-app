@@ -23,9 +23,9 @@ open class MultiMoyaProvider: MoyaProvider<MultiTarget> {
     }
 }
 
-extension MultiMoyaProvider {
+extension Reactive where Base: MultiMoyaProvider {
     func requestMapped<T, M>(_ target: T, callbackQueue: DispatchQueue? = nil) -> Single<M> where T: TargetType, M: Codable {
-        return self.rx.request(MultiTarget(target), callbackQueue: callbackQueue)
+        return request(MultiTarget(target), callbackQueue: callbackQueue)
             .asObservable()
             .map(M.self)
             .asSingle()

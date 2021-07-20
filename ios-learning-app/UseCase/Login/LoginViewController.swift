@@ -40,14 +40,13 @@ class LoginViewController: UIViewController {
         guard let msisdn = self.msisdnField.text else {
             return
         }
-        self.viewModel.performLogin(msisdn: msisdn) { state in
-            switch (state) {
-            case .success:
-                self.navigateToDashboard()
-            case .failure:
-                return
-            }
-        } 
+        self.viewModel.performLogin(msisdn: msisdn).subscribe { _ in
+            self.navigateToDashboard()
+        } onError: { error in
+            print(error)
+        }
+        .disposed(by: bag)
+
     }
     
     // MARK: - UI setup
