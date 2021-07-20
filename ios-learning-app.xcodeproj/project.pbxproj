@@ -40,6 +40,7 @@
 		D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FA268279F10095EAE0 /* LoginResponse.swift */; };
 		D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4C7FF0626A6BA46008062A1 /* ColorChangingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0526A6BA46008062A1 /* ColorChangingButton.swift */; };
+		D4C7FF0926A6D441008062A1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0826A6D441008062A1 /* Color.swift */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
@@ -84,6 +85,7 @@
 		D4A974F8268272740095EAE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D4A974FA268279F10095EAE0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		D4C7FF0526A6BA46008062A1 /* ColorChangingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangingButton.swift; sourceTree = "<group>"; };
+		D4C7FF0826A6D441008062A1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
@@ -270,7 +272,7 @@
 				D43F5E062670110F00C17DF9 /* Network */,
 				D43F5E072670114600C17DF9 /* Session */,
 				D43F5E04267010FF00C17DF9 /* Storyboards */,
-				D4CF2EA626826E41008B72B3 /* Style */,
+				D4C7FF0726A6D433008062A1 /* Style */,
 				D40C6AB7269D9F35003EA7C5 /* Supporting Files */,
 				D4E8C6FC267378F100F88572 /* UseCase */,
 				D47DCF02269478A5000D2713 /* View */,
@@ -307,9 +309,10 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		D4CF2EA626826E41008B72B3 /* Style */ = {
+		D4C7FF0726A6D433008062A1 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				D4C7FF0826A6D441008062A1 /* Color.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
+				D4C7FF0926A6D441008062A1 /* Color.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
 				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,
