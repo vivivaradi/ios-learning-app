@@ -63,18 +63,16 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    var fieldsAreValid: Observable<Bool> {
-        return Observable.combineLatest(msisdnValue, passwordValue) { msisdn, password in
-            guard let msisdn = msisdn, let password = password else {
-                return false
-            }
-            return msisdn.isMsisdnValid() && password.isPasswordValid()
-        }
-    }
-    
     private func setupValidation() {
         self.msisdnField.rx.text.bind(to: msisdnValue).disposed(by: bag)
         self.passwordField.rx.text.bind(to: passwordValue).disposed(by: bag)
+        
+        let fieldsAreValid: Observable<Bool> = Observable.combineLatest(msisdnValue, passwordValue) { msisdn, password in
+                guard let msisdn = msisdn, let password = password else {
+                    return false
+                }
+                return msisdn.isMsisdnValid() && password.isPasswordValid()
+            }
         
         fieldsAreValid.bind(to: self.loginButton.rx.isEnabled).disposed(by: bag)
     }
