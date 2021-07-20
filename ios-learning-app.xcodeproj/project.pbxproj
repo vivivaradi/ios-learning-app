@@ -41,6 +41,8 @@
 		D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D7CCC32679CD2400DF121B /* access_token.json */; };
 		D4C7FF0626A6BA46008062A1 /* ColorChangingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0526A6BA46008062A1 /* ColorChangingButton.swift */; };
 		D4C7FF0926A6D441008062A1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0826A6D441008062A1 /* Color.swift */; };
+		D4C7FF0C26A6FAB4008062A1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */; };
+		D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
@@ -86,6 +88,8 @@
 		D4A974FA268279F10095EAE0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		D4C7FF0526A6BA46008062A1 /* ColorChangingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangingButton.swift; sourceTree = "<group>"; };
 		D4C7FF0826A6D441008062A1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			children = (
 				D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */,
 				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
+				D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				D4179AD02689DAFA008A4B67 /* Assembly */,
 				D4931BF52657EF880017AD81 /* Extension */,
 				D4931BF22657BCEE0017AD81 /* Fonts */,
+				D4C7FF0A26A6FA7F008062A1 /* Interactor */,
 				D4D7CCC22679CCF500DF121B /* Mock */,
 				D47DCF0D269499D0000D2713 /* Model */,
 				D43F5E062670110F00C17DF9 /* Network */,
@@ -315,6 +321,14 @@
 				D4C7FF0826A6D441008062A1 /* Color.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		D4C7FF0A26A6FA7F008062A1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		D4D7CCC22679CCF500DF121B /* Mock */ = {
@@ -498,12 +512,14 @@
 				D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */,
 				D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */,
 				D4C7FF0626A6BA46008062A1 /* ColorChangingButton.swift in Sources */,
+				D4C7FF0C26A6FAB4008062A1 /* LoginInteractor.swift in Sources */,
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
 				D444D5B42698604400B6E4EB /* SectionData.swift in Sources */,
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
 				D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
+				D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */,
 				D4C7FF0926A6D441008062A1 /* Color.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
 				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,

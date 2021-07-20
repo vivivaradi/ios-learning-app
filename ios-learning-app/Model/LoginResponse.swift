@@ -8,6 +8,18 @@
 
 import Foundation
 
-struct LoginResponse: Codable {
-    let accessToken: String?
+public struct LoginResponse: Codable {
+    var accessToken: String?
+    
+    init() { }
+    
+    init(accessToken: String?) {
+        self.accessToken = accessToken
+    }
+}
+
+extension LoginResponse: Equatable {
+    public static func == (lhs: LoginResponse, rhs: LoginResponse) -> Bool {
+        return lhs.accessToken == rhs.accessToken
+    }
 }

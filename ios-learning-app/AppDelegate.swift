@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var container = Container()
     
     fileprivate let assemblies: [Assembly] = [
-        ManagerAssembly()
+        ManagerAssembly(),
+        InteractorAssembly()
     ]
 
 
