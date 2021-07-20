@@ -14,28 +14,11 @@ import RxCocoa
 
 protocol LoginViewModelType {
     
-    var msisdnValue: BehaviorRelay<String?> {get}
-    var passwordValue: BehaviorRelay<String?> {get}
-    var fieldsAreValid: Observable<Bool> {get}
-    
     func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void))
     func hasActiveSession() -> Bool
 }
 
-class LoginViewModel: LoginViewModelType {
-    
-    var msisdnValue: BehaviorRelay<String?>
-    var passwordValue: BehaviorRelay<String?>
-    
-    var fieldsAreValid: Observable<Bool> {
-        return Observable.combineLatest(msisdnValue, passwordValue) { msisdn, password in
-            guard msisdn != nil && password != nil else {
-                return false
-            }
-            return msisdn!.isMsisdnValid() && password!.isPasswordValid()
-        }
-    }
-    
+class LoginViewModel: LoginViewModelType {    
     
     var sessionManager: SessioningManager!
     var networkManager: NetworkingManager!
@@ -44,8 +27,6 @@ class LoginViewModel: LoginViewModelType {
          networkManager: NetworkingManager) {
         self.sessionManager = sessionManager
         self.networkManager = networkManager
-        self.msisdnValue = BehaviorRelay<String?>(value: "")
-        self.passwordValue = BehaviorRelay<String?>(value: "")
     }
     
     func performLogin(msisdn: String, completion: @escaping ((LoginViewState) -> Void)) {

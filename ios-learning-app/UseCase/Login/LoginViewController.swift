@@ -14,39 +14,20 @@ class LoginViewController: UIViewController {
     
     var viewModel: LoginViewModelType!
 
-    @IBOutlet weak var MSISDN: UITextField!
-    @IBOutlet weak var PasswordLogin: UITextField!
-    @IBOutlet weak var LoginButton: UIButton!
+    @IBOutlet weak var msisdnField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: ColorChangingButton!
     
+    var msisdnValue = BehaviorRelay<String?>(value: "")
+    var passwordValue = BehaviorRelay<String?>(value: "")
     let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setupStyle()
-        self.setupBindings()
+        self.setupValidation()
     }
-    
-    private func changeButton(to value: Bool) {
-        LoginButton.isEnabled = value
-        if (LoginButton.isEnabled) {
-            self.LoginButton.backgroundColor = UIColor(named: "VodafoneRed")
-        } else {
-            self.LoginButton.backgroundColor = UIColor(named: "DisabledButtonGrey")
-        }
-    }
-    
-    private func setupBindings() {
-        self.MSISDN.rx.text.bind(to: viewModel.msisdnValue).disposed(by: bag)
-        self.PasswordLogin.rx.text.bind(to: viewModel.passwordValue).disposed(by: bag)
-        
-        self.viewModel.fieldsAreValid.observe(on: MainScheduler.instance)
-            .subscribe(onNext:  { value in
-                self.changeButton(to: value)
-            })
-            .disposed(by: bag)
-    }
-
     
     fileprivate func navigateToDashboard() {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
@@ -56,12 +37,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let msisdn = self.MSISDN.text else {
+        guard let msisdn = self.msisdnField.text else {
             return
         }
         self.viewModel.performLogin(msisdn: msisdn) { state in
             switch (state) {
-            case .success: self.navigateToDashboard()
+            case .success:
+                self.navigateToDashboard()
             case .failure:
                 return
             }
@@ -70,12 +52,31 @@ class LoginViewController: UIViewController {
     
     // MARK: - UI setup
     
-    @IBOutlet weak var LoginCard: UIView!
+    @IBOutlet weak var loginCard: UIView!
     func setupStyle() {
         self.view.backgroundColor = UIColor(named: "VodafoneRed")
-        LoginCard.layer.cornerRadius = 5
-        LoginButton.layer.cornerRadius = 5
-        self.LoginButton.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
+        loginCard.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 5
+        self.loginButton.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
+    }
+}
+
+extension LoginViewController {
+    
+    var fieldsAreValid: Observable<Bool> {
+        return Observable.combineLatest(msisdnValue, passwordValue) { msisdn, password in
+            guard let msisdn = msisdn, let password = password else {
+                return false
+            }
+            return msisdn.isMsisdnValid() && password.isPasswordValid()
+        }
+    }
+    
+    private func setupValidation() {
+        self.msisdnField.rx.text.bind(to: msisdnValue).disposed(by: bag)
+        self.passwordField.rx.text.bind(to: passwordValue).disposed(by: bag)
+        
+        fieldsAreValid.bind(to: self.loginButton.rx.isEnabled).disposed(by: bag)
     }
 }
 
