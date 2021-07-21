@@ -9,9 +9,8 @@
 import Foundation
 import Moya
 
-
 protocol NetworkingManager {
-    var provider : MultiMoyaProvider { get }
+    var provider: MultiMoyaProvider { get }
 }
 
 class NetworkManager: NetworkingManager {

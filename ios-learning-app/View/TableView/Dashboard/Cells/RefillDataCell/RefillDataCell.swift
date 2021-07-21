@@ -30,7 +30,7 @@ class RefillDataCell: UITableViewCell {
         self.setupStyle()
     }
     
-    //MARK: UI setup
+    // MARK: UI setup
     private func setupStyle() {
            priceLabel.font = UIFont(name: Constants.roboto, size: 12)
            priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)

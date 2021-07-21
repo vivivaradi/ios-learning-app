@@ -12,7 +12,7 @@ struct SectionData {
     let title: String
     let data: [Package]
     
-    var itemCount : Int {
+    var itemCount: Int {
         return data.count
     }
     

@@ -39,7 +39,7 @@ class CurrentDataCell: UITableViewCell {
         self.setupStyle()
     }
     
-    //MARK: UI setup
+    // MARK: UI setup
     func setupStyle() {
 
         self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")

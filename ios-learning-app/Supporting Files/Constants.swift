@@ -10,18 +10,18 @@ import Foundation
 
 struct Constants {
     
-    //MARK: Custom cell identifiers
+    // MARK: Custom cell identifiers
     static let refillDataCellIdentifier = "RefillDataCell"
     static let currentDataCellIdentifier = "CurrentDataCell"
     static let sectionHeaderCellIdentifier = "SectionHeaderCell"
     static let dashboardHeaderCellIdentifier = "DashboardHeaderCell"
     
-    //MARK: Custom cell nib names
+    // MARK: Custom cell nib names
     static let refillDataCellNibName = "RefillDataCell"
     static let currentDataCellNibName = "CurrentDataCell"
     static let sectionHeaderCellNibName = "SectionHeaderCell"
     static let dashboardHeaderCellNibName = "DashboardHeaderCell"
     
-    //MARK: Font names
+    // MARK: Font names
     static let roboto = "Roboto-Regular"
 }

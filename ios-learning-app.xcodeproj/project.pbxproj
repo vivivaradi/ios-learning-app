@@ -44,6 +44,7 @@
 		D4C7FF0C26A6FAB4008062A1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */; };
 		D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
+		D4D385B526A82695000AD252 /* DashboardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385B426A82695000AD252 /* DashboardAPI.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
 		D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */; };
@@ -90,6 +91,7 @@
 		D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		D4D385B426A82695000AD252 /* DashboardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAPI.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
 		D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D43F5DFE2670067300C17DF9 /* LoginAPI.swift */,
+				D4D385B426A82695000AD252 /* DashboardAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
 				D444D5B226985F4A00B6E4EB /* Package.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
+				D4D385B526A82695000AD252 /* DashboardAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

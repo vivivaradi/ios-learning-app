@@ -42,14 +42,13 @@ extension LoginAPI: TargetType {
     var task: Task {
         switch self {
         case let .loginUser(msisdn):
-            return .requestParameters(parameters: ["msisdn" : msisdn], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["msisdn": msisdn], encoding: URLEncoding.default)
         }
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return ["Content-Type": "application/json"]
     }
-    
     
 }
 

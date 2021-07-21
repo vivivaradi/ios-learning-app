@@ -79,4 +79,3 @@ extension LoginViewController {
         fieldsAreValid.bind(to: self.loginButton.rx.isEnabled).disposed(by: bag)
     }
 }
-

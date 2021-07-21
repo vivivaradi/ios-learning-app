@@ -40,7 +40,6 @@ class DashboardViewController: UIViewController {
         
     }
     
-    
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -57,17 +56,22 @@ extension DashboardViewController: UITableViewDataSource {
         return count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        if (indexPath.section == 0) {
-            let cellData = sections[indexPath.section].data[indexPath.row] as! CurrentDataPackage
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.currentDataCellIdentifier, for: indexPath) as! CurrentDataCell
+        if indexPath.section == 0 {
+            let data = sections[indexPath.section].data[indexPath.row] as? CurrentDataPackage
+            let currentCell = tableView.dequeueReusableCell(withIdentifier: Constants.currentDataCellIdentifier, for: indexPath) as? CurrentDataCell
+            guard let cell = currentCell, let cellData = data else {
+                return UITableViewCell()
+            }
             cell.configure(from: cellData)
             return cell
         } else {
-            let cellData = sections[indexPath.section].data[indexPath.row] as! RefillDataPackage
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as! RefillDataCell
+            let data = sections[indexPath.section].data[indexPath.row] as? RefillDataPackage
+            let refillCell = tableView.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as? RefillDataCell
+            guard let cell = refillCell, let cellData = data else {
+                return UITableViewCell()
+            }
             cell.configure(from: cellData)
             return cell
         }
@@ -77,7 +81,6 @@ extension DashboardViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    
 
 }
 
@@ -91,13 +94,19 @@ extension DashboardViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if (section == 0) {
-            let view = tableView.dequeueReusableCell(withIdentifier: Constants.dashboardHeaderCellIdentifier) as! DashboardHeaderCell
+        if section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dashboardHeaderCellIdentifier) as? DashboardHeaderCell
+            guard let view = cell else {
+                return UITableViewCell()
+            }
             view.configure()
             return view
         } else {
             let headerTitle = sections[section].title
-            let view = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as! SectionHeaderCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as? SectionHeaderCell
+            guard let view = cell else {
+                return UITableViewCell()
+            }
             view.configure(with: headerTitle)
             return view
         }
@@ -112,4 +121,3 @@ extension DashboardViewController: UITableViewDelegate {
         return 50.0
     }
 }
-

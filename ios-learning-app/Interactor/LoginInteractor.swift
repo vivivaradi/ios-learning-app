@@ -26,5 +26,4 @@ class LoginInteractor: LoginInteractorType {
         return self.networkManager.provider.rx.requestMapped(endpoint)
     }
     
-    
 }

@@ -18,8 +18,8 @@ protocol SessioningManager {
 
 class SessionManager: SessioningManager {
     
-    var accessToken : String?
-    var msisdn : String?
+    var accessToken: String?
+    var msisdn: String?
     
     init() {}
     

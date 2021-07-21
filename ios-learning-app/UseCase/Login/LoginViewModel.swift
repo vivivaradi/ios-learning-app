@@ -28,7 +28,7 @@ class LoginViewModel: LoginViewModelType {
         self.loginInteractor = loginInteractor
     }
     
-    func performLogin(msisdn: String) -> Single<LoginResponse>{
+    func performLogin(msisdn: String) -> Single<LoginResponse> {
         return self.loginInteractor.login(msisdn: msisdn)
     }
     
