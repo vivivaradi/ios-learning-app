@@ -8,12 +8,12 @@
 
 import Foundation
 
-class RefillDataPackage: Package {
-    var price: Int
-    
-    init(name: String, price: Int) {
-        self.price = price
-        super.init(name)
-        
-    }
+struct RefillDataPackage {
+
+    let id: String?
+    let name: String?
+    let description: String?
+    let active: Bool?
+    let price: Int?
+    let psmCodes: PsmCodes
 }

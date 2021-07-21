@@ -17,8 +17,6 @@
 		D43F5E0126700B9F00C17DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */; };
 		D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */; };
 		D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5AF269831D600B6E4EB /* DataConverter.swift */; };
-		D444D5B226985F4A00B6E4EB /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B126985F4900B6E4EB /* Package.swift */; };
-		D444D5B42698604400B6E4EB /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B32698604400B6E4EB /* SectionData.swift */; };
 		D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */; };
 		D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */; };
 		D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FE9A826A5B763005BCC8B /* StringExtension.swift */; };
@@ -45,6 +43,10 @@
 		D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */; };
 		D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */; };
 		D4D385B526A82695000AD252 /* DashboardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385B426A82695000AD252 /* DashboardAPI.swift */; };
+		D4D385B726A83A83000AD252 /* UnlimitedContentPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385B626A83A83000AD252 /* UnlimitedContentPackage.swift */; };
+		D4D385B926A8524C000AD252 /* DashboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385B826A8524C000AD252 /* DashboardData.swift */; };
+		D4D385BB26A86200000AD252 /* PsmCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385BA26A86200000AD252 /* PsmCodes.swift */; };
+		D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385BC26A86306000AD252 /* Postpaid.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
 		D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */; };
@@ -63,8 +65,6 @@
 		D43F5E0026700B9F00C17DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		D444D5AF269831D600B6E4EB /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
-		D444D5B126985F4900B6E4EB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		D444D5B32698604400B6E4EB /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		D44FE9A826A5B763005BCC8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -92,6 +92,10 @@
 		D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
 		D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		D4D385B426A82695000AD252 /* DashboardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAPI.swift; sourceTree = "<group>"; };
+		D4D385B626A83A83000AD252 /* UnlimitedContentPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimitedContentPackage.swift; sourceTree = "<group>"; };
+		D4D385B826A8524C000AD252 /* DashboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardData.swift; sourceTree = "<group>"; };
+		D4D385BA26A86200000AD252 /* PsmCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsmCodes.swift; sourceTree = "<group>"; };
+		D4D385BC26A86306000AD252 /* Postpaid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postpaid.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
 		D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
@@ -341,9 +345,11 @@
 			isa = PBXGroup;
 			children = (
 				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
-				D444D5B126985F4900B6E4EB /* Package.swift */,
 				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
-				D444D5B32698604400B6E4EB /* SectionData.swift */,
+				D4D385B626A83A83000AD252 /* UnlimitedContentPackage.swift */,
+				D4D385B826A8524C000AD252 /* DashboardData.swift */,
+				D4D385BA26A86200000AD252 /* PsmCodes.swift */,
+				D4D385BC26A86306000AD252 /* Postpaid.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -548,8 +554,8 @@
 				D4C7FF0626A6BA46008062A1 /* ColorChangingButton.swift in Sources */,
 				D4C7FF0C26A6FAB4008062A1 /* LoginInteractor.swift in Sources */,
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
-				D444D5B42698604400B6E4EB /* SectionData.swift in Sources */,
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
+				D4D385BB26A86200000AD252 /* PsmCodes.swift in Sources */,
 				D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
@@ -559,18 +565,20 @@
 				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,
 				D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */,
+				D4D385B926A8524C000AD252 /* DashboardData.swift in Sources */,
 				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
+				D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */,
 				D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
+				D4D385B726A83A83000AD252 /* UnlimitedContentPackage.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
-				D444D5B226985F4A00B6E4EB /* Package.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
 				D4D385B526A82695000AD252 /* DashboardAPI.swift in Sources */,
 			);

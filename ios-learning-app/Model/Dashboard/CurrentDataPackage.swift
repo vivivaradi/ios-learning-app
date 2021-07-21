@@ -8,16 +8,29 @@
 
 import Foundation
 
-class CurrentDataPackage: Package {
-    let totalData: Int
-    let usedData: Int
-    let expirationDate: Date
-    
-    init(name: String, totalData: Int, usedData: Int, expirationDate: Date) {
-        self.totalData = totalData
-        self.usedData = usedData
-        self.expirationDate = expirationDate
-        super.init(name)
-        
-    }
+struct CurrentDataPackage {
+
+    let id: String?
+    let name: String?
+    let description: String?
+    let featured: Bool?
+    let price: Int?
+    let active: Bool?
+    let type: String?
+    let dataUsageMb: Int?
+    let actualUsage: Int?
+    let overfill: Int?
+    let total: Int?
+    let expirationDate: String?
+    let maxMember: Int?
+    let baseOfferIncluded: Bool?
+    let activeOnSubscription: Bool?
+    let upgradePoolIds: [String?]
+    let offerIdsMaster: [String?]
+    let offerIdsMember: [String?]
+    let addonIdsMaster: [String?]
+    let addonIdsMember: [String?]
+    let refillIds: [String?]
+    let unlimitedContenPackages: [String?]
+    let psmCodes: PsmCodes?
 }
