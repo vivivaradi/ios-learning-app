@@ -47,7 +47,6 @@
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
 		D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */; };
-		D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +94,6 @@
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
 		D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
 		D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeaderCell.xib; sourceTree = "<group>"; };
-		D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,11 +237,8 @@
 		D47DCF0D269499D0000D2713 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
-				D4A974FA268279F10095EAE0 /* LoginResponse.swift */,
-				D444D5B126985F4900B6E4EB /* Package.swift */,
-				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
-				D444D5B32698604400B6E4EB /* SectionData.swift */,
+				D4D385B226A80B12000AD252 /* Dashboard */,
+				D4D385B126A80B0C000AD252 /* Login */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +326,25 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		D4D385B126A80B0C000AD252 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4A974FA268279F10095EAE0 /* LoginResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D4D385B226A80B12000AD252 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
+				D444D5B126985F4900B6E4EB /* Package.swift */,
+				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
+				D444D5B32698604400B6E4EB /* SectionData.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		D4D7CCC22679CCF500DF121B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,7 +368,6 @@
 			children = (
 				D4931BE22657A6700017AD81 /* LoginViewController.swift */,
 				D4A974F8268272740095EAE0 /* LoginViewModel.swift */,
-				D4FD4060269DD4BB00FF0202 /* LoginViewState.swift */,
 			);
 			name = Login;
 			path = "/Users/newmobileapp/Documents/ios-learning-app/ios-learning-app/UseCase/Login";
@@ -399,6 +412,7 @@
 				D4931BD82657A6700017AD81 /* Frameworks */,
 				D4931BD92657A6700017AD81 /* Resources */,
 				31827CE181E9E3EDC3B27FF6 /* [CP] Embed Pods Frameworks */,
+				D4D385B326A80E25000AD252 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -502,6 +516,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4D385B326A80E25000AD252 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint ${PODS_ROOT}/SwiftLint/swiftlint; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,7 +564,6 @@
 				D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
-				D4FD4061269DD4BB00FF0202 /* LoginViewState.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
