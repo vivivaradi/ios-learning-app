@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum DashboardAPI {
-    
+    case getData
 }
 
 // MARK: TargetType protocol implementation
