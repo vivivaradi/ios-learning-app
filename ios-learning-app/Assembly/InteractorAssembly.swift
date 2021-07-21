@@ -13,5 +13,6 @@ import SwinjectAutoregistration
 class InteractorAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(LoginInteractorType.self, initializer: LoginInteractor.init).inObjectScope(.container)
+        container.autoregister(DashboardInteractorType.self, initializer: DashboardInteractor.init).inObjectScope(.container)
     }
 }
