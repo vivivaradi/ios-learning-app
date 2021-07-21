@@ -55,8 +55,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rememberMeLabel: UILabel!
     func setupStyle() {
         self.view.backgroundColor = Color.vodafoneRed
-        self.msisdnField.textColor = Color.lightGrey
-        self.passwordField.textColor = Color.lightGrey
         self.rememberMeLabel.textColor = Color.mediumGrey
         self.rememberMeLabel.font = UIFont(name: Constants.roboto, size: 14)
         self.loginCard.layer.cornerRadius = 5
