@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CurrentDataPackage {
+struct CurrentDataPackage: Codable {
 
     let id: String?
     let name: String?

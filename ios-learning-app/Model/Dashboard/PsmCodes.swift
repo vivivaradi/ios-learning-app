@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PsmCodes {
+struct PsmCodes: Codable {
     
     let activation: String?
     let deactivation: String?

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RefillDataPackage {
+struct RefillDataPackage: Codable {
 
     let id: String?
     let name: String?

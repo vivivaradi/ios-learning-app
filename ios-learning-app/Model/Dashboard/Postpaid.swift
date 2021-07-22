@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Postpaid {
+struct Postpaid: Codable {
     
     let cumulativeActualDataUsage: Int?
     let cumulativeTotalData: Int?

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DashboardData {
+struct DashboardData: Codable {
     
     let status: String?
     let responseType: String?

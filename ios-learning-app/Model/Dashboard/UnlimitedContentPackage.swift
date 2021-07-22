@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UnlimitedContentPackage {
+struct UnlimitedContentPackage: Codable {
     
     let id: String?
     let name: String?
