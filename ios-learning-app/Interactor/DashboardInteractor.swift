@@ -8,21 +8,31 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol DashboardInteractorType {
-    func getData() -> Single<DashboardData>
+    
+    var dashboardDataRelay: PublishRelay<DashboardData> { get }
+    var dashboardDataResult: Observable<DashboardData> { get }
+
 }
 
 class DashboardInteractor: DashboardInteractorType {
     
+    var dashboardDataResult: Observable<DashboardData>
+    var dashboardDataRelay: PublishRelay<DashboardData>
+    
     let networkManager: NetworkingManager!
+    
+    let bag = DisposeBag()
     
     init(networkManager: NetworkingManager) {
         self.networkManager = networkManager
+        self.dashboardDataRelay = PublishRelay()
+        self.dashboardDataResult = self.dashboardDataRelay
+            .flatMapLatest({ data -> Observable<DashboardData> in
+                return self.networkManager.provider.rx.request(DashboardAPI.getData).asObservable()
+            })
     }
-    
-    func getData() -> Single<DashboardData> {
-    }
-    
     
 }
