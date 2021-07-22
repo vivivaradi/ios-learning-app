@@ -9,9 +9,10 @@
 import Foundation
 
 protocol DashboardViewModelType {
-    
+    var dashboardInteractor: DashboardInteractor! { get }
 }
 
 class DashboardViewModel: DashboardViewModelType {
     
+    var dashboardInteractor: DashboardInteractor!
 }

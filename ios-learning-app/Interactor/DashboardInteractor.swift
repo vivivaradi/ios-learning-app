@@ -31,7 +31,7 @@ class DashboardInteractor: DashboardInteractorType {
         self.dashboardDataRelay = PublishRelay()
         self.dashboardDataResult = self.dashboardDataRelay
             .flatMapLatest({ data -> Observable<DashboardData> in
-                return self.networkManager.provider.rx.requestMapped(DashboardAPI.getData)
+                return networkManager.provider.rx.requestMapped(DashboardAPI.getData)
             })
         self.dashboardDataResult.subscribe().disposed(by: bag)
     }
