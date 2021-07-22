@@ -20,6 +20,7 @@
 		D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */; };
 		D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */; };
 		D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FE9A826A5B763005BCC8B /* StringExtension.swift */; };
+		D477232B26A99C96003F05ED /* dashboard.json in Resources */ = {isa = PBXBuildFile; fileRef = D477232A26A99C96003F05ED /* dashboard.json */; };
 		D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* RefillDataCell.swift */; };
 		D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* RefillDataCell.xib */; };
 		D47DCF0C26949662000D2713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0B26949662000D2713 /* Constants.swift */; };
@@ -69,6 +70,7 @@
 		D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		D44FE9A826A5B763005BCC8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D477232A26A99C96003F05ED /* dashboard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dashboard.json; sourceTree = "<group>"; };
 		D47DCF0726948C73000D2713 /* RefillDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCell.swift; sourceTree = "<group>"; };
 		D47DCF0826948C73000D2713 /* RefillDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillDataCell.xib; sourceTree = "<group>"; };
 		D47DCF0B26949662000D2713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 		D4D7CCC22679CCF500DF121B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				D477232A26A99C96003F05ED /* dashboard.json */,
 				D4D7CCC32679CD2400DF121B /* access_token.json */,
 				D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */,
 			);
@@ -474,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */,
+				D477232B26A99C96003F05ED /* dashboard.json in Resources */,
 				D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */,
 				D4C5AEAE2693110900E5F7EE /* access_token.json in Resources */,
 				D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */,

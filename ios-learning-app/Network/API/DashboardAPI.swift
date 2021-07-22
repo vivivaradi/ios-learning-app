@@ -16,27 +16,38 @@ enum DashboardAPI {
 // MARK: TargetType protocol implementation
 extension DashboardAPI: TargetType {
     var baseURL: URL {
-        <#code#>
+        return URL(string: "https://vivi.mock.com")!
     }
     
     var path: String {
-        <#code#>
+        switch self {
+        case .getData: return "/dashboard"
+        }
     }
     
     var method: Moya.Method {
-        <#code#>
+        switch self {
+        case .getData:
+            return .get
+        }
     }
     
     var sampleData: Data {
-        <#code#>
+        switch self {
+        case .getData:
+            return stubbedResponse("dashboard")
+        }
     }
     
     var task: Task {
-        <#code#>
+        switch self {
+        case .getData:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
-        <#code#>
+        return ["Content-Type": "application/json"]
     }
     
     
