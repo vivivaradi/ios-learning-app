@@ -23,7 +23,7 @@ class LoginInteractor: LoginInteractorType {
     
     func login(msisdn: String) -> Single<LoginResponse> {
         let endpoint = LoginAPI.loginUser(msisdn: msisdn)
-        return self.networkManager.provider.rx.requestMapped(endpoint)
+        return self.networkManager.provider.rx.requestMappedSingle(endpoint)
     }
     
 }

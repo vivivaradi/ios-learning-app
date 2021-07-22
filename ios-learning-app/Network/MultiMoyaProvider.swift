@@ -29,8 +29,13 @@ extension Reactive where Base: MultiMoyaProvider {
             .asObservable()
     }
     
-    func requestMapped<T, M>(_ target: T, callbackQueue: DispatchQueue? = nil) -> Single<M> where T: TargetType, M: Codable {
-        return requestDefault(MultiTarget(target), callbackQueue: callbackQueue)
+    func requestMapped<T, M>(_ target: T, callbackQueue: DispatchQueue? = nil) -> Observable<M> where T: TargetType, M: Codable {
+        return requestDefault(target, callbackQueue: callbackQueue)
+            .map(M.self)
+    }
+    
+    func requestMappedSingle<T, M>(_ target: T, callbackQueue: DispatchQueue? = nil) -> Single<M> where T: TargetType, M: Codable {
+        return requestDefault(target, callbackQueue: callbackQueue)
             .map(M.self)
             .asSingle()
     }
