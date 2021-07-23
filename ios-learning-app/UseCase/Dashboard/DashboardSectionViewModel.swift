@@ -17,5 +17,37 @@ enum DashboardSectionViewModel {
 }
 
 enum DashboardItemViewModel {
-    case mainItem()
+    case mainItem(item: CurrentDataCellItemViewModel)
+    case refillItem(item: RefillDataCellItemViewModel)
+}
+
+extension DashboardSectionViewModel: SectionModelType {
+    
+    typealias Item = DashboardItemViewModel
+    
+    init(original: DashboardSectionViewModel, items: [DashboardItemViewModel]) {
+        switch original {
+        case .headerSection:
+            self = .headerSection
+        case .mainSection(let item):
+            self = .mainSection(item: item)
+        case .refillSection(let title, let items):
+        self = .refillSection(title: title, items: items)
+        case .contentSection(let title, let items):
+            self = .contentSection(title: title, items: items)
+        }
+    }
+    
+    var items: [DashboardItemViewModel] {
+        switch self {
+        case .headerSection:
+            return []
+        case .mainSection(let item):
+            return [item]
+        case .refillSection(_, let items):
+            return items
+        case .contentSection(_, let items):
+            return items
+        }
+    }
 }
