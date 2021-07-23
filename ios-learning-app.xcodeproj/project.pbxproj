@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2EB4BEAB9E8B0C59B2038F7D /* Pods_ios_learning_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */; };
+		D40F48E426AAD779007364FD /* DashboardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */; };
+		D40F48E626AAE55D007364FD /* CurrentDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */; };
+		D40F48E826AAE5D2007364FD /* RefillDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E726AAE5D2007364FD /* RefillDataCellItemViewModel.swift */; };
 		D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */; };
 		D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */; };
 		D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */; };
@@ -58,6 +61,9 @@
 		15FF72AB7015A5B890955155 /* Pods-ios-learning-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.release.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.release.xcconfig"; sourceTree = "<group>"; };
 		302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_learning_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA16EAFF84F288D80EF3D9 /* Pods-ios-learning-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.debug.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.debug.xcconfig"; sourceTree = "<group>"; };
+		D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionViewModel.swift; sourceTree = "<group>"; };
+		D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCellItemViewModel.swift; sourceTree = "<group>"; };
+		D40F48E726AAE5D2007364FD /* RefillDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCellItemViewModel.swift; sourceTree = "<group>"; };
 		D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
 		D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAssemble.swift; sourceTree = "<group>"; };
 		D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataPackage.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 			children = (
 				D47DCF0726948C73000D2713 /* RefillDataCell.swift */,
 				D47DCF0826948C73000D2713 /* RefillDataCell.xib */,
+				D40F48E726AAE5D2007364FD /* RefillDataCellItemViewModel.swift */,
 			);
 			path = RefillDataCell;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			children = (
 				D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */,
 				D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */,
+				D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */,
 			);
 			path = CurrentDataCell;
 			sourceTree = "<group>";
@@ -393,6 +401,7 @@
 			children = (
 				D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */,
 				D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */,
+				D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -563,6 +572,7 @@
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
 				D4D385BB26A86200000AD252 /* PsmCodes.swift in Sources */,
+				D40F48E426AAD779007364FD /* DashboardSectionViewModel.swift in Sources */,
 				D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
@@ -576,6 +586,7 @@
 				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
+				D40F48E826AAE5D2007364FD /* RefillDataCellItemViewModel.swift in Sources */,
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */,
@@ -583,6 +594,7 @@
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4D385B726A83A83000AD252 /* UnlimitedContentPackage.swift in Sources */,
 				D4931BDF2657A6700017AD81 /* AppDelegate.swift in Sources */,
+				D40F48E626AAE55D007364FD /* CurrentDataCellItemViewModel.swift in Sources */,
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D4D385BF26A8663F000AD252 /* DashboardInteractor.swift in Sources */,

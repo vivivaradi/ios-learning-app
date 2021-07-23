@@ -11,6 +11,7 @@ target 'ios-learning-app' do
   
   pod 'RxSwift', '5.1.1'
   pod 'RxCocoa', '5.1.1'
+  pod 'RxDataSources', '4.0.1'
   
   pod 'Swinject', '2.6.2'
   pod 'SwinjectStoryboard', '2.2.0'
