@@ -56,7 +56,7 @@ class DashboardViewModel: DashboardViewModelType {
                     if let refill = refill {
                         let name = refill.name ?? ""
                         let price = refill.price ?? 0
-                        let item = DashboardItemViewModel.refillItem(item:  RefillDataCellItemViewModel(name: name, price: price))
+                        let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(name: name, price: price))
                         refillItems.append(item)
                     }
                 }
@@ -82,6 +82,7 @@ class DashboardViewModel: DashboardViewModelType {
                 
                 return dashboardSections
                 
-            }).asDriver(onErrorDriveWith: Driver.just([]))
+            }).startWith([])
+            .asDriver(onErrorDriveWith: Driver.just([]))
     }
 }

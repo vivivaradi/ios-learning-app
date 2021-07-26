@@ -25,8 +25,8 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         self.setupStyle()
-        self.configureTableView()
         self.configureDataSource()
+        self.configureTableView()
         
         self.viewModel.dashboardData
             .drive(tableView.rx.items(dataSource: dataSource))
@@ -51,7 +51,7 @@ extension DashboardViewController {
     }
     
     func configureDataSource() {
-        dataSource = RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>(configureCell: { [weak self] (dataSource, table, indexPath, model) in
+        dataSource = RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>(configureCell: { [weak self] (_, table, indexPath, model) in
             switch model {
             case .mainItem(let item):
                 if let cell = table.dequeueReusableCell(withIdentifier: Constants.currentDataCellIdentifier, for: indexPath) as? CurrentDataCell {
