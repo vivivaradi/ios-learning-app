@@ -14,3 +14,9 @@ struct CurrentDataCellItemViewModel: Codable {
     let usedData: Int
     let daysLeft: Int
 }
+
+extension CurrentDataCellItemViewModel: Equatable {
+    static func == (lhs: CurrentDataCellItemViewModel, rhs: CurrentDataCellItemViewModel) -> Bool {
+        return lhs.name == rhs.name && lhs.totalData == rhs.totalData && lhs.usedData == rhs.usedData
+    }
+}

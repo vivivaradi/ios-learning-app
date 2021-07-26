@@ -12,3 +12,9 @@ struct RefillDataCellItemViewModel: Codable {
     let name: String
     let price: Int
 }
+
+extension RefillDataCellItemViewModel: Equatable {
+    static func == (lhs: RefillDataCellItemViewModel, rhs: RefillDataCellItemViewModel) -> Bool {
+        return lhs.name == rhs.name && lhs.price == rhs.price
+    }
+}
