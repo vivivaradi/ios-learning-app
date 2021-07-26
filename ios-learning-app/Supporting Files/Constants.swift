@@ -24,4 +24,8 @@ struct Constants {
     
     // MARK: Font names
     static let roboto = "Roboto-Regular"
+    
+    // MARK: UI constants
+    static let refillHeaderString = "Refills"
+    static let contentHeaderString = "Unlimited Content Packages"
 }
