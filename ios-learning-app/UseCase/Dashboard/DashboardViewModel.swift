@@ -40,12 +40,10 @@ class DashboardViewModel: DashboardViewModelType {
                 let endDate = formatter.date(from: dateString) ?? Date()
                 let days = RemainingTime.getDays(until: endDate)
                 
-                let headerSection = DashboardSectionViewModel.headerSection
                 let mainData = CurrentDataCellItemViewModel(name: name, totalData: totalData, usedData: usedData, daysLeft: days)
                 let mainItem = DashboardItemViewModel.mainItem(item: mainData)
                 let mainSection = DashboardSectionViewModel.mainSection(item: mainItem)
-                
-                dashboardSections.append(headerSection)
+
                 dashboardSections.append(mainSection)
                 
                 var refillItems: [DashboardItemViewModel] = []

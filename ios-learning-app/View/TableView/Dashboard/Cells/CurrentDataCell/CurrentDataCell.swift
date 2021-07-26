@@ -28,7 +28,7 @@ class CurrentDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(from package: CurrentDataPackage) {
+    func configure(from package: CurrentDataCellItemViewModel) {
         self.myDataLabel.text = package.name
         let totalDataString = DataConverter.addMeasurement(to: package.totalData)
         self.totalDataLabel.text = "left of \(totalDataString) bundle"
@@ -36,6 +36,7 @@ class CurrentDataCell: UITableViewCell {
         let remainingDataString = DataConverter.addMeasurement(to: remainingData)
         self.remainingDataLabel.text = remainingDataString
         self.progressView.progress = (Float(package.usedData) / Float(package.totalData))
+        self.remainingDaysLabel.text = "Resets in \(package.daysLeft) days"
         self.setupStyle()
     }
     

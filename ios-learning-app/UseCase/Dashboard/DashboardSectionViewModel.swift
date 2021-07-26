@@ -10,7 +10,6 @@ import Foundation
 import RxDataSources
 
 enum DashboardSectionViewModel {
-    case headerSection
     case mainSection(item: DashboardItemViewModel)
     case refillSection(title: String, items: [DashboardItemViewModel])
     case contentSection(title: String, items: [DashboardItemViewModel])
@@ -27,8 +26,6 @@ extension DashboardSectionViewModel: SectionModelType {
     
     init(original: DashboardSectionViewModel, items: [DashboardItemViewModel]) {
         switch original {
-        case .headerSection:
-            self = .headerSection
         case .mainSection(let item):
             self = .mainSection(item: item)
         case .refillSection(let title, let items):
@@ -40,8 +37,6 @@ extension DashboardSectionViewModel: SectionModelType {
     
     var items: [DashboardItemViewModel] {
         switch self {
-        case .headerSection:
-            return []
         case .mainSection(let item):
             return [item]
         case .refillSection(_, let items):

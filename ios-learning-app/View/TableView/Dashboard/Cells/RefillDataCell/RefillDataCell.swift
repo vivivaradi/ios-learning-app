@@ -24,7 +24,7 @@ class RefillDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(from package: RefillDataPackage) {
+    func configure(from package: RefillDataCellItemViewModel) {
         self.priceLabel.text = "\(package.price) Ft"
         self.dataLabel.text = package.name
         self.setupStyle()
