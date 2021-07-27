@@ -17,12 +17,12 @@ struct Postpaid: Codable {
     let warningText: String?
     let unlimitedContentPackageMessage: String?
     let noRedir: Bool?
-    let entitlements: [String?]
-    let poolEntitlements: [String?]
+    let entitlements: [String]?
+    let poolEntitlements: [String]?
     let poolId: String
     let poolRole: String?
-    let offers: [String?]
-    let pools: [CurrentDataPackage?]
-    let refills: [RefillDataPackage?]
-    let unlimitedContentPackages: [UnlimitedContentPackage?]
+    let offers: [String]?
+    let pools: [CurrentDataPackage]?
+    let refills: [RefillDataPackage]?
+    let unlimitedContentPackages: [UnlimitedContentPackage]?
 }

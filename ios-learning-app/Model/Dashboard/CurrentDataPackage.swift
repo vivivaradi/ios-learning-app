@@ -25,12 +25,12 @@ struct CurrentDataPackage: Codable {
     let maxMember: Int?
     let baseOfferIncluded: Bool?
     let activeOnSubscription: Bool?
-    let upgradePoolIds: [String?]
-    let offerIdsMaster: [String?]
-    let offerIdsMember: [String?]
-    let addonIdsMaster: [String?]
-    let addonIdsMember: [String?]
-    let refillIds: [String?]
-    let unlimitedContentPackages: [String?]
+    let upgradePoolIds: [String]?
+    let offerIdsMaster: [String]?
+    let offerIdsMember: [String]?
+    let addonIdsMaster: [String]?
+    let addonIdsMember: [String]?
+    let refillIds: [String]?
+    let unlimitedContentPackages: [String]?
     let psmCodes: PsmCodes?
 }
