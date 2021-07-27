@@ -17,6 +17,8 @@ class DashboardViewController: UIViewController {
     
     var dataSource: RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>!
     
+    var pullToRefresh: UIRefreshControl = UIRefreshControl()
+    
     let bag = DisposeBag()
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +28,7 @@ class DashboardViewController: UIViewController {
         
         self.configureTableView()
         self.configureDataSource()
+        self.configurePullToRefresh()
         
         self.viewModel.dashboardData
             .drive(tableView.rx.items(dataSource: dataSource))
@@ -69,6 +72,22 @@ extension DashboardViewController {
                 return UITableViewCell()
             }
         })
+    }
+    
+    func configurePullToRefresh() {
+        self.pullToRefresh.rx
+            .controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.viewModel.dashboardRelay.accept(Void())
+            }).disposed(by: bag)
+        
+        self.viewModel.dashboardData
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.pullToRefresh.endRefreshing()
+            }).disposed(by: bag)
+
     }
 }
 
