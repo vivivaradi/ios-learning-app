@@ -31,6 +31,6 @@ struct CurrentDataPackage: Codable {
     let addonIdsMaster: [String?]
     let addonIdsMember: [String?]
     let refillIds: [String?]
-    let unlimitedContenPackages: [String?]
+    let unlimitedContentPackages: [String?]
     let psmCodes: PsmCodes?
 }

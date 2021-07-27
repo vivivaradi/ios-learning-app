@@ -24,9 +24,8 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setupStyle()
-        self.configureDataSource()
         self.configureTableView()
+        self.configureDataSource()
         
         self.viewModel.dashboardData
             .drive(tableView.rx.items(dataSource: dataSource))
