@@ -43,8 +43,12 @@ class DashboardViewController: UIViewController {
     
 }
 
+// MARK: UITableView configuration
+
 extension DashboardViewController {
     func configureTableView() {
+        self.tableView.refreshControl = self.pullToRefresh
+        
         self.tableView.rx.setDelegate(self)
             .disposed(by: bag)
         
@@ -74,6 +78,11 @@ extension DashboardViewController {
         })
     }
     
+}
+
+// MARK: Pull to Refresh configuration
+
+extension DashboardViewController {
     func configurePullToRefresh() {
         self.pullToRefresh.rx
             .controlEvent(.valueChanged)
@@ -90,6 +99,8 @@ extension DashboardViewController {
 
     }
 }
+
+// MARK: UITableView delegates
 
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
