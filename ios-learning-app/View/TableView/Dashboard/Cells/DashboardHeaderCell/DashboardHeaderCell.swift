@@ -27,6 +27,7 @@ class DashboardHeaderCell: UITableViewCell {
     private func setupStyle() {
         self.headerLogoImage.image = UIImage(named: "HeaderLogoPlaceholder")
         self.welcomeLabel.text = "Welcome lorem ipsum!"
+        self.welcomeLabel.textAlignment = NSTextAlignment.right
         self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
     }
     

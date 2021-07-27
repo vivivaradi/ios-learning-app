@@ -30,6 +30,8 @@ class DashboardViewController: UIViewController {
         self.viewModel.dashboardData
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
+        
+        self.viewModel.dashboardRelay.accept(Void())
     }
     
     private func setupStyle() {
@@ -83,6 +85,7 @@ extension DashboardViewController: UITableViewDelegate {
         switch dataSource[section] {
         case .mainSection(_):
             if let mainHeaderCell = tableView.dequeueReusableCell(withIdentifier: Constants.dashboardHeaderCellIdentifier) as? DashboardHeaderCell {
+                mainHeaderCell.configure()
                 return mainHeaderCell
             }
             return nil

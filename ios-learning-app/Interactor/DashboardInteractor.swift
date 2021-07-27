@@ -12,7 +12,7 @@ import RxRelay
 
 protocol DashboardInteractorType {
     
-    var dashboardDataRelay: PublishRelay<DashboardData> { get }
+    var dashboardRelay: PublishRelay<Void> { get }
     var dashboardDataResult: Observable<DashboardData> { get }
 
 }
@@ -20,7 +20,7 @@ protocol DashboardInteractorType {
 class DashboardInteractor: DashboardInteractorType {
     
     var dashboardDataResult: Observable<DashboardData>
-    var dashboardDataRelay: PublishRelay<DashboardData>
+    var dashboardRelay: PublishRelay<Void>
     
     let networkManager: NetworkingManager!
     
@@ -28,8 +28,8 @@ class DashboardInteractor: DashboardInteractorType {
     
     init(networkManager: NetworkingManager) {
         self.networkManager = networkManager
-        self.dashboardDataRelay = PublishRelay()
-        self.dashboardDataResult = self.dashboardDataRelay
+        self.dashboardRelay = PublishRelay()
+        self.dashboardDataResult = self.dashboardRelay
             .flatMapLatest({ _ -> Observable<DashboardData> in
                 return networkManager.provider.rx.requestMapped(DashboardAPI.getData)
             })

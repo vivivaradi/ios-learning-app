@@ -7,16 +7,16 @@ target 'ios-learning-app' do
 
   # Pods for ios-learning-app
   
-  pod 'Moya/RxSwift'
+  pod 'Moya/RxSwift', '14.0.0'
   
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
+  pod 'RxSwift', '5.1.1'
+  pod 'RxCocoa', '5.1.1'
+  pod 'RxDataSources', '4.0.1'
   
-  pod 'Swinject'
-  pod 'SwinjectStoryboard'
-  pod 'SwinjectAutoregistration'
+  pod 'Swinject', '2.6.2'
+  pod 'SwinjectStoryboard', '2.2.0'
+  pod 'SwinjectAutoregistration', '2.6.1'
   
-  pod 'SwiftLint'
+  pod 'SwiftLint', '0.43.1'
 
 end

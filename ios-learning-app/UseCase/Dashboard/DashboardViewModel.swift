@@ -11,14 +11,17 @@ import RxSwift
 import RxCocoa
 
 protocol DashboardViewModelType {
-    var dashboardInteractor: DashboardInteractorType! { get }
     var dashboardData: Driver<[DashboardSectionViewModel]> { get }
+    var dashboardRelay: PublishRelay<Void> { get }
 }
 
 class DashboardViewModel: DashboardViewModelType {
     
     var dashboardInteractor: DashboardInteractorType!
     var dashboardData: Driver<[DashboardSectionViewModel]>
+    var dashboardRelay: PublishRelay<Void> {
+        return dashboardInteractor.dashboardRelay
+    }
     
     init(dashboardInteractor: DashboardInteractorType) {
         self.dashboardInteractor = dashboardInteractor
@@ -27,7 +30,7 @@ class DashboardViewModel: DashboardViewModelType {
             .map({ data -> [DashboardSectionViewModel] in
                 var dashboardSections: [DashboardSectionViewModel] = []
                 
-                guard let currentData = data.postpaid?.pools[0] else {
+                guard let currentData = data.postpaid?.pools?[0] else {
                     return []
                 }
                 
@@ -37,6 +40,7 @@ class DashboardViewModel: DashboardViewModelType {
                 let dateString = currentData.expirationDate ?? ""
                 
                 let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
                 let endDate = formatter.date(from: dateString) ?? Date()
                 let days = RemainingTime.getDays(until: endDate)
                 
@@ -53,12 +57,11 @@ class DashboardViewModel: DashboardViewModelType {
                 }
                 
                 for refill in refills {
-                    if let refill = refill {
-                        let name = refill.name ?? ""
-                        let price = refill.price ?? 0
-                        let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(name: name, price: price))
-                        refillItems.append(item)
-                    }
+                    let name = refill.name ?? ""
+                    let price = refill.price ?? 0
+                    let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(name: name, price: price))
+                    refillItems.append(item)
+                    
                 }
                 
                 dashboardSections.append(DashboardSectionViewModel.refillSection(title: Constants.refillHeaderString, items: refillItems))
@@ -70,12 +73,11 @@ class DashboardViewModel: DashboardViewModelType {
                 }
                 
                 for package in contentPackages {
-                    if let package = package {
-                        let name = package.name ?? ""
-                        let price = package.price ?? 0
-                        let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(name: name, price: price))
-                        contentPackageItems.append(item)
-                    }
+                    let name = package.name ?? ""
+                    let price = package.price ?? 0
+                    let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(name: name, price: price))
+                    contentPackageItems.append(item)
+                    
                 }
                 
                 dashboardSections.append(DashboardSectionViewModel.contentSection(title: Constants.contentHeaderString, items: contentPackageItems))
