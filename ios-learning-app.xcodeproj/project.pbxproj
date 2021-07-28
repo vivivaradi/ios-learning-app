@@ -27,6 +27,7 @@
 		D41A766026B1439700F3AD11 /* dashboard_UCP66907.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */; };
 		D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A766226B145B600F3AD11 /* DashboardService.swift */; };
 		D41A766526B15B6F00F3AD11 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */; };
+		D41A766826B188A100F3AD11 /* DataPackageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A766726B188A100F3AD11 /* DataPackageDetailsViewController.swift */; };
 		D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */; };
 		D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */; };
 		D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */; };
@@ -95,6 +96,7 @@
 		D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_UCP66907.json; sourceTree = "<group>"; };
 		D41A766226B145B600F3AD11 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		D41A766726B188A100F3AD11 /* DataPackageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageDetailsViewController.swift; sourceTree = "<group>"; };
 		D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataPackage.swift; sourceTree = "<group>"; };
 		D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCell.swift; sourceTree = "<group>"; };
 		D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentDataCell.xib; sourceTree = "<group>"; };
@@ -189,6 +191,14 @@
 				D41A766226B145B600F3AD11 /* DashboardService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D41A766626B1887D00F3AD11 /* DataPackageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D41A766726B188A100F3AD11 /* DataPackageDetailsViewController.swift */,
+			);
+			path = DataPackageDetails;
 			sourceTree = "<group>";
 		};
 		D42BBF372695A275003DBAB5 /* TableView */ = {
@@ -433,6 +443,7 @@
 		D4E8C6FC267378F100F88572 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D41A766626B1887D00F3AD11 /* DataPackageDetails */,
 				D4E8C6FE267378FF00F88572 /* Dashboard */,
 				D4E8C6FD267378F900F88572 /* Login */,
 			);
@@ -666,6 +677,7 @@
 				D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */,
 				D4931BE12657A6700017AD81 /* SceneDelegate.swift in Sources */,
 				D4D385BF26A8663F000AD252 /* DashboardInteractor.swift in Sources */,
+				D41A766826B188A100F3AD11 /* DataPackageDetailsViewController.swift in Sources */,
 				D47DCF0F269499EE000D2713 /* RefillDataPackage.swift in Sources */,
 				D43F5DFF2670067300C17DF9 /* LoginAPI.swift in Sources */,
 				D4D385B526A82695000AD252 /* DashboardAPI.swift in Sources */,

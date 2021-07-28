@@ -18,4 +18,11 @@ class ColorChangingButton: UIButton {
             backgroundColor = isEnabled ? red : gray
         }
     }
+
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.layer.cornerRadius = 5
+        self.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
+    }
 }

@@ -58,8 +58,7 @@ class LoginViewController: UIViewController {
         self.rememberMeLabel.textColor = Color.mediumGrey
         self.rememberMeLabel.font = UIFont(name: Constants.roboto, size: 14)
         self.loginCard.layer.cornerRadius = 5
-        self.loginButton.layer.cornerRadius = 5
-        self.loginButton.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
+        
     }
 }
 
