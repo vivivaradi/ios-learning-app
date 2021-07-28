@@ -1,0 +1,13 @@
+{
+    "id": "UCP67696",
+    "name": "Music Pass",
+    "description": "A Music Pass csomaggal úgy hallgathatsz zenét a népszerü online zene applikációkon, hogy nem fogyasztod az adatkereted!  A Music Passben foglalt alkalmazások csak addig nem fogyasztják az adatkereted, amíg rendelkezel minimális adattal. A Music Pass belföldön és az EU-n belül érhetö el, meghatározott applikációkra, személyi használatra, utazási célra, a tarifában foglalt vagy vásárolt kiegészítö adatopció erejéig. A Music Pass automatikusan megújul minden hónapban,így nem kell havonta újrarendelned. A Music Pass a zenei szolgáltatást nyújtó harmadik fél által havidíj ellenében elérhetö prémium funkcióik elérését nem tartalmazza, ezen fizetös tartalmak igénybevételéhez külön elöfizetés szükséges a zene szolgáltatónál.",
+    "featured": false,
+    "price": 1000,
+    "active": true,
+    "activeOnSubscription": false,
+    "psmCodes": {
+        "activation": "MUSICPASSADDON",
+        "deactivation": "XMUSICPASSADDON"
+    }
+}

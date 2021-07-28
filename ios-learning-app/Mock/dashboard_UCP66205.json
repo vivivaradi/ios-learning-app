@@ -1,0 +1,14 @@
+{
+    "id": "UCP66205",
+    "name": "Social Pass",
+    "description": "A Social Pass csomaggal úgy használhatod a népszerü közösségi oldalak applikációit, hogy nem fogyasztod az adatkeretedet! Legyen szó akár képek vagy videók feltöltéséröl, vagy a hírfolyam olvasásáról!  A Social Pass belföldön és aktív Vodafone EU Roaming esetén az EU-n belül érhetö el, meghatározott applikációkra, személyi használatra, utazási célra, a tarifában foglalt vagy vásárolt kiegészítö adatopció erejéig. A Social Pass automatikusan megújul minden hónapban, így nem kell havonta újrarendelned.",
+    "featured": false,
+    "price": 881,
+    "active": false,
+    "activeOnSubscription": true,
+    "subscriptionType": "personal",
+    "expirationDate": "2019-04-30T11:59:59",
+    "psmCodes": {
+        
+    }
+}

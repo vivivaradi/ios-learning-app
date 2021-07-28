@@ -1,0 +1,13 @@
+{
+    "id": "UCP69102",
+    "name": "Video Pass",
+    "description": "A Video Pass csomaggal kedvenc videóidat 480p minöségben nézheted a népszerü online video nézö applikációkon úgy, hogy nem fogyasztod az adatkeretedet! A Video Passben foglalt alkalmazások csak addig nem fogyasztják az adatkereted, amíg rendelkezel minimális adattal. A Video Pass belföldön és az EU-n belül érhetö el, meghatározott applikációkra, személyi használatra, utazási célra, a tarifában foglalt vagy vásárolt kiegészítö adatopció erejéig. A Video Pass automatikusan megújul minden hónapban,így nem kell havonta újrarendelned. A Video Pass a video szolgáltatást nyújtó harmadik fél által havidíj ellenében elérhetö prémium funkcióik elérését nem tartalmazza, ezen fizetös tartalmak igénybevételéhez külön elöfizetés szükséges a video szolgáltatónál.",
+    "featured": false,
+    "price": 5000,
+    "active": true,
+    "activeOnSubscription": false,
+    "psmCodes": {
+        "activation": "VFVIDEOPASSADDON",
+        "deactivation": "XVFVIDEOPASSADDON"
+    }
+}

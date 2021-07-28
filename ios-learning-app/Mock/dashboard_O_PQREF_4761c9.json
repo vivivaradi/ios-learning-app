@@ -1,0 +1,11 @@
+{
+    "id": "O_PQREF_4761c9",
+    "name": "Osztható PluszAdat 5 GB",
+    "description": "Ezzel a kiegészítö adatopcióval további 5 GB adat áll rendelkezésedre a tarifádban foglalt adatmennyiségeden felül 5000 Ft-ért, melyet számlazárásig tudsz felhasználni, a tarifádban foglalt adatra irányadó, azonos feltételekkel. Ha MultiNet Supreme szolgáltatással is rendelkezel, lehetöséged van megosztani a kiegészítö PluszAdatot a két eszközöd között!",
+    "active": true,
+    "price": 5000,
+    "psmCodes": {
+        "activation": "TOLT 5GB",
+        "deactivation": ""
+    }
+}

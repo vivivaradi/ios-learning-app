@@ -1,0 +1,14 @@
+{
+    "id": "UCP66907",
+    "name": "Connect Pass",
+    "description": "A Connect Pass csomaggal úgy használhatod a népszerü online chat- és telefon szolgáltatást biztosító alkalmazásokat üzenetküldésre, hang- és videóhívásra, hogy nem fogyasztod az adatkeretedet! Legyen szó akár képek vagy videók elküldéséröl vagy videohívásról!  A  Connect Pass belföldön és aktív Vodafone EU Roaming esetén az EU-n belül érhetö el, meghatározott applikációkra, személyi használatra, utazási célra, a tarifában foglalt vagy vásárolt kiegészítö adatopció erejéig. A Connect Pass automatikusan megújul minden hónapban,így nem kell havonta újrarendelned.",
+    "featured": false,
+    "price": 2661,
+    "active": false,
+    "activeOnSubscription": true,
+    "subscriptionType": "personal",
+    "expirationDate": "2019-04-30T11:59:59",
+    "psmCodes": {
+        
+    }
+}

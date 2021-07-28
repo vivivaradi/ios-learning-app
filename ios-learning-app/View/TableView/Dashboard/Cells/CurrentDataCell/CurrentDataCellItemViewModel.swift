@@ -9,7 +9,9 @@
 import Foundation
 
 struct CurrentDataCellItemViewModel: Codable {
+    let id: String
     let name: String
+    let description: String
     let totalData: Int
     let usedData: Int
     let daysLeft: Int
@@ -17,6 +19,6 @@ struct CurrentDataCellItemViewModel: Codable {
 
 extension CurrentDataCellItemViewModel: Equatable {
     static func == (lhs: CurrentDataCellItemViewModel, rhs: CurrentDataCellItemViewModel) -> Bool {
-        return lhs.name == rhs.name && lhs.totalData == rhs.totalData && lhs.usedData == rhs.usedData
+        return lhs.id == rhs.id
     }
 }

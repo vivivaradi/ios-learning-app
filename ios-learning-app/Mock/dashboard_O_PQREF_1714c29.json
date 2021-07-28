@@ -1,0 +1,11 @@
+{
+    "id": "O_PQREF_1714c29",
+    "name": "Osztható PluszAdat 1 GB",
+    "description": "Ezzel a kiegészítö adatopcióval további 1 GB adat áll rendelkezésedre a tarifádban foglalt adatmennyiségeden felül 1800 Ft-ért, melyet számlazárásig tudsz felhasználni, a tarifádban foglalt adatra irányadó, azonos feltételekkel. Ha MultiNet Supreme szolgáltatással is rendelkezel, lehetöséged van megosztani a kiegészítö PluszAdatot a két eszközöd között!",
+    "active": true,
+    "price": 1800,
+    "psmCodes": {
+        "activation": "TOLT 1GB",
+        "deactivation": ""
+    }
+}

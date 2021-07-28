@@ -1,0 +1,11 @@
+{
+    "id": "68861",
+    "name": "Osztható Megújuló PluszAdat 5 GB",
+    "description": "Ezzel a kiegészítö adatopcióval 5GB osztható adat áll rendelkezésedre minden számlázási ciklusban havi 3000 Ft-ért a tarifádban, valamit az Automatikus PluszAdat opciódba foglalt adatmennyiségeden felül. A kiegészítö opció minden hónapban megújul, így nem kell minden hónapban megrendelned újra. Ha MultiNet Supreme-el is rendelkezel, lehetöséged van megosztani a kiegészítö PluszAdatot a két eszközöd között!  A kiegészítö adatopciót a tarifádban foglalt adat felhasználásával azonos feltételek mellett használhatod.",
+    "active": true,
+    "price": 3000,
+    "psmCodes": {
+        "activation": "PLUSZ5GB-O-M-UJ",
+        "deactivation": "XPLUSZ5GB-O-M-UJ"
+    }
+}

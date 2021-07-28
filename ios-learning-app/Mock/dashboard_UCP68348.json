@@ -1,0 +1,13 @@
+{
+    "id": "UCP68348",
+    "name": "Navigate Pass",
+    "description": "A Navigate Pass csomaggal úgy használhatod a népszerü navigációs applikációkat, hogy nem fogyasztod vele az adatkeretedet! A Navigate Passben foglalt alkalmazások csak addig nem fogyasztják az adatkereted, amíg rendelkezel minimális adattal. A Navigate Pass belföldön és az EU-n belül érhetö el, meghatározott applikációkra, személyi használatra, utazási célra, a tarifában foglalt vagy vásárolt kiegészítö adatopció erejéig. A Navigate Pass automatikusan megújul minden hónapban,így nem kell havonta újrarendelned.",
+    "featured": false,
+    "price": 1000,
+    "active": true,
+    "activeOnSubscription": false,
+    "psmCodes": {
+        "activation": "NAVIGATEPASSADDON",
+        "deactivation": "XNAVIGATEPASSADDON"
+    }
+}

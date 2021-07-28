@@ -1,0 +1,11 @@
+{
+    "id": "O_PQREF_714c29",
+    "name": "Osztható PluszAdat 300 MB",
+    "description": "Ezzel a kiegészítö adatopcióval további 300MB adat áll rendelkezésedre a tarifádban foglalt adatmennyiségeden felül 750 Ft-ért, melyet számlazárásig tudsz felhasználni, a tarifádban foglalt adatra irányadó, azonos feltételekkel. Ha MultiNet Supreme szolgáltatással is rendelkezel, lehetöséged van megosztani a kiegészítö PluszAdatot a két eszközöd között!",
+    "active": true,
+    "price": 750,
+    "psmCodes": {
+        "activation": "TOLT 300MB",
+        "deactivation": ""
+    }
+}
