@@ -11,7 +11,6 @@ import Foundation
 struct CurrentDataCellItemViewModel: Codable {
     let id: String
     let name: String
-    let description: String
     let totalData: Int
     let usedData: Int
     let daysLeft: Int
