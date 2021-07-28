@@ -15,5 +15,4 @@ class ServiceAssembly: Assembly {
         container.autoregister(DashboardServiceType.self, initializer: DashboardService.init)
     }
     
-    
 }

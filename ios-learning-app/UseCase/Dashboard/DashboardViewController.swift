@@ -56,6 +56,17 @@ extension DashboardViewController {
         self.tableView.register(UINib(nibName: Constants.currentDataCellNibName, bundle: nil), forCellReuseIdentifier: Constants.currentDataCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.sectionHeaderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.sectionHeaderCellIdentifier)
         self.tableView.register(UINib(nibName: Constants.dashboardHeaderCellNibName, bundle: nil), forCellReuseIdentifier: Constants.dashboardHeaderCellIdentifier)
+        
+        self.tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let self = self else { return }
+                switch self.dataSource[indexPath] {
+                case .mainItem(let item):
+                    print(item)
+                case .refillItem(let item):
+                    self.viewModel.selectedItem(with: item.id)
+                }
+            }).disposed(by: bag)
     }
     
     func configureDataSource() {

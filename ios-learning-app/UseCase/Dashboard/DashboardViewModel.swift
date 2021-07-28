@@ -13,6 +13,9 @@ import RxCocoa
 protocol DashboardViewModelType {
     var dashboardData: Driver<[DashboardSectionViewModel]> { get }
     var dashboardRelay: PublishRelay<Void> { get }
+    
+    func selectedItem(with id: String)
+    func deselectedItem()
 }
 
 class DashboardViewModel: DashboardViewModelType {
@@ -23,8 +26,11 @@ class DashboardViewModel: DashboardViewModelType {
         return dashboardInteractor.dashboardRelay
     }
     
-    init(dashboardInteractor: DashboardInteractorType) {
+    var dashboardService: DashboardServiceType!
+    
+    init(dashboardInteractor: DashboardInteractorType, dashboardService: DashboardServiceType) {
         self.dashboardInteractor = dashboardInteractor
+        self.dashboardService = dashboardService
         
         self.dashboardData = self.dashboardInteractor.dashboardDataResult
             .map({ data -> [DashboardSectionViewModel] in
@@ -89,5 +95,14 @@ class DashboardViewModel: DashboardViewModelType {
                 
             }).startWith([])
             .asDriver(onErrorDriveWith: Driver.just([]))
+    }
+    
+    func selectedItem(with id: String) {
+        self.dashboardService.packageId.accept(id)
+        print(dashboardService.packageId.value ?? "nem jó")
+    }
+    
+    func deselectedItem() {
+        self.dashboardService.packageId.accept(nil)
     }
 }
