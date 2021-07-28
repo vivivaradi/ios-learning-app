@@ -25,6 +25,8 @@
 		D41A765C26B1434A00F3AD11 /* dashboard_UCP69102.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A765B26B1434A00F3AD11 /* dashboard_UCP69102.json */; };
 		D41A765E26B1436D00F3AD11 /* dashboard_UCP66205.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A765D26B1436D00F3AD11 /* dashboard_UCP66205.json */; };
 		D41A766026B1439700F3AD11 /* dashboard_UCP66907.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */; };
+		D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A766226B145B600F3AD11 /* DashboardService.swift */; };
+		D41A766526B15B6F00F3AD11 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */; };
 		D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */; };
 		D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */; };
 		D42BBF3F2695AD5F003DBAB5 /* CurrentDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */; };
@@ -91,6 +93,8 @@
 		D41A765B26B1434A00F3AD11 /* dashboard_UCP69102.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_UCP69102.json; sourceTree = "<group>"; };
 		D41A765D26B1436D00F3AD11 /* dashboard_UCP66205.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_UCP66205.json; sourceTree = "<group>"; };
 		D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_UCP66907.json; sourceTree = "<group>"; };
+		D41A766226B145B600F3AD11 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataPackage.swift; sourceTree = "<group>"; };
 		D42BBF3C2695AD5F003DBAB5 /* CurrentDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCell.swift; sourceTree = "<group>"; };
 		D42BBF3D2695AD5F003DBAB5 /* CurrentDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentDataCell.xib; sourceTree = "<group>"; };
@@ -174,8 +178,17 @@
 				D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */,
 				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
 				D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */,
+				D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D41A766126B1452500F3AD11 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D41A766226B145B600F3AD11 /* DashboardService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D42BBF372695A275003DBAB5 /* TableView */ = {
@@ -317,6 +330,7 @@
 				D4D7CCC22679CCF500DF121B /* Mock */,
 				D47DCF0D269499D0000D2713 /* Model */,
 				D43F5E062670110F00C17DF9 /* Network */,
+				D41A766126B1452500F3AD11 /* Service */,
 				D43F5E072670114600C17DF9 /* Session */,
 				D43F5E04267010FF00C17DF9 /* Storyboards */,
 				D4C7FF0726A6D433008062A1 /* Style */,
@@ -397,9 +411,8 @@
 		D4D7CCC22679CCF500DF121B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				D477232A26A99C96003F05ED /* dashboard.json */,
 				D4D7CCC32679CD2400DF121B /* access_token.json */,
-				D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */,
+				D477232A26A99C96003F05ED /* dashboard.json */,
 				D41A764526B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json */,
 				D41A764726B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json */,
 				D41A764B26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json */,
@@ -412,6 +425,7 @@
 				D41A765B26B1434A00F3AD11 /* dashboard_UCP69102.json */,
 				D41A765D26B1436D00F3AD11 /* dashboard_UCP66205.json */,
 				D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */,
+				D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -628,6 +642,7 @@
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
 				D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */,
+				D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */,
 				D4C7FF0926A6D441008062A1 /* Color.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
 				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,
@@ -642,6 +657,7 @@
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
 				D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */,
+				D41A766526B15B6F00F3AD11 /* ServiceAssembly.swift in Sources */,
 				D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */,
 				D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */,
 				D4D385B726A83A83000AD252 /* UnlimitedContentPackage.swift in Sources */,

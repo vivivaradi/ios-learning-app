@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate let assemblies: [Assembly] = [
         ManagerAssembly(),
-        InteractorAssembly()
+        InteractorAssembly(),
+        ServiceAssembly()
     ]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
