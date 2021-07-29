@@ -41,6 +41,12 @@ class DashboardViewController: UIViewController {
         
     }
     
+    func navigateTo(storyboard name: String, withIdentifier id: String) {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 // MARK: UITableView configuration
@@ -66,6 +72,7 @@ extension DashboardViewController {
                 case .refillItem(let item):
                     self.viewModel.selectedItem(with: item.id)
                 }
+                self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageDetailsViewController")
             }).disposed(by: bag)
     }
     

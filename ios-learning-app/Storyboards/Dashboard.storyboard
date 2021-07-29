@@ -49,10 +49,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-A6-gSd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="544"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-cy-2rt" userLabel="BackgroundView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-1d-Q0R">
                                                 <rect key="frame" x="16" y="32" width="30" height="30"/>
@@ -62,7 +62,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXb-Zc-YSf" userLabel="ContainerView">
-                                                <rect key="frame" x="0.0" y="94" width="375" height="458"/>
+                                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-kV-pCM" userLabel="DataPackageLabel">
                                                         <rect key="frame" x="166.5" y="32" width="42" height="21"/>
@@ -83,7 +83,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-io-LGy" userLabel="ContentLabel">
-                                                        <rect key="frame" x="16" y="167" width="343" height="291"/>
+                                                        <rect key="frame" x="16" y="167" width="343" height="406"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -157,15 +157,27 @@
                         <viewLayoutGuide key="safeArea" id="9Uq-r1-5EF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZF3-L1-ZkK" firstAttribute="top" secondItem="Ejj-A6-gSd" secondAttribute="bottom" id="BTf-nc-Acf"/>
                             <constraint firstItem="ZF3-L1-ZkK" firstAttribute="leading" secondItem="9Uq-r1-5EF" secondAttribute="leading" id="EIQ-eq-D5C"/>
                             <constraint firstItem="Ejj-A6-gSd" firstAttribute="leading" secondItem="9Uq-r1-5EF" secondAttribute="leading" id="EIu-4f-0du"/>
                             <constraint firstItem="9Uq-r1-5EF" firstAttribute="trailing" secondItem="ZF3-L1-ZkK" secondAttribute="trailing" id="Fj4-nl-cPQ"/>
                             <constraint firstItem="Ejj-A6-gSd" firstAttribute="trailing" secondItem="9Uq-r1-5EF" secondAttribute="trailing" id="Us9-La-2LG"/>
+                            <constraint firstItem="9Uq-r1-5EF" firstAttribute="bottom" secondItem="Ejj-A6-gSd" secondAttribute="bottom" id="cbs-00-k5C"/>
                             <constraint firstItem="Ejj-A6-gSd" firstAttribute="top" secondItem="9Uq-r1-5EF" secondAttribute="top" id="egW-xz-Tbk"/>
                             <constraint firstItem="9Uq-r1-5EF" firstAttribute="bottom" secondItem="ZF3-L1-ZkK" secondAttribute="bottom" id="oc7-4w-QdA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Mmj-cy-2rt" id="tLk-cu-Iqy"/>
+                        <outlet property="buyButton" destination="cOg-NP-THI" id="ZjG-ka-2WS"/>
+                        <outlet property="containerView" destination="dXb-Zc-YSf" id="8eK-SK-PzP"/>
+                        <outlet property="contentLabel" destination="4cm-io-LGy" id="RM7-KM-Awd"/>
+                        <outlet property="dataPackageLabel" destination="kJE-kV-pCM" id="vSe-El-qe1"/>
+                        <outlet property="logoImage" destination="Ng2-1d-Q0R" id="dei-el-1wD"/>
+                        <outlet property="myVodafoneLabel" destination="X7v-P4-qDw" id="1au-a5-xjB"/>
+                        <outlet property="scrollView" destination="Ejj-A6-gSd" id="t7e-yY-N2b"/>
+                        <outlet property="titleLabel" destination="pmn-N7-h40" id="dlc-bS-Io0"/>
+                        <outlet property="underTitleLabel" destination="iBB-C2-vza" id="8j4-7r-yDL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-4U-Faq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

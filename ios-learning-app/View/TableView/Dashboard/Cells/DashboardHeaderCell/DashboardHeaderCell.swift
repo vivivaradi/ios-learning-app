@@ -29,6 +29,7 @@ class DashboardHeaderCell: UITableViewCell {
         self.welcomeLabel.text = "Welcome lorem ipsum!"
         self.welcomeLabel.textAlignment = NSTextAlignment.right
         self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
+        self.layoutIfNeeded()
     }
     
     func configure() {
