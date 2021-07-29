@@ -19,7 +19,6 @@ class ColorChangingButton: UIButton {
         }
     }
 
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.layer.cornerRadius = 5

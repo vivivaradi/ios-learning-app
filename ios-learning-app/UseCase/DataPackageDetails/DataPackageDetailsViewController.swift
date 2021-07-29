@@ -11,6 +11,8 @@ import UIKit
 
 class DataPackageDetailsViewController: UIViewController {
     
+    var viewModel: DataPackageDetailsViewModelType!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var logoImage: UIImageView!

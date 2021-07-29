@@ -166,6 +166,7 @@
                             <constraint firstItem="9Uq-r1-5EF" firstAttribute="bottom" secondItem="ZF3-L1-ZkK" secondAttribute="bottom" id="oc7-4w-QdA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lg1-XO-cLq"/>
                     <connections>
                         <outlet property="backgroundView" destination="Mmj-cy-2rt" id="tLk-cu-Iqy"/>
                         <outlet property="buyButton" destination="cOg-NP-THI" id="ZjG-ka-2WS"/>

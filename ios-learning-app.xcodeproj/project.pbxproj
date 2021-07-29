@@ -69,6 +69,7 @@
 		D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385BC26A86306000AD252 /* Postpaid.swift */; };
 		D4D385BF26A8663F000AD252 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D385BE26A8663F000AD252 /* DashboardInteractor.swift */; };
 		D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */; };
+		D4EBE9E326B2B897001FB4DC /* DataPackageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EBE9E226B2B897001FB4DC /* DataPackageDetailsViewModel.swift */; };
 		D4F13B4D269F2CE900C90344 /* DashboardHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */; };
 		D4F13B4E269F2CE900C90344 /* DashboardHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		D4D385BE26A8663F000AD252 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
 		D4D7CCC32679CD2400DF121B /* access_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = access_token.json; sourceTree = "<group>"; };
 		D4D7CCC52679CD5000DF121B /* stubbedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubbedResponse.swift; sourceTree = "<group>"; };
+		D4EBE9E226B2B897001FB4DC /* DataPackageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageDetailsViewModel.swift; sourceTree = "<group>"; };
 		D4F13B4B269F2CE900C90344 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
 		D4F13B4C269F2CE900C90344 /* DashboardHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				D41A766726B188A100F3AD11 /* DataPackageDetailsViewController.swift */,
+				D4EBE9E226B2B897001FB4DC /* DataPackageDetailsViewModel.swift */,
 			);
 			path = DataPackageDetails;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */,
 				D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */,
 				D4C7FF0926A6D441008062A1 /* Color.swift in Sources */,
+				D4EBE9E326B2B897001FB4DC /* DataPackageDetailsViewModel.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
 				D42BBF3E2695AD5F003DBAB5 /* CurrentDataCell.swift in Sources */,
 				D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */,

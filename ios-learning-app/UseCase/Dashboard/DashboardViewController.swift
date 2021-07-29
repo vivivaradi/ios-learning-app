@@ -43,7 +43,7 @@ class DashboardViewController: UIViewController {
     
     func navigateTo(storyboard name: String, withIdentifier id: String) {
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        let vc = storyboard.instantiateViewController(withIdentifier: id) as UIViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
