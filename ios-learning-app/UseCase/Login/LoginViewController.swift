@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     fileprivate func navigateToDashboard() {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardViewController") as UIViewController
+        let vc = storyboard.instantiateInitialViewController()
         UIApplication.shared.windows.first?.rootViewController = vc
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }

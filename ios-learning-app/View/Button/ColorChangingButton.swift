@@ -23,5 +23,6 @@ class ColorChangingButton: UIButton {
         super.init(coder: coder)
         self.layer.cornerRadius = 5
         self.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
+        self.setTitleColor(Color.white, for: .normal)
     }
 }

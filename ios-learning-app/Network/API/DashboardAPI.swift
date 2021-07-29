@@ -10,7 +10,8 @@ import Foundation
 import Moya
 
 enum DashboardAPI {
-    case getData
+    case getDashboard
+    case getPackage(id: String)
 }
 
 // MARK: TargetType protocol implementation
@@ -21,27 +22,30 @@ extension DashboardAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getData: return "/dashboard"
+        case .getDashboard: return "/dashboard"
+        case .getPackage(let id): return "/dashboard/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getData:
+        case .getDashboard, .getPackage(_):
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .getData:
+        case .getDashboard:
             return stubbedResponse("dashboard")
+        case .getPackage(let id):
+            return stubbedResponse("dashboard_\(id)")
         }
     }
     
     var task: Task {
         switch self {
-        case .getData:
+        case .getDashboard, .getPackage(_):
             return .requestPlain
         }
     }

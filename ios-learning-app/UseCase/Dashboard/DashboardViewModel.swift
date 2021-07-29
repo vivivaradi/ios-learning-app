@@ -16,6 +16,9 @@ protocol DashboardViewModelType {
     
     func selectedItem(with id: String)
     func deselectedItem()
+    
+    func getRefillPackage(id: String) -> Single<RefillDataPackage>
+    func getContentPackage(id: String) -> Single<UnlimitedContentPackage>
 }
 
 class DashboardViewModel: DashboardViewModelType {
@@ -105,4 +108,13 @@ class DashboardViewModel: DashboardViewModelType {
     func deselectedItem() {
         self.dashboardService.packageId.accept(nil)
     }
+    
+    func getRefillPackage(id: String) -> Single<RefillDataPackage> {
+        return self.dashboardInteractor.getRefillPackage(id: id)
+    }
+    
+    func getContentPackage(id: String) -> Single<UnlimitedContentPackage> {
+        return self.dashboardInteractor.getContentPackage(id: id)
+    }
+    
 }
