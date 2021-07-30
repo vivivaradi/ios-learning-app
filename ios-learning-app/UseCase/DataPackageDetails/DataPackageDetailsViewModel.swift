@@ -35,13 +35,13 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
                     print("nem ezt a kepernyot keresed")
                 case .refillItem:
                     if let id = id {
-                        item = dashboardInteractor.getRefillPackage(id: id)
-                            .map { package -> DataPackageDetailsItemViewModel in
+                        dashboardInteractor.getRefillPackage(id: id)
+                            .map { package in
                                 let itemId = package.id ?? ""
                                 let itemName = package.name ?? ""
                                 let itemDescription = package.description ?? ""
                                 let itemPrice = package.price ?? 0
-                                return DataPackageDetailsItemViewModel(id: itemId, name: itemName, description: itemDescription, price: itemPrice)
+                                item =  DataPackageDetailsItemViewModel(id: itemId, name: itemName, description: itemDescription, price: itemPrice)
                             }
                     }
                     
