@@ -14,6 +14,10 @@ struct CurrentDataCellItemViewModel: Codable {
     let totalData: Int
     let usedData: Int
     let daysLeft: Int
+    
+    init(package: CurrentDataPackage) {
+        
+    }
 }
 
 extension CurrentDataCellItemViewModel: Equatable {

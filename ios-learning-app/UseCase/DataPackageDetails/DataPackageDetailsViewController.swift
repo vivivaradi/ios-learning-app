@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class DataPackageDetailsViewController: UIViewController {
     
@@ -26,9 +27,16 @@ class DataPackageDetailsViewController: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var buyButton: ColorChangingButton!
     
+    let bag = DisposeBag()
+    
     override func viewDidLoad() {
         self.setupStyle()
-        self.setupData()
+        
+        self.viewModel.packageData
+            .drive(onNext: { [weak self] item in
+                guard let self = self else { return }
+                self.setupData(item: item)
+            }).disposed(by: bag)
     }
     
     private func setupStyle() {
@@ -66,15 +74,15 @@ class DataPackageDetailsViewController: UIViewController {
         self.contentTextView.textColor = Color.darkGrey
         self.contentTextView.textAlignment = .justified
         self.contentTextView.isEditable = false
+        self.contentTextView.isScrollEnabled = false
         
         self.buyButton.isEnabled = true
     }
     
-    func setupData() {
+    func setupData(item: DataPackageDetailsItemViewModel) {
         self.dataPackageLabel.text = "Data Package"
-        self.titleLabel.text = "1GB recurring extra data"
-        self.underTitleLabel.text = "with 1GB overcharge"
-        self.contentTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel imperdiet odio, non sodales est. Vivamus vitae elementum ex. Sed non quam diam. Maecenas tincidunt euismod odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae libero luctus, blandit dolor nec, posuere est. Curabitur euismod tellus a tortor pellentesque facilisis. Nullam facilisis aliquam est vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel imperdiet odio, non sodales est. Vivamus vitae elementum ex. Sed non quam diam. Maecenas tincidunt euismod odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae libero luctus, blandit dolor nec, posuere est. Curabitur euismod tellus a tortor pellentesque facilisis. Nullam facilisis aliquam est vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel imperdiet odio, non sodales est. Vivamus vitae elementum ex. Sed non quam diam. Maecenas tincidunt euismod odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae libero luctus, blandit dolor nec, posuere est. Curabitur euismod tellus a tortor pellentesque facilisis. Nullam facilisis aliquam est vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel imperdiet odio, non sodales est. Vivamus vitae elementum ex. Sed non quam diam. Maecenas tincidunt euismod odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae libero luctus, blandit dolor nec, posuere est. Curabitur euismod tellus a tortor pellentesque facilisis. Nullam facilisis aliquam est vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel imperdiet odio, non sodales est. Vivamus vitae elementum ex. Sed non quam diam. Maecenas tincidunt euismod odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae libero luctus, blandit dolor nec, posuere est. Curabitur euismod tellus a tortor pellentesque facilisis. Nullam facilisis aliquam est vitae."
-        self.buyButton.setTitle("Buy", for: .normal)
+        self.titleLabel.text = item.name
+        self.contentTextView.text = item.description
+        self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
     }
 }

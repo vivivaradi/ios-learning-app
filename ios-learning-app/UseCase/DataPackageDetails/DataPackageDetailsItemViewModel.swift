@@ -23,10 +23,17 @@ struct DataPackageDetailsItemViewModel {
         price = 0
     }
     
-    init(id: String, name: String, description: String, price: Int) {
-        self.id = id
-        self.name = name
-        self.description = description
-        self.price = price
+    init(package: RefillDataPackage) {
+        self.id = package.id ?? ""
+        self.name = package.name ?? ""
+        self.description = package.description ?? ""
+        self.price = package.price ?? 0
+    }
+    
+    init(package: UnlimitedContentPackage) {
+        self.id = package.id ?? ""
+        self.name = package.name ?? ""
+        self.description = package.description ?? ""
+        self.price = package.price ?? 0
     }
 }

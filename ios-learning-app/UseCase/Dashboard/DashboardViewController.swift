@@ -79,8 +79,8 @@ extension DashboardViewController {
                 switch self.dataSource[indexPath] {
                 case .mainItem(let item):
                     print(item)
-                case .refillItem(let item):
-                    self.viewModel.selectedItem(with: item.id)
+                case .refillItem(let item), .contentItem(let item):
+                    self.viewModel.selectedItem(with: item.id, type: self.dataSource[indexPath])
                 }
                 self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageDetailsViewController")
             }).disposed(by: bag)
@@ -96,7 +96,7 @@ extension DashboardViewController {
                 }
                 return UITableViewCell()
                 
-            case .refillItem(let item):
+            case .refillItem(let item), .contentItem(let item):
                 if let cell = table.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as? RefillDataCell {
                     cell.configure(from: item)
                     return cell
