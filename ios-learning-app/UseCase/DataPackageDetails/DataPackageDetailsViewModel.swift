@@ -27,42 +27,19 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
         self.dashboardInteractor = dashboardInteractor
         self.dashboardService = dashboardService
         
-        self.packageData = Observable.combineLatest(self.dashboardService.packageId, self.dashboardService.packageType)
-            .map { id, type -> DataPackageDetailsItemViewModel in
-                var item = DataPackageDetailsItemViewModel()
-                switch type {
-                case .mainItem:
-                    print("nem ezt a kepernyot keresed")
-                case .refillItem:
-                    if let id = id {
-                        dashboardInteractor.getRefillPackage(id: id)
-                            .map { package in
-                                let itemId = package.id ?? ""
-                                let itemName = package.name ?? ""
-                                let itemDescription = package.description ?? ""
-                                let itemPrice = package.price ?? 0
-                                item =  DataPackageDetailsItemViewModel(id: itemId, name: itemName, description: itemDescription, price: itemPrice)
-                            }
-                    }
-                    
-                case .contentItem:
-                    if let id = id {
-                        dashboardInteractor.getContentPackage(id: id)
-                            .map { package in
-                                let itemId = package.id ?? ""
-                                let itemName = package.name ?? ""
-                                let itemDescription = package.description ?? ""
-                                let itemPrice = package.price ?? 0
-                                item = DataPackageDetailsItemViewModel(id: itemId, name: itemName, description: itemDescription, price: itemPrice)
-                            }
-                    }
-                    
-                case .none:
-                    print("nincs")
-                }
-                
-                return item
-            }.asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel(id: "", name: "", description: "", price: 0))
+        switch self.dashboardService.packageType.value {
+        case .refillItem:
+            self.packageData = self.dashboardService.getRefillPackage()
+                .map { package in
+                    return DataPackageDetailsItemViewModel(package: package)
+                }.asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
+        case .contentItem:
+            self.packageData = self.dashboardService.getContentPackage()
+                .map({ package in
+                    return DataPackageDetailsItemViewModel(package: package)
+                }).asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
+        default: packageData = Observable.empty().asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
+        }
     }
     
 }
