@@ -14,11 +14,9 @@ protocol DashboardViewModelType {
     var dashboardData: Driver<[DashboardSectionViewModel]> { get }
     var dashboardRelay: PublishRelay<Void> { get }
     
-    func selectedItem(with id: String)
+    func selectedItem(with id: String, type: DashboardItemViewModel)
     func deselectedItem()
-    
-    func getRefillPackage(id: String) -> Single<RefillDataPackage>
-    func getContentPackage(id: String) -> Single<UnlimitedContentPackage>
+
 }
 
 class DashboardViewModel: DashboardViewModelType {
@@ -87,7 +85,7 @@ class DashboardViewModel: DashboardViewModelType {
                     let id = package.id ?? ""
                     let name = package.name ?? ""
                     let price = package.price ?? 0
-                    let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(id: id, name: name, price: price))
+                    let item = DashboardItemViewModel.contentItem(item: RefillDataCellItemViewModel(id: id, name: name, price: price))
                     contentPackageItems.append(item)
                     
                 }
@@ -100,21 +98,14 @@ class DashboardViewModel: DashboardViewModelType {
             .asDriver(onErrorDriveWith: Driver.just([]))
     }
     
-    func selectedItem(with id: String) {
+    func selectedItem(with id: String, type: DashboardItemViewModel) {
         self.dashboardService.packageId.accept(id)
-        print(dashboardService.packageId.value ?? "nem jó")
+        self.dashboardService.packageType.accept(type)
     }
     
     func deselectedItem() {
         self.dashboardService.packageId.accept(nil)
-    }
-    
-    func getRefillPackage(id: String) -> Single<RefillDataPackage> {
-        return self.dashboardInteractor.getRefillPackage(id: id)
-    }
-    
-    func getContentPackage(id: String) -> Single<UnlimitedContentPackage> {
-        return self.dashboardInteractor.getContentPackage(id: id)
+        self.dashboardService.packageType.accept(nil)
     }
     
 }

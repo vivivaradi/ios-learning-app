@@ -18,6 +18,7 @@ enum DashboardSectionViewModel {
 enum DashboardItemViewModel {
     case mainItem(item: CurrentDataCellItemViewModel)
     case refillItem(item: RefillDataCellItemViewModel)
+    case contentItem(item: RefillDataCellItemViewModel)
 }
 
 extension DashboardSectionViewModel: SectionModelType {
