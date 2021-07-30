@@ -41,18 +41,7 @@ class DashboardViewModel: DashboardViewModelType {
                     return []
                 }
                 
-                let id = currentData.id ?? ""
-                let name = currentData.name ?? ""
-                let totalData = currentData.total ?? 0
-                let usedData = currentData.actualUsage ?? 0
-                let dateString = currentData.expirationDate ?? ""
-                
-                let formatter = DateFormatter()
-                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-                let endDate = formatter.date(from: dateString) ?? Date()
-                let days = RemainingTime.getDays(until: endDate)
-                
-                let mainData = CurrentDataCellItemViewModel(id: id, name: name, totalData: totalData, usedData: usedData, daysLeft: days)
+                let mainData = CurrentDataCellItemViewModel(package: currentData)
                 let mainItem = DashboardItemViewModel.mainItem(item: mainData)
                 let mainSection = DashboardSectionViewModel.mainSection(item: mainItem)
 
@@ -65,10 +54,7 @@ class DashboardViewModel: DashboardViewModelType {
                 }
                 
                 for refill in refills {
-                    let id = refill.id ?? ""
-                    let name = refill.name ?? ""
-                    let price = refill.price ?? 0
-                    let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(id: id, name: name, price: price))
+                    let item = DashboardItemViewModel.refillItem(item: RefillDataCellItemViewModel(package: refill))
                     refillItems.append(item)
                     
                 }
@@ -82,10 +68,7 @@ class DashboardViewModel: DashboardViewModelType {
                 }
                 
                 for package in contentPackages {
-                    let id = package.id ?? ""
-                    let name = package.name ?? ""
-                    let price = package.price ?? 0
-                    let item = DashboardItemViewModel.contentItem(item: RefillDataCellItemViewModel(id: id, name: name, price: price))
+                    let item = DashboardItemViewModel.contentItem(item: RefillDataCellItemViewModel(package: package))
                     contentPackageItems.append(item)
                     
                 }
