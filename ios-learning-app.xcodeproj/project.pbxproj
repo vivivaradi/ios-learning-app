@@ -39,6 +39,8 @@
 		D444D5B826987EF800B6E4EB /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */; };
 		D444D5B926987EF800B6E4EB /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */; };
 		D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FE9A826A5B763005BCC8B /* StringExtension.swift */; };
+		D455638726B8127B00456090 /* DataPackageConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455638626B8127B00456090 /* DataPackageConfirmationViewController.swift */; };
+		D455638926B8388600456090 /* DataPackageConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D455638826B8388600456090 /* DataPackageConfirmationViewModel.swift */; };
 		D477232B26A99C96003F05ED /* dashboard.json in Resources */ = {isa = PBXBuildFile; fileRef = D477232A26A99C96003F05ED /* dashboard.json */; };
 		D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DCF0726948C73000D2713 /* RefillDataCell.swift */; };
 		D47DCF0A26948C73000D2713 /* RefillDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47DCF0826948C73000D2713 /* RefillDataCell.xib */; };
@@ -110,6 +112,8 @@
 		D444D5B626987EF800B6E4EB /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		D444D5B726987EF800B6E4EB /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		D44FE9A826A5B763005BCC8B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D455638626B8127B00456090 /* DataPackageConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageConfirmationViewController.swift; sourceTree = "<group>"; };
+		D455638826B8388600456090 /* DataPackageConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageConfirmationViewModel.swift; sourceTree = "<group>"; };
 		D477232A26A99C96003F05ED /* dashboard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dashboard.json; sourceTree = "<group>"; };
 		D47DCF0726948C73000D2713 /* RefillDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCell.swift; sourceTree = "<group>"; };
 		D47DCF0826948C73000D2713 /* RefillDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillDataCell.xib; sourceTree = "<group>"; };
@@ -300,6 +304,15 @@
 			path = SectionHeaderCell;
 			sourceTree = "<group>";
 		};
+		D455638526B811D800456090 /* DataPackageConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				D455638626B8127B00456090 /* DataPackageConfirmationViewController.swift */,
+				D455638826B8388600456090 /* DataPackageConfirmationViewModel.swift */,
+			);
+			path = DataPackageConfirmation;
+			sourceTree = "<group>";
+		};
 		D47DCF02269478A5000D2713 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +462,7 @@
 		D4E8C6FC267378F100F88572 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D455638526B811D800456090 /* DataPackageConfirmation */,
 				D41A766626B1887D00F3AD11 /* DataPackageDetails */,
 				D4E8C6FE267378FF00F88572 /* Dashboard */,
 				D4E8C6FD267378F900F88572 /* Login */,
@@ -669,11 +683,13 @@
 				D4D385B926A8524C000AD252 /* DashboardData.swift in Sources */,
 				D4AA69B626AEB4AB0060FCB5 /* RemainingTime.swift in Sources */,
 				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
+				D455638726B8127B00456090 /* DataPackageConfirmationViewController.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
 				D40F48E826AAE5D2007364FD /* RefillDataCellItemViewModel.swift in Sources */,
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
+				D455638926B8388600456090 /* DataPackageConfirmationViewModel.swift in Sources */,
 				D40C23C326B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift in Sources */,
 				D4D385BD26A86306000AD252 /* Postpaid.swift in Sources */,
 				D41A766526B15B6F00F3AD11 /* ServiceAssembly.swift in Sources */,

@@ -21,8 +21,6 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
     var dashboardInteractor: DashboardInteractorType!
     var dashboardService: DashboardServiceType!
     
-    let bag = DisposeBag()
-    
     init(dashboardInteractor: DashboardInteractorType, dashboardService: DashboardServiceType) {
         self.dashboardInteractor = dashboardInteractor
         self.dashboardService = dashboardService

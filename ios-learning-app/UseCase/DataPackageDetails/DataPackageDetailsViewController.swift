@@ -30,12 +30,20 @@ class DataPackageDetailsViewController: UIViewController {
     let bag = DisposeBag()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         self.setupStyle()
         
         self.viewModel.packageData
             .drive(onNext: { [weak self] item in
                 guard let self = self else { return }
                 self.setupData(item: item)
+            }).disposed(by: bag)
+        
+        self.buyButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageConfirmationViewController")
             }).disposed(by: bag)
     }
     
@@ -72,7 +80,7 @@ class DataPackageDetailsViewController: UIViewController {
         
         self.contentTextView.font = UIFont(name: Constants.roboto, size: 16)
         self.contentTextView.textColor = Color.darkGrey
-        self.contentTextView.textAlignment = .justified
+        self.contentTextView.textAlignment = .center
         self.contentTextView.isEditable = false
         self.contentTextView.isScrollEnabled = false
         
@@ -84,5 +92,11 @@ class DataPackageDetailsViewController: UIViewController {
         self.titleLabel.text = item.name
         self.contentTextView.text = item.description
         self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
+    }
+    
+    func navigateTo(storyboard name: String, withIdentifier id: String) {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id) as UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -14,6 +14,7 @@ protocol DashboardServiceType {
   
     var packageId: BehaviorRelay<String?> { get }
     var packageType: BehaviorRelay<DashboardItemViewModel?> { get }
+    var packageName: BehaviorRelay<String?> { get }
     
     func getRefillPackage() -> Single<RefillDataPackage>
     func getContentPackage() -> Single<UnlimitedContentPackage>
@@ -21,6 +22,7 @@ protocol DashboardServiceType {
 
 class DashboardService: DashboardServiceType {
     
+    var packageName: BehaviorRelay<String?>
     var packageType: BehaviorRelay<DashboardItemViewModel?>
     var packageId: BehaviorRelay<String?>
     
@@ -29,6 +31,7 @@ class DashboardService: DashboardServiceType {
     init(dashboardInteractor: DashboardInteractorType) {
         self.packageId = BehaviorRelay<String?>(value: nil)
         self.packageType = BehaviorRelay<DashboardItemViewModel?>(value: nil)
+        self.packageName = BehaviorRelay<String?>(value: nil)
         self.dashboardInteractor = dashboardInteractor
     }
     

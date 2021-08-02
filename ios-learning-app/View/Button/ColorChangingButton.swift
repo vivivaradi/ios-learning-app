@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class ColorChangingButton: UIButton {
-    let red = Color.vodafoneRed
-    let gray = Color.lightGrey
+    var enabledColor = Color.vodafoneRed
+    var disabledColor = Color.lightGrey
     
     override var isEnabled: Bool {
         didSet {
-            backgroundColor = isEnabled ? red : gray
+            backgroundColor = isEnabled ? enabledColor : disabledColor
         }
     }
 
@@ -24,5 +24,9 @@ class ColorChangingButton: UIButton {
         self.layer.cornerRadius = 5
         self.titleLabel?.font = UIFont(name: Constants.roboto, size: 20)
         self.setTitleColor(Color.white, for: .normal)
+    }
+    
+    func setMainColor(color: UIColor) {
+        self.enabledColor = color
     }
 }
