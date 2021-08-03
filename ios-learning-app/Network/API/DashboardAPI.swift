@@ -12,6 +12,7 @@ import Moya
 enum DashboardAPI {
     case getDashboard
     case getPackage(id: String)
+    case postPurchase()
 }
 
 // MARK: TargetType protocol implementation
