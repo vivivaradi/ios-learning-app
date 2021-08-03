@@ -63,12 +63,14 @@ class DataPackageConfirmationViewController: UIViewController {
         self.confirmationTextLabel.lineBreakMode = .byWordWrapping
         
         self.yesButton.setTitle("Yes", for: .normal)
+        self.yesButton.isEnabled = true
         self.noButton.setMainColor(color: Color.lightGrey)
         self.noButton.setTitle("No thanks", for: .normal)
+        self.noButton.isEnabled = true
     }
     
     func setupData(packageName: String?) {
         self.dataPackageLabel.text = "Data Package"
-        self.confirmationTextLabel.text = "Are you sure you want to activate \(packageName ?? "")"
+        self.confirmationTextLabel.text = "Are you sure you want to activate \(packageName ?? "")?"
     }
 }

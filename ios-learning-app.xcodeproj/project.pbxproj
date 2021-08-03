@@ -13,7 +13,7 @@
 		D40F48E626AAE55D007364FD /* CurrentDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */; };
 		D40F48E826AAE5D2007364FD /* RefillDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E726AAE5D2007364FD /* RefillDataCellItemViewModel.swift */; };
 		D4179AD22689DB0E008A4B67 /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */; };
-		D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */; };
+		D4179AD42689EDC4008A4B67 /* StoryboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4179AD32689EDC4008A4B67 /* StoryboardAssembly.swift */; };
 		D41A764626B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A764526B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json */; };
 		D41A764826B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A764726B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json */; };
 		D41A764C26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json in Resources */ = {isa = PBXBuildFile; fileRef = D41A764B26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json */; };
@@ -86,7 +86,7 @@
 		D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCellItemViewModel.swift; sourceTree = "<group>"; };
 		D40F48E726AAE5D2007364FD /* RefillDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillDataCellItemViewModel.swift; sourceTree = "<group>"; };
 		D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
-		D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAssemble.swift; sourceTree = "<group>"; };
+		D4179AD32689EDC4008A4B67 /* StoryboardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAssembly.swift; sourceTree = "<group>"; };
 		D41A764526B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_O_PQREF_714c29.json; sourceTree = "<group>"; };
 		D41A764726B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_O_PQREF_1714c29.json; sourceTree = "<group>"; };
 		D41A764B26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dashboard_O_PQREF_4761c9.json; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		D4179AD02689DAFA008A4B67 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				D4179AD32689EDC4008A4B67 /* AutoAssemble.swift */,
+				D4179AD32689EDC4008A4B67 /* StoryboardAssembly.swift */,
 				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
 				D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */,
 				D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */,
@@ -682,7 +682,7 @@
 				D43F5E0326700C2B00C17DF9 /* DashboardViewController.swift in Sources */,
 				D4D385B926A8524C000AD252 /* DashboardData.swift in Sources */,
 				D4AA69B626AEB4AB0060FCB5 /* RemainingTime.swift in Sources */,
-				D4179AD42689EDC4008A4B67 /* AutoAssemble.swift in Sources */,
+				D4179AD42689EDC4008A4B67 /* StoryboardAssembly.swift in Sources */,
 				D455638726B8127B00456090 /* DataPackageConfirmationViewController.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
 				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,

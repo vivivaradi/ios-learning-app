@@ -43,6 +43,7 @@ class DataPackageDetailsViewController: UIViewController {
         self.buyButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
+                self.viewModel.storePackageName(name: self.titleLabel.text ?? "")
                 self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageConfirmationViewController")
             }).disposed(by: bag)
     }

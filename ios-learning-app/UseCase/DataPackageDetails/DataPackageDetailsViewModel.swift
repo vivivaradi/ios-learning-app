@@ -12,6 +12,8 @@ import RxSwift
 
 protocol DataPackageDetailsViewModelType {
     var packageData: Driver<DataPackageDetailsItemViewModel> { get }
+    
+    func storePackageName(name: String)
 }
 
 class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
@@ -40,4 +42,7 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
         }
     }
     
+    func storePackageName(name: String) {
+        self.dashboardService.packageName.accept(name)
+    }
 }
