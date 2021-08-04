@@ -34,6 +34,10 @@ class DashboardAssembly: Assembly {
         container.storyboardInitCompleted(DataPackageConfirmationViewController.self) { r, c in
             c.viewModel = r.resolve(DataPackageConfirmationViewModelType.self)!
         }
+        container.autoregister(DataPackageResultViewModelType.self, initializer: DataPackageResultViewModel.init)
+        container.storyboardInitCompleted(DataPackageResultViewController.self) { r, c in
+            c.viewModel = r.resolve(DataPackageResultViewModelType.self)!
+        }
     }
 }
 

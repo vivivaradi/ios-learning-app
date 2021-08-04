@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class DataPackageResultViewController: UIViewController {
     
@@ -23,8 +24,16 @@ class DataPackageResultViewController: UIViewController {
     @IBOutlet weak var resultDescription: UILabel!
     @IBOutlet weak var dashboardButton: UIButton!
     
+    let bag = DisposeBag()
+    
     override func viewDidLoad() {
         self.setupStyle()
+        
+        self.dashboardButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigationController?.popToRootViewController(animated: true)
+            }).disposed(by: bag)
     }
     
     func setupStyle() {
@@ -60,7 +69,7 @@ class DataPackageResultViewController: UIViewController {
         self.dashboardButton.isEnabled = true
     }
     
-    func setupData() {
+    func setupData(item: DataPackageResultItemViewModel) {
         
     }
     
