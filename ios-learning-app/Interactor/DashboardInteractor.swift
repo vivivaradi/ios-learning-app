@@ -48,4 +48,8 @@ class DashboardInteractor: DashboardInteractorType {
         return self.networkManager.provider.rx.requestMappedSingle(endpoint)
     }
     
+    func postPurchase(id: String) -> Single<DataPurchaseResponse> {
+        let endpoint = DashboardAPI.postPurchase(id: id)
+        return self.networkManager.provider.rx.requestMappedSingle(endpoint)
+    }
 }
