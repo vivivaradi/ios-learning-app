@@ -29,6 +29,12 @@ class DataPackageResultViewController: UIViewController {
     override func viewDidLoad() {
         self.setupStyle()
         
+        self.viewModel.result
+            .drive(onNext: { [weak self] result in
+                guard let self = self else { return }
+                self.setupData(item: result)
+            }).disposed(by: bag)
+        
         self.dashboardButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
@@ -64,13 +70,24 @@ class DataPackageResultViewController: UIViewController {
         self.resultDescription.lineBreakMode = .byWordWrapping
         self.resultDescription.numberOfLines = 0
         
+        // TODO: not showing
         self.dashboardButton.setTitle("Go to Dashboard", for: .normal)
         self.dashboardButton.setTitleColor(Color.white, for: .normal)
         self.dashboardButton.isEnabled = true
     }
     
     func setupData(item: DataPackageResultItemViewModel) {
-        
+        self.dataPackageLabel.text = "Data Package"
+        self.resultLabel.text = item.title
+        self.resultDescription.text = item.description
+        switch item.status {
+        case "success":
+            self.resultImageView.image = UIImage(named: "SuccessImage")
+        case "failure":
+            self.resultImageView.image = UIImage(named: "FailureImage")
+        default:
+            self.resultImageView.image = UIImage(named: "ImagePlaceholder")
+        }
     }
     
 }
