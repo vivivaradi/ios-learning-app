@@ -10,6 +10,7 @@
 		2EB4BEAB9E8B0C59B2038F7D /* Pods_ios_learning_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */; };
 		D4033B6426BAAB3E00A9B63E /* DataPackageResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */; };
 		D4033B6626BAAB4D00A9B63E /* DataPackageResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */; };
+		D4033B6826BAD11200A9B63E /* DataPackageResultItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4033B6726BAD11200A9B63E /* DataPackageResultItemViewModel.swift */; };
 		D40C23C326B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */; };
 		D40F48E426AAD779007364FD /* DashboardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */; };
 		D40F48E626AAE55D007364FD /* CurrentDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */; };
@@ -110,6 +111,7 @@
 		76DA16EAFF84F288D80EF3D9 /* Pods-ios-learning-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.debug.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.debug.xcconfig"; sourceTree = "<group>"; };
 		D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageResultViewController.swift; sourceTree = "<group>"; };
 		D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageResultViewModel.swift; sourceTree = "<group>"; };
+		D4033B6726BAD11200A9B63E /* DataPackageResultItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageResultItemViewModel.swift; sourceTree = "<group>"; };
 		D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageDetailsItemViewModel.swift; sourceTree = "<group>"; };
 		D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionViewModel.swift; sourceTree = "<group>"; };
 		D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCellItemViewModel.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */,
 				D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */,
+				D4033B6726BAD11200A9B63E /* DataPackageResultItemViewModel.swift */,
 			);
 			path = DataPackageResult;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
 				D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */,
 				D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */,
+				D4033B6826BAD11200A9B63E /* DataPackageResultItemViewModel.swift in Sources */,
 				D4C7FF0926A6D441008062A1 /* Color.swift in Sources */,
 				D4EBE9E326B2B897001FB4DC /* DataPackageDetailsViewModel.swift in Sources */,
 				D47DCF0926948C73000D2713 /* RefillDataCell.swift in Sources */,
