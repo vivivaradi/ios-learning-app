@@ -293,7 +293,7 @@
         <!--Data Package Result View Controller-->
         <scene sceneID="vOX-Yr-6ec">
             <objects>
-                <viewController id="HNi-3L-3Zb" customClass="DataPackageResultViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataPackageResultViewController" id="HNi-3L-3Zb" customClass="DataPackageResultViewController" customModule="ios_learning_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xdm-Gp-mK9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

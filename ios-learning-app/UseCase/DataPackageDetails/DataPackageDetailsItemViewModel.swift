@@ -11,10 +11,10 @@ import RxSwift
 
 struct DataPackageDetailsItemViewModel {
     
-    var id: String
-    var name: String
-    var description: String
-    var price: Int
+    let id: String
+    let name: String
+    let description: String
+    let price: Int
     
     init() {
         id = ""

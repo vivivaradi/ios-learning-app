@@ -38,6 +38,18 @@ class DataPackageConfirmationViewController: UIViewController {
                 guard let self = self else { return }
                 self.setupData(packageName: packageName)
             }).disposed(by: bag)
+        
+        self.noButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigationController?.popViewController(animated: true)
+            }).disposed(by: bag)
+        
+        self.yesButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageResultViewController")
+            }).disposed(by: bag)
     }
     
     func setupStyle() {
@@ -72,5 +84,11 @@ class DataPackageConfirmationViewController: UIViewController {
     func setupData(packageName: String?) {
         self.dataPackageLabel.text = "Data Package"
         self.confirmationTextLabel.text = "Are you sure you want to activate \(packageName ?? "")?"
+    }
+    
+    func navigateTo(storyboard name: String, withIdentifier id: String) {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id) as UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

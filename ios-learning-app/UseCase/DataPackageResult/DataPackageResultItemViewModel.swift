@@ -12,4 +12,16 @@ struct DataPackageResultItemViewModel {
     let status: String
     let title: String
     let description: String
+    
+    init() {
+        self.status = ""
+        self.title = ""
+        self.description = ""
+    }
+    
+    init(dataPurchaseResponse: DataPurchaseResponse) {
+        self.status = dataPurchaseResponse.status ?? ""
+        self.title = dataPurchaseResponse.title ?? ""
+        self.description = dataPurchaseResponse.description ?? ""
+    }
 }
