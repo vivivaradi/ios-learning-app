@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EB4BEAB9E8B0C59B2038F7D /* Pods_ios_learning_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */; };
+		D4033B6426BAAB3E00A9B63E /* DataPackageResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */; };
+		D4033B6626BAAB4D00A9B63E /* DataPackageResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */; };
 		D40C23C326B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */; };
 		D40F48E426AAD779007364FD /* DashboardSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */; };
 		D40F48E626AAE55D007364FD /* CurrentDataCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */; };
@@ -106,6 +108,8 @@
 		15FF72AB7015A5B890955155 /* Pods-ios-learning-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.release.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.release.xcconfig"; sourceTree = "<group>"; };
 		302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_learning_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA16EAFF84F288D80EF3D9 /* Pods-ios-learning-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-learning-app.debug.xcconfig"; path = "Target Support Files/Pods-ios-learning-app/Pods-ios-learning-app.debug.xcconfig"; sourceTree = "<group>"; };
+		D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageResultViewController.swift; sourceTree = "<group>"; };
+		D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageResultViewModel.swift; sourceTree = "<group>"; };
 		D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPackageDetailsItemViewModel.swift; sourceTree = "<group>"; };
 		D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSectionViewModel.swift; sourceTree = "<group>"; };
 		D40F48E526AAE55D007364FD /* CurrentDataCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDataCellItemViewModel.swift; sourceTree = "<group>"; };
@@ -220,6 +224,15 @@
 				302CB5E74EECC477F3787DC5 /* Pods_ios_learning_app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4033B6226BAAB0E00A9B63E /* DataPackageResult */ = {
+			isa = PBXGroup;
+			children = (
+				D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */,
+				D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */,
+			);
+			path = DataPackageResult;
 			sourceTree = "<group>";
 		};
 		D40C6AB7269D9F35003EA7C5 /* Supporting Files */ = {
@@ -553,6 +566,7 @@
 		D4E8C6FC267378F100F88572 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				D4033B6226BAAB0E00A9B63E /* DataPackageResult */,
 				D455638526B811D800456090 /* DataPackageConfirmation */,
 				D41A766626B1887D00F3AD11 /* DataPackageDetails */,
 				D4E8C6FE267378FF00F88572 /* Dashboard */,
@@ -780,12 +794,14 @@
 				D4D7CCC62679CD5000DF121B /* stubbedResponse.swift in Sources */,
 				D4C7FF0626A6BA46008062A1 /* ColorChangingButton.swift in Sources */,
 				D4C7FF0C26A6FAB4008062A1 /* LoginInteractor.swift in Sources */,
+				D4033B6626BAAB4D00A9B63E /* DataPackageResultViewModel.swift in Sources */,
 				D444D5B0269831D600B6E4EB /* DataConverter.swift in Sources */,
 				D47DCF0C26949662000D2713 /* Constants.swift in Sources */,
 				D4D385BB26A86200000AD252 /* PsmCodes.swift in Sources */,
 				D40F48E426AAD779007364FD /* DashboardSectionViewModel.swift in Sources */,
 				D44FE9A926A5B763005BCC8B /* StringExtension.swift in Sources */,
 				D4931BE32657A6700017AD81 /* LoginViewController.swift in Sources */,
+				D4033B6426BAAB3E00A9B63E /* DataPackageResultViewController.swift in Sources */,
 				D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */,
 				D4C7FF0E26A7026D008062A1 /* InteractorAssembly.swift in Sources */,
 				D41A766326B145B600F3AD11 /* DashboardService.swift in Sources */,
