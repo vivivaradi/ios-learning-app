@@ -57,7 +57,7 @@ extension DashboardAPI: TargetType {
         case .getDashboard, .getPackage(_):
             return .requestPlain
         case .postPurchase(let id):
-            return .requestParameters(parameters: ["id" : id], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["id": id], encoding: JSONEncoding.default)
         }
     }
     

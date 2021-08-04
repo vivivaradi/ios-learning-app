@@ -337,7 +337,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="247-Qm-B3a">
-                                                <rect key="frame" x="16" y="479" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="442" width="343" height="67"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="67" id="rz1-oe-tDk"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDr-dH-oIx" userLabel="StatusLabel">

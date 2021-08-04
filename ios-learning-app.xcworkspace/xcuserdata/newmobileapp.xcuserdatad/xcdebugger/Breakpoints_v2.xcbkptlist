@@ -255,7 +255,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1707609A-AAE8-4B2F-9EF8-AF5329A64340"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-learning-app/UseCase/DataPackageConfirmation/DataPackageConfirmationViewController.swift"
