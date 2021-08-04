@@ -18,6 +18,7 @@ protocol DashboardServiceType {
     
     func getRefillPackage() -> Single<RefillDataPackage>
     func getContentPackage() -> Single<UnlimitedContentPackage>
+    func postPurchase() -> Single<DataPurchaseResponse>
 }
 
 class DashboardService: DashboardServiceType {
@@ -43,5 +44,10 @@ class DashboardService: DashboardServiceType {
     func getContentPackage() -> Single<UnlimitedContentPackage> {
         let id = packageId.value ?? ""
         return self.dashboardInteractor.getContentPackage(id: id)
+    }
+    
+    func postPurchase() -> Single<DataPurchaseResponse> {
+        let id = packageId.value ?? ""
+        return self.dashboardInteractor.postPurchase(id: id)
     }
 }

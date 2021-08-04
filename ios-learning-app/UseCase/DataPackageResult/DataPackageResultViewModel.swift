@@ -7,11 +7,24 @@
 //
 
 import Foundation
+import RxCocoa
 
 protocol DataPackageResultViewModelType {
-    
+    var result: Driver<DataPackageResultItemViewModel> { get }
 }
 
 class DataPackageResultViewModel: DataPackageResultViewModelType {
     
+    var result: Driver<DataPackageResultItemViewModel>
+    
+    var dashboardService: DashboardServiceType!
+    
+    init(dashboardService: DashboardServiceType) {
+        self.dashboardService = dashboardService
+        self.result = self.dashboardService.postPurchase()
+            .map({ response in
+                return DataPackageResultItemViewModel(dataPurchaseResponse: response)
+            }).asDriver(onErrorJustReturn: DataPackageResultItemViewModel())
+            
+    }
 }

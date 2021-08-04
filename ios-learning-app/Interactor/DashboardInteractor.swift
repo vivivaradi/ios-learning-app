@@ -17,6 +17,7 @@ protocol DashboardInteractorType {
 
     func getRefillPackage(id: String) -> Single<RefillDataPackage>
     func getContentPackage(id: String) -> Single<UnlimitedContentPackage>
+    func postPurchase(id: String) -> Single<DataPurchaseResponse>
 }
 
 class DashboardInteractor: DashboardInteractorType {
