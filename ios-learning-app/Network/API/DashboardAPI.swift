@@ -12,7 +12,7 @@ import Moya
 enum DashboardAPI {
     case getDashboard
     case getPackage(id: String)
-    case postPurchase()
+    case postPurchase(id: String)
 }
 
 // MARK: TargetType protocol implementation
@@ -23,8 +23,12 @@ extension DashboardAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getDashboard: return "/dashboard"
-        case .getPackage(let id): return "/dashboard/\(id)"
+        case .getDashboard:
+            return "/dashboard"
+        case .getPackage(let id):
+            return "/dashboard/\(id)"
+        case .postPurchase(_):
+            return "/purchases"
         }
     }
     
@@ -32,6 +36,8 @@ extension DashboardAPI: TargetType {
         switch self {
         case .getDashboard, .getPackage(_):
             return .get
+        case .postPurchase(_):
+            return .post
         }
     }
     
@@ -41,6 +47,8 @@ extension DashboardAPI: TargetType {
             return stubbedResponse("dashboard")
         case .getPackage(let id):
             return stubbedResponse("dashboard_\(id)")
+        case .postPurchase(let id):
+            return stubbedResponse("datapurchaseresponse_success_\(id)")
         }
     }
     
@@ -48,6 +56,8 @@ extension DashboardAPI: TargetType {
         switch self {
         case .getDashboard, .getPackage(_):
             return .requestPlain
+        case .postPurchase(let id):
+            return .requestParameters(parameters: ["id" : id], encoding: JSONEncoding.default)
         }
     }
     
