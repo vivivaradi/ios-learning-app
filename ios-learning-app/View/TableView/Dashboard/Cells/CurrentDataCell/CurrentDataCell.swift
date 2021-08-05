@@ -28,7 +28,7 @@ class CurrentDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(from package: CurrentDataCellItemViewModel) {
+    func setupData(from package: CurrentDataCellItemViewModel) {
         self.myDataLabel.text = package.name
         let totalDataString = DataConverter.addMeasurement(to: package.totalData)
         self.totalDataLabel.text = "left of \(totalDataString) bundle"

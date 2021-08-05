@@ -27,7 +27,7 @@ class SectionHeaderCell: UITableViewCell {
         self.layoutIfNeeded()
     }
     
-    func configure(with title: String) {
+    func setupData(with title: String) {
         self.titleLabel.text = title
         self.setupStyle()
     }

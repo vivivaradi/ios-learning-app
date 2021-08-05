@@ -32,7 +32,7 @@ class DashboardHeaderCell: UITableViewCell {
         self.layoutIfNeeded()
     }
     
-    func configure() {
+    func setupData() {
         setupStyle()
     }
     

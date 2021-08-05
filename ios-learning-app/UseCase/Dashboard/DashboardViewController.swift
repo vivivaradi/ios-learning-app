@@ -91,14 +91,14 @@ extension DashboardViewController {
             switch model {
             case .mainItem(let item):
                 if let cell = table.dequeueReusableCell(withIdentifier: Constants.currentDataCellIdentifier, for: indexPath) as? CurrentDataCell {
-                    cell.configure(from: item)
+                    cell.setupData(from: item)
                     return cell
                 }
                 return UITableViewCell()
                 
             case .refillItem(let item), .contentItem(let item):
                 if let cell = table.dequeueReusableCell(withIdentifier: Constants.refillDataCellIdentifier, for: indexPath) as? RefillDataCell {
-                    cell.configure(from: item)
+                    cell.setupData(from: item)
                     return cell
                 }
                 return UITableViewCell()
@@ -143,19 +143,19 @@ extension DashboardViewController: UITableViewDelegate {
         switch dataSource[section] {
         case .mainSection(_):
             if let mainHeaderCell = tableView.dequeueReusableCell(withIdentifier: Constants.dashboardHeaderCellIdentifier) as? DashboardHeaderCell {
-                mainHeaderCell.configure()
+                mainHeaderCell.setupData()
                 return mainHeaderCell
             }
             return nil
         case .refillSection(let title, _):
             if let sectionHeaderCell = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as? SectionHeaderCell {
-                sectionHeaderCell.configure(with: title)
+                sectionHeaderCell.setupData(with: title)
                 return sectionHeaderCell
             }
             return nil
         case .contentSection(let title, _):
             if let sectionHeaderCell = tableView.dequeueReusableCell(withIdentifier: Constants.sectionHeaderCellIdentifier) as? SectionHeaderCell {
-                sectionHeaderCell.configure(with: title)
+                sectionHeaderCell.setupData(with: title)
                 return sectionHeaderCell
             }
             return nil
