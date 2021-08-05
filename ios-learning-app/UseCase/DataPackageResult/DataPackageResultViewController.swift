@@ -22,7 +22,7 @@ class DataPackageResultViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultImageView: UIImageView!
     @IBOutlet weak var resultDescription: UILabel!
-    @IBOutlet weak var dashboardButton: UIButton!
+    @IBOutlet weak var dashboardButton: ColorChangingButton!
     
     let bag = DisposeBag()
     
@@ -69,8 +69,7 @@ class DataPackageResultViewController: UIViewController {
         self.resultDescription.font = UIFont(name: Constants.roboto, size: 16)
         self.resultDescription.lineBreakMode = .byWordWrapping
         self.resultDescription.numberOfLines = 0
-        
-        // TODO: not showing
+    
         self.dashboardButton.setTitle("Go to Dashboard", for: .normal)
         self.dashboardButton.setTitleColor(Color.white, for: .normal)
         self.dashboardButton.isEnabled = true

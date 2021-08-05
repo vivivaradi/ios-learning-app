@@ -336,7 +336,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="247-Qm-B3a">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="247-Qm-B3a" customClass="ColorChangingButton" customModule="ios_learning_app" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="442" width="343" height="67"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="67" id="rz1-oe-tDk"/>
@@ -393,7 +393,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="kZg-0e-q54" id="tbC-O4-Sjh"/>
                         <outlet property="containerView" destination="fkv-3J-agy" id="WeB-zG-YbJ"/>
-                        <outlet property="dashboardButton" destination="247-Qm-B3a" id="hCP-uE-Qsf"/>
+                        <outlet property="dashboardButton" destination="247-Qm-B3a" id="f5l-jl-F3B"/>
                         <outlet property="dataPackageLabel" destination="Nh7-ag-iIT" id="0jc-Zy-NmP"/>
                         <outlet property="logoImageView" destination="5pk-uO-f00" id="wJd-th-6eK"/>
                         <outlet property="myVodafoneLabel" destination="1ch-Ed-8Rg" id="Tmb-Et-OPE"/>
