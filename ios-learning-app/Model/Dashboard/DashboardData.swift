@@ -8,10 +8,17 @@
 
 import Foundation
 
-struct DashboardData: Codable {
+class DashboardData: Codable {
     
-    let status: String?
-    let responseType: String?
-    let postpaid: Postpaid?
+    var status: String?
+    var responseType: String?
+    var postpaid: Postpaid?
 
+    init() { }
+    
+    init(status: String?, responseType: String?, postpaid: Postpaid?) {
+        self.status = status
+        self.responseType = responseType
+        self.postpaid = postpaid
+    }
 }

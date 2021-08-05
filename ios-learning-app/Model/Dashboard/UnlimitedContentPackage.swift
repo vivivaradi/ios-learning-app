@@ -8,14 +8,27 @@
 
 import Foundation
 
-struct UnlimitedContentPackage: Codable {
+class UnlimitedContentPackage: Codable {
     
-    let id: String?
-    let name: String?
-    let description: String?
-    let featured: Bool?
-    let price: Int?
-    let active: Bool?
-    let activeOnSubscription: Bool?
-    let psmCodes: PsmCodes?
+    var id: String?
+    var name: String?
+    var description: String?
+    var featured: Bool?
+    var price: Int?
+    var active: Bool?
+    var activeOnSubscription: Bool?
+    var psmCodes: PsmCodes?
+    
+    init() { }
+    
+    init(id: String?, name: String?, description: String?, featured: Bool?, price: Int?, active: Bool?, activeOnSubscription: Bool?, psmCodes: PsmCodes?) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.featured = featured
+        self.price = price
+        self.active = active
+        self.activeOnSubscription = activeOnSubscription
+        self.psmCodes = psmCodes
+    }
 }

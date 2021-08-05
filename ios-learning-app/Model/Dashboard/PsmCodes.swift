@@ -8,8 +8,15 @@
 
 import Foundation
 
-struct PsmCodes: Codable {
+class PsmCodes: Codable {
     
-    let activation: String?
-    let deactivation: String?
+    var activation: String?
+    var deactivation: String?
+    
+    init() { }
+    
+    init(activation: String?, deactivation: String?) {
+        self.activation = activation
+        self.deactivation = deactivation
+    }
 }

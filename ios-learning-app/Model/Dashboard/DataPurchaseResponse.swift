@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct DataPurchaseResponse: Codable {
-    let status: String?
-    let title: String?
-    let description: String?
+class DataPurchaseResponse: Codable {
+    var status: String?
+    var title: String?
+    var description: String?
+    
+    init() { }
+    
+    init(status: String?, title: String?, description: String?) {
+        self.status = status
+        self.title = title
+        self.description = description
+    }
 }

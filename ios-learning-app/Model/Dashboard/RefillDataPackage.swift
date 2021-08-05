@@ -8,12 +8,23 @@
 
 import Foundation
 
-struct RefillDataPackage: Codable {
+class RefillDataPackage: Codable {
 
-    let id: String?
-    let name: String?
-    let description: String?
-    let active: Bool?
-    let price: Int?
-    let psmCodes: PsmCodes
+    var id: String?
+    var name: String?
+    var description: String?
+    var active: Bool?
+    var price: Int?
+    var psmCodes: PsmCodes?
+    
+    init() { }
+    
+    init(id: String?, name: String?, description: String?, active: Bool?, price: Int?, psmCodes: PsmCodes?) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.active = active
+        self.price = price
+        self.psmCodes = psmCodes
+    }
 }
