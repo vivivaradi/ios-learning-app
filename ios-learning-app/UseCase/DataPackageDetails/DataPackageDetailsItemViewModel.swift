@@ -44,3 +44,9 @@ struct DataPackageDetailsItemViewModel {
         self.price = price
     }
 }
+
+extension DataPackageDetailsItemViewModel: Equatable {
+    static func == (lhs: DataPackageDetailsItemViewModel, rhs: DataPackageDetailsItemViewModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

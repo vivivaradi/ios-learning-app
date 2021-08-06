@@ -31,3 +31,9 @@ struct DataPackageResultItemViewModel {
         self.description = description
     }
 }
+
+extension DataPackageResultItemViewModel: Equatable {
+    static func == (lhs: DataPackageResultItemViewModel, rhs: DataPackageResultItemViewModel) -> Bool {
+        return lhs.status == rhs.status && lhs.title == rhs.title && lhs.description == rhs.description
+    }
+}
