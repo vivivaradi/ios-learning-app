@@ -231,9 +231,9 @@
 		D4033B6226BAAB0E00A9B63E /* DataPackageResult */ = {
 			isa = PBXGroup;
 			children = (
+				D4033B6726BAD11200A9B63E /* DataPackageResultItemViewModel.swift */,
 				D4033B6326BAAB3E00A9B63E /* DataPackageResultViewController.swift */,
 				D4033B6526BAAB4D00A9B63E /* DataPackageResultViewModel.swift */,
-				D4033B6726BAD11200A9B63E /* DataPackageResultItemViewModel.swift */,
 			);
 			path = DataPackageResult;
 			sourceTree = "<group>";
@@ -241,8 +241,10 @@
 		D40C6AB7269D9F35003EA7C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4931BE72657A6720017AD81 /* Assets.xcassets */,
 				D47DCF0B26949662000D2713 /* Constants.swift */,
 				D444D5AF269831D600B6E4EB /* DataConverter.swift */,
+				D4931BEC2657A6720017AD81 /* Info.plist */,
 				D4AA69B526AEB4AB0060FCB5 /* RemainingTime.swift */,
 			);
 			path = "Supporting Files";
@@ -251,10 +253,10 @@
 		D4179AD02689DAFA008A4B67 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				D4179AD32689EDC4008A4B67 /* StoryboardAssembly.swift */,
 				D4179AD12689DB0E008A4B67 /* ManagerAssembly.swift */,
 				D4C7FF0D26A7026D008062A1 /* InteractorAssembly.swift */,
 				D41A766426B15B6F00F3AD11 /* ServiceAssembly.swift */,
+				D4179AD32689EDC4008A4B67 /* StoryboardAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -270,9 +272,9 @@
 		D41A766626B1887D00F3AD11 /* DataPackageDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */,
 				D41A766726B188A100F3AD11 /* DataPackageDetailsViewController.swift */,
 				D4EBE9E226B2B897001FB4DC /* DataPackageDetailsViewModel.swift */,
-				D40C23C226B40C0B0009D307 /* DataPackageDetailsItemViewModel.swift */,
 			);
 			path = DataPackageDetails;
 			sourceTree = "<group>";
@@ -280,18 +282,18 @@
 		D41EA84126B93CEC001231DA /* DashboardItem */ = {
 			isa = PBXGroup;
 			children = (
-				D41A764526B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json */,
-				D41A764726B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json */,
-				D41A764B26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json */,
 				D41A764D26B1422B00F3AD11 /* dashboard_68859.json */,
 				D41A764F26B1424900F3AD11 /* dashboard_68860.json */,
 				D41A765126B1428100F3AD11 /* dashboard_68861.json */,
 				D41A765326B142CA00F3AD11 /* dashboard_68862.json */,
-				D41A765526B142F000F3AD11 /* dashboard_UCP68348.json */,
-				D41A765926B1432400F3AD11 /* dashboard_UCP67696.json */,
-				D41A765B26B1434A00F3AD11 /* dashboard_UCP69102.json */,
+				D41A764726B1407A00F3AD11 /* dashboard_O_PQREF_1714c29.json */,
+				D41A764B26B141FD00F3AD11 /* dashboard_O_PQREF_4761c9.json */,
+				D41A764526B13EED00F3AD11 /* dashboard_O_PQREF_714c29.json */,
 				D41A765D26B1436D00F3AD11 /* dashboard_UCP66205.json */,
 				D41A765F26B1439700F3AD11 /* dashboard_UCP66907.json */,
+				D41A765926B1432400F3AD11 /* dashboard_UCP67696.json */,
+				D41A765526B142F000F3AD11 /* dashboard_UCP68348.json */,
+				D41A765B26B1434A00F3AD11 /* dashboard_UCP69102.json */,
 			);
 			path = DashboardItem;
 			sourceTree = "<group>";
@@ -299,30 +301,30 @@
 		D41EA84226B93D06001231DA /* DataPurchaseResponse */ = {
 			isa = PBXGroup;
 			children = (
-				D41EA84526B95082001231DA /* datapurchaseresponse_success_O_PQREF_714c29.json */,
-				D41EA84726B950BA001231DA /* datapurchaseresponse_success_O_PQREF_1714c29.json */,
-				D41EA84926B96333001231DA /* datapurchaseresponse_success_O_PQREF_4761c9.json */,
-				D41EA84B26B9636D001231DA /* datapurchaseresponse_success_68859.json */,
-				D41EA84D26B9638C001231DA /* datapurchaseresponse_success_68860.json */,
-				D41EA84F26B963A0001231DA /* datapurchaseresponse_success_68861.json */,
-				D41EA85126B963BE001231DA /* datapurchaseresponse_success_68862.json */,
-				D41EA85326B963D9001231DA /* datapurchaseresponse_success_UCP68348.json */,
-				D41EA85526B963EF001231DA /* datapurchaseresponse_success_UCP67696.json */,
-				D41EA85726B96404001231DA /* datapurchaseresponse_success_UCP69102.json */,
-				D41EA85926B96424001231DA /* datapurchaseresponse_success_UCP66205.json */,
-				D41EA87326B97E97001231DA /* datapurchaseresponse_success_UCP66907.json */,
-				D41EA85B26B967DA001231DA /* datapurchaseresponse_failure_O_PQREF_714c29.json */,
-				D41EA85D26B96808001231DA /* datapurchaseresponse_failure_O_PQREF_1714c29.json */,
-				D41EA85F26B9681C001231DA /* datapurchaseresponse_failure_O_PQREF_4761c9.json */,
 				D41EA86126B96830001231DA /* datapurchaseresponse_failure_68859.json */,
 				D41EA86326B96848001231DA /* datapurchaseresponse_failure_68860.json */,
 				D41EA86526B96860001231DA /* datapurchaseresponse_failure_68861.json */,
 				D41EA86726B96894001231DA /* datapurchaseresponse_failure_68862.json */,
-				D41EA86926B968C6001231DA /* datapurchaseresponse_failure_UCP68348.json */,
-				D41EA86B26B968DE001231DA /* datapurchaseresponse_failure_UCP67696.json */,
-				D41EA86D26B968F3001231DA /* datapurchaseresponse_failure_UCP69102.json */,
+				D41EA85D26B96808001231DA /* datapurchaseresponse_failure_O_PQREF_1714c29.json */,
+				D41EA85F26B9681C001231DA /* datapurchaseresponse_failure_O_PQREF_4761c9.json */,
+				D41EA85B26B967DA001231DA /* datapurchaseresponse_failure_O_PQREF_714c29.json */,
 				D41EA86F26B96902001231DA /* datapurchaseresponse_failure_UCP66205.json */,
 				D41EA87126B96910001231DA /* datapurchaseresponse_failure_UCP66907.json */,
+				D41EA86B26B968DE001231DA /* datapurchaseresponse_failure_UCP67696.json */,
+				D41EA86926B968C6001231DA /* datapurchaseresponse_failure_UCP68348.json */,
+				D41EA86D26B968F3001231DA /* datapurchaseresponse_failure_UCP69102.json */,
+				D41EA84B26B9636D001231DA /* datapurchaseresponse_success_68859.json */,
+				D41EA84D26B9638C001231DA /* datapurchaseresponse_success_68860.json */,
+				D41EA84F26B963A0001231DA /* datapurchaseresponse_success_68861.json */,
+				D41EA85126B963BE001231DA /* datapurchaseresponse_success_68862.json */,
+				D41EA84726B950BA001231DA /* datapurchaseresponse_success_O_PQREF_1714c29.json */,
+				D41EA84926B96333001231DA /* datapurchaseresponse_success_O_PQREF_4761c9.json */,
+				D41EA84526B95082001231DA /* datapurchaseresponse_success_O_PQREF_714c29.json */,
+				D41EA85926B96424001231DA /* datapurchaseresponse_success_UCP66205.json */,
+				D41EA87326B97E97001231DA /* datapurchaseresponse_success_UCP66907.json */,
+				D41EA85526B963EF001231DA /* datapurchaseresponse_success_UCP67696.json */,
+				D41EA85326B963D9001231DA /* datapurchaseresponse_success_UCP68348.json */,
+				D41EA85726B96404001231DA /* datapurchaseresponse_success_UCP69102.json */,
 			);
 			path = DataPurchaseResponse;
 			sourceTree = "<group>";
@@ -377,8 +379,8 @@
 		D43F5DFD2670065D00C17DF9 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D43F5DFE2670067300C17DF9 /* LoginAPI.swift */,
 				D4D385B426A82695000AD252 /* DashboardAPI.swift */,
+				D43F5DFE2670067300C17DF9 /* LoginAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -484,8 +486,6 @@
 				D47DCF02269478A5000D2713 /* View */,
 				D4931BDE2657A6700017AD81 /* AppDelegate.swift */,
 				D4931BE02657A6700017AD81 /* SceneDelegate.swift */,
-				D4931BE72657A6720017AD81 /* Assets.xcassets */,
-				D4931BEC2657A6720017AD81 /* Info.plist */,
 			);
 			path = "ios-learning-app";
 			sourceTree = "<group>";
@@ -526,8 +526,8 @@
 		D4C7FF0A26A6FA7F008062A1 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */,
 				D4D385BE26A8663F000AD252 /* DashboardInteractor.swift */,
+				D4C7FF0B26A6FAB4008062A1 /* LoginInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -545,11 +545,11 @@
 			children = (
 				D42BBF3526959FAF003DBAB5 /* CurrentDataPackage.swift */,
 				D4D385B826A8524C000AD252 /* DashboardData.swift */,
+				D41EA87526B9856F001231DA /* DataPurchaseResponse.swift */,
 				D4D385BC26A86306000AD252 /* Postpaid.swift */,
 				D4D385BA26A86200000AD252 /* PsmCodes.swift */,
 				D47DCF0E269499EE000D2713 /* RefillDataPackage.swift */,
 				D4D385B626A83A83000AD252 /* UnlimitedContentPackage.swift */,
-				D41EA87526B9856F001231DA /* DataPurchaseResponse.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -591,9 +591,9 @@
 		D4E8C6FE267378FF00F88572 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */,
 				D43F5E0226700C2B00C17DF9 /* DashboardViewController.swift */,
 				D4CDBE422689F37E00C8E86A /* DashboardViewModel.swift */,
-				D40F48E326AAD779007364FD /* DashboardSectionViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
