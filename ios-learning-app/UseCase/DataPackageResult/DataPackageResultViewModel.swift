@@ -19,7 +19,7 @@ class DataPackageResultViewModel: DataPackageResultViewModelType {
     
     var result: Driver<DataPackageResultItemViewModel>
     
-    //MARK: - Dependencies
+    // MARK: - Dependencies
     
     var dashboardService: DashboardServiceType!
     

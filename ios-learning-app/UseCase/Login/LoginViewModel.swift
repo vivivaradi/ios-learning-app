@@ -15,20 +15,17 @@ import RxCocoa
 protocol LoginViewModelType {
     
     func performLogin(msisdn: String) -> Single<LoginResponse>
-    func hasActiveSession() -> Bool
 }
 
 class LoginViewModel: LoginViewModelType {    
     
     // MARK: - Dependencies
-    
-    var sessionManager: SessioningManager!
+
     var loginInteractor: LoginInteractorType!
     
     // MARK: - Init
     
-    init(sessionManager: SessioningManager, loginInteractor: LoginInteractorType) {
-        self.sessionManager = sessionManager
+    init(loginInteractor: LoginInteractorType) {
         self.loginInteractor = loginInteractor
     }
     
@@ -36,9 +33,5 @@ class LoginViewModel: LoginViewModelType {
     
     func performLogin(msisdn: String) -> Single<LoginResponse> {
         return self.loginInteractor.login(msisdn: msisdn)
-    }
-    
-    func hasActiveSession() -> Bool {
-        return self.sessionManager.isSessionActive()
     }
 }

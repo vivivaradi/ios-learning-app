@@ -82,7 +82,6 @@
 		D4931BEB2657A6720017AD81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4931BE92657A6720017AD81 /* LaunchScreen.storyboard */; };
 		D4931BF42657BCFF0017AD81 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4931BF32657BCFF0017AD81 /* Roboto-Regular.ttf */; };
 		D4A1FA0426657C020013FBBE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1FA0326657C020013FBBE /* NetworkManager.swift */; };
-		D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A1FA0526657C0F0013FBBE /* SessionManager.swift */; };
 		D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */; };
 		D4A974F9268272740095EAE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974F8268272740095EAE0 /* LoginViewModel.swift */; };
 		D4A974FB268279F10095EAE0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A974FA268279F10095EAE0 /* LoginResponse.swift */; };
@@ -182,10 +181,9 @@
 		D4931BE52657A6700017AD81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D4931BE72657A6720017AD81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4931BEA2657A6720017AD81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4931BEC2657A6720017AD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4931BEC2657A6720017AD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ios-learning-app/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		D4931BF32657BCFF0017AD81 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D4A1FA0326657C020013FBBE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		D4A1FA0526657C0F0013FBBE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D4A4F51526662FC50026B0A6 /* MultiMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMoyaProvider.swift; sourceTree = "<group>"; };
 		D4A974F8268272740095EAE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D4A974FA268279F10095EAE0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -405,14 +403,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		D43F5E072670114600C17DF9 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				D4A1FA0526657C0F0013FBBE /* SessionManager.swift */,
-			);
-			path = Session;
-			sourceTree = "<group>";
-		};
 		D444D5B526987EDA00B6E4EB /* SectionHeaderCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,7 +468,6 @@
 				D47DCF0D269499D0000D2713 /* Model */,
 				D43F5E062670110F00C17DF9 /* Network */,
 				D41A766126B1452500F3AD11 /* Service */,
-				D43F5E072670114600C17DF9 /* Session */,
 				D43F5E04267010FF00C17DF9 /* Storyboards */,
 				D4C7FF0726A6D433008062A1 /* Style */,
 				D40C6AB7269D9F35003EA7C5 /* Supporting Files */,
@@ -820,7 +809,6 @@
 				D4179AD42689EDC4008A4B67 /* StoryboardAssembly.swift in Sources */,
 				D455638726B8127B00456090 /* DataPackageConfirmationViewController.swift in Sources */,
 				D4CDBE432689F37E00C8E86A /* DashboardViewModel.swift in Sources */,
-				D4A1FA0626657C0F0013FBBE /* SessionManager.swift in Sources */,
 				D40F48E826AAE5D2007364FD /* RefillDataCellItemViewModel.swift in Sources */,
 				D42BBF3626959FAF003DBAB5 /* CurrentDataPackage.swift in Sources */,
 				D4A4F51626662FC50026B0A6 /* MultiMoyaProvider.swift in Sources */,
@@ -988,7 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ios-learning-app/Info.plist";
+				INFOPLIST_FILE = "ios-learning-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1006,7 +994,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ios-learning-app/Info.plist";
+				INFOPLIST_FILE = "ios-learning-app/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

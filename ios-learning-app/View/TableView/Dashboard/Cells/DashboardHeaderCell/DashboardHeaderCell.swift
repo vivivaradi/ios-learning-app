@@ -10,7 +10,7 @@ import UIKit
 
 class DashboardHeaderCell: UITableViewCell {
 
-    //MARK: - IBOutlet variables
+    // MARK: - IBOutlet variables
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var headerLogoImage: UIImageView!

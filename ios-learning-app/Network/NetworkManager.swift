@@ -14,7 +14,12 @@ protocol NetworkingManager {
 }
 
 class NetworkManager: NetworkingManager {
+    
+    // MARK: - Public variables
+    
     var provider: MultiMoyaProvider
+    
+    // MARK: - Init
     
     init() {
         self.provider = MultiMoyaProvider(stubClosure: MultiMoyaProvider.delayedStub(1))
