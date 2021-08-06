@@ -15,11 +15,18 @@ protocol LoginInteractorType {
 }
 
 class LoginInteractor: LoginInteractorType {
+    
+    // MARK: - Dependencies
+    
     let networkManager: NetworkingManager!
+    
+    // MARK: - Init
     
     init(networkManager: NetworkingManager) {
         self.networkManager = networkManager
     }
+    
+    // MARK: - Public methods
     
     func login(msisdn: String) -> Single<LoginResponse> {
         let endpoint = LoginAPI.loginUser(msisdn: msisdn)

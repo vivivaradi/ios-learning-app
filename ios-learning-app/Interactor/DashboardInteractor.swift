@@ -22,12 +22,18 @@ protocol DashboardInteractorType {
 
 class DashboardInteractor: DashboardInteractorType {
     
+    // MARK: - Public variables
+    
     var dashboardDataResult: Observable<DashboardData>
     var dashboardRelay: PublishRelay<Void>
+    
+    // MARK: - Dependencies
     
     let networkManager: NetworkingManager!
     
     let bag = DisposeBag()
+    
+    // MARK: - Init
     
     init(networkManager: NetworkingManager) {
         self.networkManager = networkManager
@@ -38,6 +44,8 @@ class DashboardInteractor: DashboardInteractorType {
             })
         self.dashboardDataResult.subscribe().disposed(by: bag)
     }
+    
+    // MARK: - Public methods
     
     func getRefillPackage(id: String) -> Single<RefillDataPackage> {
         let endpoint = DashboardAPI.getPackage(id: id)
