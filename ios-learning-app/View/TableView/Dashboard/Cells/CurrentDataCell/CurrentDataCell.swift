@@ -35,13 +35,11 @@ class CurrentDataCell: UITableViewCell {
         self.remainingDataLabel.text = remainingDataString
         self.progressView.progress = (Float(package.usedData) / Float(package.totalData))
         self.remainingDaysLabel.text = "Resets in \(package.daysLeft) days"
+        self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")
         self.setupStyle()
     }
 
     func setupStyle() {
-
-        self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")
-        
         self.myDataLabel.font = UIFont(name: Constants.roboto, size: 20)
         self.remainingDataLabel.font = UIFont(name: Constants.roboto, size: 36)
         self.totalDataLabel.font = UIFont(name: Constants.roboto, size: 16)

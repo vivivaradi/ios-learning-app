@@ -25,6 +25,7 @@ class DashboardHeaderCell: UITableViewCell {
     private func setupStyle() {
         self.welcomeLabel.textAlignment = NSTextAlignment.right
         self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
+        self.welcomeLabel.textColor = Color.darkGrey
         self.layoutIfNeeded()
     }
     

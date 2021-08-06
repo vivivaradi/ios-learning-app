@@ -32,15 +32,15 @@ class RefillDataCell: UITableViewCell {
 
     private func setupStyle() {
         self.priceLabel.font = UIFont(name: Constants.roboto, size: 12)
-        self.priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)
+        self.priceLabel.textColor = Color.mediumGrey
         self.dataLabel.font = UIFont(name: Constants.roboto, size: 16)
-        self.dataLabel.textColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 1)
+        self.dataLabel.textColor = Color.darkGrey
         
         self.containerView.layer.cornerRadius = 5
 
         self.containerView.layer.borderWidth = 0.5
 
-        self.containerView.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+        self.containerView.layer.borderColor = Color.borderColor.cgColor
         self.layoutIfNeeded()
        }
     
