@@ -15,7 +15,7 @@ class DataPackageConfirmationViewController: UIViewController {
     
     var viewModel: DataPackageConfirmationViewModelType!
     
-    // MARK: IBOutlet variables
+    // MARK: - IBOutlet variables
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var containerView: UIView!
@@ -30,7 +30,7 @@ class DataPackageConfirmationViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    // MARK: Configure ViewController
+    // MARK: - Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
