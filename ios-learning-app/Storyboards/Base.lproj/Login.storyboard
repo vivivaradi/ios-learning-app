@@ -47,7 +47,6 @@
                                         <rect key="frame" x="16" y="135.66666666666666" width="311" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="8Xa-3y-1HY" userLabel="height = 21"/>
-                                            <constraint firstAttribute="width" constant="311" id="F45-Ts-Jq6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
@@ -55,7 +54,6 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-UY-O3P" userLabel="PasswordText">
                                         <rect key="frame" x="16" y="215.66666666666666" width="311" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="311" id="1Dh-LM-ur7"/>
                                             <constraint firstAttribute="height" constant="21" id="dgY-Co-9ol"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
@@ -69,7 +67,7 @@
                                         </constraints>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-6P-pqw">
-                                        <rect key="frame" x="78" y="263.33333333333337" width="91.333333333333314" height="17"/>
+                                        <rect key="frame" x="78" y="263.33333333333337" width="249" height="17"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" name="DarkGrey"/>
                                         <nil key="highlightedColor"/>
@@ -79,7 +77,6 @@
                                         <color key="backgroundColor" name="DisabledButtonGrey"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="Ukz-d2-v2z"/>
-                                            <constraint firstAttribute="width" constant="311" id="oxs-Dl-3ho"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                         <state key="normal" title="Log in">
@@ -100,23 +97,27 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="CqO-6K-aXi" firstAttribute="top" secondItem="ccC-pY-TFX" secondAttribute="bottom" constant="16" id="1u0-fG-TpR"/>
+                                    <constraint firstAttribute="trailing" secondItem="D95-5u-Rdi" secondAttribute="trailing" constant="16" id="2pc-4h-bdB"/>
                                     <constraint firstItem="130-Lz-Sjm" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="-30.219999999999999" id="3B1-Yt-QFM"/>
+                                    <constraint firstItem="pfK-UY-O3P" firstAttribute="leading" secondItem="rbO-6v-BEP" secondAttribute="leading" constant="16" id="6BE-Xe-fd2"/>
                                     <constraint firstItem="ccC-pY-TFX" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="97.780000000000001" id="H38-1S-WbL"/>
                                     <constraint firstItem="ccC-pY-TFX" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="JTf-ma-O2r"/>
                                     <constraint firstAttribute="bottom" secondItem="DIj-cZ-6gR" secondAttribute="bottom" constant="32" id="JcS-lS-NFN"/>
                                     <constraint firstItem="130-Lz-Sjm" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="M44-9B-4fd"/>
+                                    <constraint firstAttribute="trailing" secondItem="DIj-cZ-6gR" secondAttribute="trailing" constant="16" id="Ode-RT-fGq"/>
+                                    <constraint firstItem="D95-5u-Rdi" firstAttribute="leading" secondItem="rbO-6v-BEP" secondAttribute="leading" constant="16" id="QE4-bE-b4f"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0T-6P-pqw" secondAttribute="trailing" constant="16" id="QX7-0N-EkY"/>
+                                    <constraint firstItem="DIj-cZ-6gR" firstAttribute="leading" secondItem="rbO-6v-BEP" secondAttribute="leading" constant="16" id="Rwk-hk-rNd"/>
                                     <constraint firstItem="T9r-OY-bbr" firstAttribute="top" secondItem="CqO-6K-aXi" secondAttribute="bottom" constant="16" id="TGw-Oq-KkH"/>
-                                    <constraint firstItem="pfK-UY-O3P" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="UNA-Oa-jL8"/>
                                     <constraint firstItem="T9r-OY-bbr" firstAttribute="leading" secondItem="rbO-6v-BEP" secondAttribute="leading" constant="16" id="UvC-3G-dCo"/>
+                                    <constraint firstAttribute="trailing" secondItem="pfK-UY-O3P" secondAttribute="trailing" constant="16" id="XL6-7k-f2i"/>
                                     <constraint firstItem="C0T-6P-pqw" firstAttribute="leading" secondItem="T9r-OY-bbr" secondAttribute="trailing" constant="16" id="XLp-h0-dq1"/>
                                     <constraint firstAttribute="height" constant="410.77999999999997" id="YVy-L2-7L8"/>
                                     <constraint firstAttribute="width" constant="343" id="cDX-g2-Hid"/>
                                     <constraint firstItem="CqO-6K-aXi" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="djS-Ns-r01"/>
-                                    <constraint firstItem="D95-5u-Rdi" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="iMh-n0-4uf"/>
                                     <constraint firstItem="pfK-UY-O3P" firstAttribute="top" secondItem="ccC-pY-TFX" secondAttribute="bottom" constant="54" id="kfm-1x-6Ut"/>
                                     <constraint firstItem="C0T-6P-pqw" firstAttribute="centerY" secondItem="T9r-OY-bbr" secondAttribute="centerY" id="n3L-PD-MUJ"/>
                                     <constraint firstItem="DIj-cZ-6gR" firstAttribute="top" secondItem="CqO-6K-aXi" secondAttribute="bottom" constant="70" id="oSt-2e-zSr"/>
-                                    <constraint firstItem="DIj-cZ-6gR" firstAttribute="centerX" secondItem="rbO-6v-BEP" secondAttribute="centerX" id="szf-Ud-lFK"/>
                                     <constraint firstItem="D95-5u-Rdi" firstAttribute="top" secondItem="rbO-6v-BEP" secondAttribute="top" constant="135.78" id="ziB-0c-er1"/>
                                 </constraints>
                             </view>

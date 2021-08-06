@@ -95,7 +95,7 @@ class DataPackageDetailsViewController: UIViewController {
     func setupData(item: DataPackageDetailsItemViewModel) {
         self.dataPackageLabel.text = "Data Package"
         self.titleLabel.text = item.name
-        self.contentTextView.text = item.description
+        self.contentTextView.text = item.description + "xfhésiogőrfiojhbősroibősroibőfiobjőhoifjbősoifjgbősoridjfbgőosfijgbőgosfijbőosijbőoifjgoőnfgboősinfdboőifsőboifnsőbonfgboőinfőgobinfgsőobindőfoibnofősgnbofingboőfginbofignbofnboignboignbőofgnőonoőnoosifngboőngfőosgffgghkdsdsdsdsdsdsdsssddsdsdsfdsfsfsdfdsfsfdsfdsfdsfdsfdsfdsfsfdsfdsfdsfdsdfdsfdsfdsdfsfdsdfdsfdsfdsfdsfdsffdfdfdsfdsafdsadsadsadsadasdsdfadfsdfsfdsafsafdsadfsafdsafdsadfsafdsadfsadfadfsfdsdfdfsdfsasdfsadsffdsadsadsadsdsaadsfadsfadsfasdasdasdasdfsadadsasdadsadsadsasdasdfasdasdasdfadsfasdasdasdasdfasdfasdasdasdasdfasdfasdasdasdfasdasdasdfadsffdsafdsafdafdsafdsafdsafdsadfsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsafdsafdsafdsafdsafdsafdsafdsadfasfdsafdsafdsafdsafsafdsafdsafsafsafsafdsafsafdsafdsafdsafdsafdsadfsfdsfdsafsdafdsafdsafsafdsafdsafsdasdfaafsdfdasfasfadsfdsadsfafdsafdsasaasdfasdffdsadsfasdfasdfasdfasdfadsasddasfasdfadsadsfasdadsffdsasdffadsasdasdasdasdasdadsfadsfadsfadsfadsadsdasfadfadsfadsfadsfadsadsfadsfadsfads"
         self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
     }
     
