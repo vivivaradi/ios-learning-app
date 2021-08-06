@@ -15,15 +15,15 @@ protocol DataPackageResultViewModelType {
 
 class DataPackageResultViewModel: DataPackageResultViewModelType {
     
-    // MARK: Public variables
+    // MARK: - Public variables
     
     var result: Driver<DataPackageResultItemViewModel>
     
-    //MARK: Dependencies
+    //MARK: - Dependencies
     
     var dashboardService: DashboardServiceType!
     
-    // MARK: Init
+    // MARK: - Init
     
     init(dashboardService: DashboardServiceType) {
         self.dashboardService = dashboardService

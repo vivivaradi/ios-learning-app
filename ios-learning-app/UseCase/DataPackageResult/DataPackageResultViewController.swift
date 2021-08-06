@@ -14,7 +14,7 @@ class DataPackageResultViewController: UIViewController {
     
     var viewModel: DataPackageResultViewModelType!
     
-    // MARK: IBOutlet variables
+    // MARK: - IBOutlet variables
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
@@ -28,7 +28,7 @@ class DataPackageResultViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    // MARK: Configure ViewController
+    // MARK: - Configure ViewController
     
     override func viewDidLoad() {
         self.setupStyle()

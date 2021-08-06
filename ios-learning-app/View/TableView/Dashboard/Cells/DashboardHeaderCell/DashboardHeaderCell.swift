@@ -10,29 +10,28 @@ import UIKit
 
 class DashboardHeaderCell: UITableViewCell {
 
+    //MARK: - IBOutlet variables
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var headerLogoImage: UIImageView!
+    
+    // MARK: - Setup cell
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     private func setupStyle() {
-        self.headerLogoImage.image = UIImage(named: "HeaderLogoPlaceholder")
-        self.welcomeLabel.text = "Welcome lorem ipsum!"
         self.welcomeLabel.textAlignment = NSTextAlignment.right
         self.welcomeLabel.font = UIFont(name: Constants.roboto, size: 18)
         self.layoutIfNeeded()
     }
     
     func setupData() {
+        self.headerLogoImage.image = UIImage(named: "HeaderLogoPlaceholder")
+        self.welcomeLabel.text = "Welcome lorem ipsum!"
+        
         setupStyle()
     }
     

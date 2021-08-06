@@ -14,8 +14,8 @@
             filePath = "ios-learning-app/View/TableView/Dashboard/Cells/CurrentDataCell/CurrentDataCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "setupData(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,8 +119,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "DashboardViewController"
-            landmarkType = "3">
+            landmarkName = "navigateTo(storyboard:withIdentifier:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

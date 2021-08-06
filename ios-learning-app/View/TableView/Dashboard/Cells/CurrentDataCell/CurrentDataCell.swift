@@ -10,6 +10,8 @@ import UIKit
 
 class CurrentDataCell: UITableViewCell {
 
+    // MARK: - IBOutlet variables
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cellLogoImage: UIImageView!
     @IBOutlet weak var myDataLabel: UILabel!
@@ -18,14 +20,10 @@ class CurrentDataCell: UITableViewCell {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var remainingDaysLabel: UILabel!
     
+    // MARK: - Setup cell
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setupData(from package: CurrentDataCellItemViewModel) {
@@ -39,8 +37,7 @@ class CurrentDataCell: UITableViewCell {
         self.remainingDaysLabel.text = "Resets in \(package.daysLeft) days"
         self.setupStyle()
     }
-    
-    // MARK: UI setup
+
     func setupStyle() {
 
         self.cellLogoImage.image = UIImage(named: "MyDataCardLogoPlaceholder")

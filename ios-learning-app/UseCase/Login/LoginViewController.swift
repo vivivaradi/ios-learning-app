@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     
     var viewModel: LoginViewModelType!
     
-    //MARK: IBOutlet variables
+    //MARK: - IBOutlet variables
 
     @IBOutlet weak var msisdnField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -22,13 +22,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginCard: UIView!
     @IBOutlet weak var rememberMeLabel: UILabel!
     
-    //MARK: Public variables
+    //MARK: - Public variables
     
     var msisdnValue = BehaviorRelay<String?>(value: "")
     var passwordValue = BehaviorRelay<String?>(value: "")
     let bag = DisposeBag()
     
-    //MARK: Configure ViewController
+    //MARK: - Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-//MARK: Setup validation for login
+//MARK: - Setup validation for login
 
 extension LoginViewController {
     

@@ -21,19 +21,19 @@ protocol DashboardViewModelType {
 
 class DashboardViewModel: DashboardViewModelType {
     
-    // MARK: Public variables
+    // MARK: - Public variables
     
     var dashboardData: Driver<[DashboardSectionViewModel]>
     var dashboardRelay: PublishRelay<Void> {
         return dashboardInteractor.dashboardRelay
     }
     
-    // MARK: Dependencies
+    // MARK: - Dependencies
     
     var dashboardInteractor: DashboardInteractorType!
     var dashboardService: DashboardServiceType!
     
-    // MARK: Init
+    // MARK: - Init
     
     init(dashboardInteractor: DashboardInteractorType, dashboardService: DashboardServiceType) {
         self.dashboardInteractor = dashboardInteractor
@@ -87,7 +87,7 @@ class DashboardViewModel: DashboardViewModelType {
             .asDriver(onErrorDriveWith: Driver.just([]))
     }
     
-    // MARK: Public methods
+    // MARK: - Public methods
     
     func selectedItem(with id: String, type: DashboardItemViewModel) {
         self.dashboardService.packageId.accept(id)

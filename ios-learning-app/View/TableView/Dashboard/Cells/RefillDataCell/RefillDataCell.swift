@@ -10,33 +10,32 @@ import UIKit
 
 class RefillDataCell: UITableViewCell {
 
+    // MARK: - IBOutlet variables
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
+    
+    // MARK: - Setup cell
 
     override func awakeFromNib() {
-        super.awakeFromNib()    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        super.awakeFromNib()
     }
     
     func setupData(from package: RefillDataCellItemViewModel) {
         self.priceLabel.text = "\(package.price) Ft"
         self.dataLabel.text = package.name
+        self.logoImage.image = UIImage(named: "ListLogoPlaceholder")
         self.setupStyle()
     }
-    
-    // MARK: UI setup
+
     private func setupStyle() {
-           priceLabel.font = UIFont(name: Constants.roboto, size: 12)
-           priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)
-           dataLabel.font = UIFont(name: Constants.roboto, size: 16)
-           dataLabel.textColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 1)
-           logoImage.image = UIImage(named: "ListLogoPlaceholder")
+        self.priceLabel.font = UIFont(name: Constants.roboto, size: 12)
+        self.priceLabel.textColor = UIColor(red: 102/256, green: 102/256, blue: 102/256, alpha: 1)
+        self.dataLabel.font = UIFont(name: Constants.roboto, size: 16)
+        self.dataLabel.textColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 1)
+        
         self.containerView.layer.cornerRadius = 5
 
         self.containerView.layer.borderWidth = 0.5

@@ -14,7 +14,7 @@ class DataPackageDetailsViewController: UIViewController {
     
     var viewModel: DataPackageDetailsViewModelType!
     
-    //MARK: IBOutlet variables
+    //MARK: - IBOutlet variables
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
@@ -31,7 +31,7 @@ class DataPackageDetailsViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    //MARK: Configure ViewController
+    //MARK: - Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

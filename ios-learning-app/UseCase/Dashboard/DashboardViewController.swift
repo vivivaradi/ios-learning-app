@@ -17,16 +17,16 @@ class DashboardViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    //MARK: IBOutlet variables
+    //MARK: - IBOutlet variables
     
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: Public variables
+    //MARK: - Public variables
     
     var dataSource: RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>!
     var pullToRefresh: UIRefreshControl = UIRefreshControl()
     
-    //MARK: Configure ViewController
+    //MARK: - Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ class DashboardViewController: UIViewController {
     
 }
 
-// MARK: UITableView configuration
+// MARK: - UITableView configuration
 
 extension DashboardViewController {
     func configureTableView() {
@@ -109,7 +109,7 @@ extension DashboardViewController {
     
 }
 
-// MARK: Pull to Refresh configuration
+// MARK: - Pull to Refresh configuration
 
 extension DashboardViewController {
     func configurePullToRefresh() {
@@ -129,7 +129,7 @@ extension DashboardViewController {
     }
 }
 
-// MARK: UITableView delegates
+// MARK: - UITableView delegates
 
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

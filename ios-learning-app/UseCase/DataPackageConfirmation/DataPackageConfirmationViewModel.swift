@@ -15,15 +15,15 @@ protocol DataPackageConfirmationViewModelType {
 
 class DataPackageConfirmationViewModel: DataPackageConfirmationViewModelType {
     
-    // MARK: Public variables
+    // MARK: - Public variables
     
     var packageData: Driver<String?>
     
-    // MARK: Dependencies
+    // MARK: - Dependencies
     
     var dashboardService: DashboardServiceType!
     
-    // MARK: Init
+    // MARK: - Init
     
     init(dashboardService: DashboardServiceType) {
         self.dashboardService = dashboardService
