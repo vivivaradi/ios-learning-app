@@ -51,11 +51,7 @@ class DashboardViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-    private func setupStyle() {
-        
-    }
-    
+
     func navigateTo(storyboard name: String, withIdentifier id: String) {
         let storyboard = UIStoryboard(name: name, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: id) as UIViewController
