@@ -13,18 +13,25 @@ import RxSwift
 class LoginViewController: UIViewController {
     
     var viewModel: LoginViewModelType!
+    
+    //MARK: IBOutlet variables
 
     @IBOutlet weak var msisdnField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: ColorChangingButton!
+    @IBOutlet weak var loginCard: UIView!
+    @IBOutlet weak var rememberMeLabel: UILabel!
+    
+    //MARK: Public variables
     
     var msisdnValue = BehaviorRelay<String?>(value: "")
     var passwordValue = BehaviorRelay<String?>(value: "")
     let bag = DisposeBag()
     
+    //MARK: Configure ViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.setupStyle()
         self.setupValidation()
     }
@@ -49,10 +56,6 @@ class LoginViewController: UIViewController {
 
     }
     
-    // MARK: - UI setup
-    
-    @IBOutlet weak var loginCard: UIView!
-    @IBOutlet weak var rememberMeLabel: UILabel!
     func setupStyle() {
         self.view.backgroundColor = Color.vodafoneRed
         self.rememberMeLabel.textColor = Color.mediumGrey
@@ -61,6 +64,8 @@ class LoginViewController: UIViewController {
         
     }
 }
+
+//MARK: Setup validation for login
 
 extension LoginViewController {
     

@@ -15,13 +15,18 @@ class DashboardViewController: UIViewController {
     
     var viewModel: DashboardViewModelType!
     
-    var dataSource: RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>!
-    
-    var pullToRefresh: UIRefreshControl = UIRefreshControl()
-    
     let bag = DisposeBag()
     
+    //MARK: IBOutlet variables
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: Public variables
+    
+    var dataSource: RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>!
+    var pullToRefresh: UIRefreshControl = UIRefreshControl()
+    
+    //MARK: Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

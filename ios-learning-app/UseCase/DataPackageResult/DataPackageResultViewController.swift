@@ -14,6 +14,8 @@ class DataPackageResultViewController: UIViewController {
     
     var viewModel: DataPackageResultViewModelType!
     
+    // MARK: IBOutlet variables
+    
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var myVodafoneLabel: UILabel!
@@ -25,6 +27,8 @@ class DataPackageResultViewController: UIViewController {
     @IBOutlet weak var dashboardButton: ColorChangingButton!
     
     let bag = DisposeBag()
+    
+    // MARK: Configure ViewController
     
     override func viewDidLoad() {
         self.setupStyle()
@@ -88,5 +92,4 @@ class DataPackageResultViewController: UIViewController {
             self.resultImageView.image = UIImage(named: "ImagePlaceholder")
         }
     }
-    
 }

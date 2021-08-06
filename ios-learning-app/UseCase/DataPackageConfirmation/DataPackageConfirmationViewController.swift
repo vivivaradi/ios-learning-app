@@ -15,6 +15,8 @@ class DataPackageConfirmationViewController: UIViewController {
     
     var viewModel: DataPackageConfirmationViewModelType!
     
+    // MARK: IBOutlet variables
+    
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var myVodafoneLabel: UILabel!
@@ -27,6 +29,8 @@ class DataPackageConfirmationViewController: UIViewController {
     @IBOutlet weak var noButton: ColorChangingButton!
     
     let bag = DisposeBag()
+    
+    // MARK: Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

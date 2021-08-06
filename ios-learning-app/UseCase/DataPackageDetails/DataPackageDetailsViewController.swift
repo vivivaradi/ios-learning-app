@@ -14,6 +14,8 @@ class DataPackageDetailsViewController: UIViewController {
     
     var viewModel: DataPackageDetailsViewModelType!
     
+    //MARK: IBOutlet variables
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
@@ -28,6 +30,8 @@ class DataPackageDetailsViewController: UIViewController {
     @IBOutlet weak var buyButton: ColorChangingButton!
     
     let bag = DisposeBag()
+    
+    //MARK: Configure ViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
