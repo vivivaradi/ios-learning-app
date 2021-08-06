@@ -18,10 +18,16 @@ protocol DataPackageDetailsViewModelType {
 
 class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
     
+    // MARK: Public variables
+    
     var packageData: Driver<DataPackageDetailsItemViewModel>
         
+    // MARK: Dependencies
+    
     var dashboardInteractor: DashboardInteractorType!
     var dashboardService: DashboardServiceType!
+    
+    // MARK: Init
     
     init(dashboardInteractor: DashboardInteractorType, dashboardService: DashboardServiceType) {
         self.dashboardInteractor = dashboardInteractor
@@ -41,6 +47,8 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
         default: packageData = Observable.empty().asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
         }
     }
+    
+    // MARK: Public methods
     
     func storePackageName(name: String) {
         self.dashboardService.packageName.accept(name)

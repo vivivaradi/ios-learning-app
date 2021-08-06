@@ -20,13 +20,19 @@ protocol LoginViewModelType {
 
 class LoginViewModel: LoginViewModelType {    
     
+    // MARK: Dependencies
+    
     var sessionManager: SessioningManager!
     var loginInteractor: LoginInteractorType!
+    
+    // MARK: Init
     
     init(sessionManager: SessioningManager, loginInteractor: LoginInteractorType) {
         self.sessionManager = sessionManager
         self.loginInteractor = loginInteractor
     }
+    
+    // MARK: Public methods
     
     func performLogin(msisdn: String) -> Single<LoginResponse> {
         return self.loginInteractor.login(msisdn: msisdn)

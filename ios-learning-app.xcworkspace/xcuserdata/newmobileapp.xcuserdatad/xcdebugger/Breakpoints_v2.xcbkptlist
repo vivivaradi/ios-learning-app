@@ -46,8 +46,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "init(dashboardInteractor:dashboardService:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "deselectedItem()"
             landmarkType = "7">
          </BreakpointContent>
@@ -197,8 +197,8 @@
             filePath = "ios-learning-app/UseCase/DataPackageDetails/DataPackageDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "init(dashboardInteractor:dashboardService:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -213,8 +213,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "selectedItem(with:type:)"
             landmarkType = "7">
          </BreakpointContent>
