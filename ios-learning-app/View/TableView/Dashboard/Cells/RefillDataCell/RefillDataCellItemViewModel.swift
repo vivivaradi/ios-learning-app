@@ -24,6 +24,12 @@ struct RefillDataCellItemViewModel: Codable {
         self.name = package.name ?? ""
         self.price = package.price ?? 0
     }
+    
+    init(id: String, name: String, price: Int) {
+        self.id = id
+        self.name = name
+        self.price = price
+    }
 }
 
 extension RefillDataCellItemViewModel: Equatable {

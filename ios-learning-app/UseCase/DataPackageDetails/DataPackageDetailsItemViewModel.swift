@@ -36,4 +36,11 @@ struct DataPackageDetailsItemViewModel {
         self.description = package.description ?? ""
         self.price = package.price ?? 0
     }
+    
+    init(id: String, name: String, description: String, price: Int) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.price = price
+    }
 }

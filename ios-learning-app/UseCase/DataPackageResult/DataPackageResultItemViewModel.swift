@@ -24,4 +24,10 @@ struct DataPackageResultItemViewModel {
         self.title = dataPurchaseResponse.title ?? ""
         self.description = dataPurchaseResponse.description ?? ""
     }
+    
+    init(status: String, title: String, description: String) {
+        self.status = status
+        self.title = title
+        self.description = description
+    }
 }

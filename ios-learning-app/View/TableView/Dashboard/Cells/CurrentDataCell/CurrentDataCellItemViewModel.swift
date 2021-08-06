@@ -27,6 +27,14 @@ struct CurrentDataCellItemViewModel: Codable {
         let endDate = formatter.date(from: dateString) ?? Date()
         self.daysLeft = RemainingTime.getDays(until: endDate)
     }
+    
+    init(id: String, name: String, totalData: Int, usedData: Int, daysLeft: Int) {
+        self.id = id
+        self.name = name
+        self.totalData = totalData
+        self.usedData = usedData
+        self.daysLeft = daysLeft
+    }
 }
 
 extension CurrentDataCellItemViewModel: Equatable {
