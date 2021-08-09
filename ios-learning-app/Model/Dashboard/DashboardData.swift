@@ -9,7 +9,6 @@
 import Foundation
 
 class DashboardData: Codable {
-    
     var status: String?
     var responseType: String?
     var postpaid: Postpaid?

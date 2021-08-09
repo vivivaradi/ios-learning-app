@@ -13,7 +13,6 @@ import RxSwift
 import RxCocoa
 
 protocol LoginViewModelType {
-    
     func performLogin(msisdn: String) -> Single<LoginResponse>
 }
 

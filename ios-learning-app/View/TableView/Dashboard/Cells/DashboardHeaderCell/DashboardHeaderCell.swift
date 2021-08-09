@@ -34,6 +34,5 @@ class DashboardHeaderCell: UITableViewCell {
         self.welcomeLabel.text = "Welcome lorem ipsum!"
         
         setupStyle()
-    }
-    
+    }    
 }

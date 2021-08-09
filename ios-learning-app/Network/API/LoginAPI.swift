@@ -49,13 +49,4 @@ extension LoginAPI: TargetType {
     var headers: [String: String]? {
         return ["Content-Type": "application/json"]
     }
-    
-}
-
-// MARK: - Helpers
-private extension String {
-
-    var utf8Encoded: Data {
-        return data(using: .utf8)!
-    }
 }

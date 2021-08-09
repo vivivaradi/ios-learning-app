@@ -53,7 +53,6 @@ class LoginViewController: UIViewController {
             print(error)
         }
         .disposed(by: bag)
-
     }
     
     func setupStyle() {
@@ -61,14 +60,12 @@ class LoginViewController: UIViewController {
         self.rememberMeLabel.textColor = Color.mediumGrey
         self.rememberMeLabel.font = UIFont(name: Constants.roboto, size: 14)
         self.loginCard.layer.cornerRadius = 5
-        
     }
 }
 
 // MARK: - Setup validation for login
 
 extension LoginViewController {
-    
     private func setupValidation() {
         self.msisdnField.rx.text.bind(to: msisdnValue).disposed(by: bag)
         self.passwordField.rx.text.bind(to: passwordValue).disposed(by: bag)

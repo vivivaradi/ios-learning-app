@@ -46,5 +46,4 @@ class RefillDataCell: UITableViewCell {
         
         self.layoutIfNeeded()
        }
-    
 }

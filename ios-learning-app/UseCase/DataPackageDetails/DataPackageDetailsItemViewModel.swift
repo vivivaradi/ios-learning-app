@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 
 struct DataPackageDetailsItemViewModel {
-    
     let id: String
     let name: String
     let description: String

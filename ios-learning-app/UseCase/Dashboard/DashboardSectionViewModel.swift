@@ -22,7 +22,6 @@ enum DashboardItemViewModel {
 }
 
 extension DashboardSectionViewModel: SectionModelType {
-    
     typealias Item = DashboardItemViewModel
     
     init(original: DashboardSectionViewModel, items: [DashboardItemViewModel]) {

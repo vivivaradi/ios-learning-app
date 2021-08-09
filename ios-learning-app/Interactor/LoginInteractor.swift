@@ -11,7 +11,6 @@ import RxSwift
 
 protocol LoginInteractorType {
     func login(msisdn: String) -> Single<LoginResponse>
-    
 }
 
 class LoginInteractor: LoginInteractorType {
@@ -32,5 +31,4 @@ class LoginInteractor: LoginInteractorType {
         let endpoint = LoginAPI.loginUser(msisdn: msisdn)
         return self.networkManager.provider.rx.requestMappedSingle(endpoint)
     }
-    
 }

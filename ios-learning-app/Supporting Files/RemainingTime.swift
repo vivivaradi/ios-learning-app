@@ -9,7 +9,6 @@
 import Foundation
 
 class RemainingTime {
-    
     static func getDays(until endDate: Date) -> Int {
         let difference = Calendar.current.dateComponents([.day], from: Date(), to: endDate)
         return difference.day ?? 0

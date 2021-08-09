@@ -13,6 +13,5 @@ import SwinjectAutoregistration
 class ManagerAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(NetworkingManager.self, initializer: NetworkManager.init).inObjectScope(.container)
-    }
-    
+    }    
 }

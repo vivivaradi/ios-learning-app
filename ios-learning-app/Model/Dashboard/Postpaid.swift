@@ -9,7 +9,6 @@
 import Foundation
 
 class Postpaid: Codable {
-    
     var cumulativeActualDataUsage: Int?
     var cumulativeTotalData: Int?
     var cumulativeActualSharedDataUsage: Int?

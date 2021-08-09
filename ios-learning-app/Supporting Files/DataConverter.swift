@@ -9,7 +9,6 @@
 import Foundation
 
 class DataConverter {
-    
     static func addMeasurement(to data: Int) -> String {
         let dataString: String
         let doubleData = Double(data) / 1024.0

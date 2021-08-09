@@ -68,5 +68,4 @@ class CurrentDataCell: UITableViewCell {
         
         self.layoutIfNeeded()
     }
-    
 }

@@ -11,7 +11,6 @@ import RxSwift
 import RxRelay
 
 protocol DashboardServiceType {
-  
     var packageId: BehaviorRelay<String?> { get }
     var packageType: BehaviorRelay<DashboardItemViewModel?> { get }
     var packageName: BehaviorRelay<String?> { get }
@@ -23,11 +22,17 @@ protocol DashboardServiceType {
 
 class DashboardService: DashboardServiceType {
     
+    // MARK: - Public variables
+    
     var packageName: BehaviorRelay<String?>
     var packageType: BehaviorRelay<DashboardItemViewModel?>
     var packageId: BehaviorRelay<String?>
     
+    // MARK: - Dependencies
+    
     var dashboardInteractor: DashboardInteractorType!
+    
+    // MARK: - Init
     
     init(dashboardInteractor: DashboardInteractorType) {
         self.packageId = BehaviorRelay<String?>(value: nil)
@@ -35,6 +40,8 @@ class DashboardService: DashboardServiceType {
         self.packageName = BehaviorRelay<String?>(value: nil)
         self.dashboardInteractor = dashboardInteractor
     }
+    
+    // MARK: - Public methods
     
     func getRefillPackage() -> Single<RefillDataPackage> {
         let id = packageId.value ?? ""

@@ -11,7 +11,6 @@ import Moya
 import RxSwift
 
 open class MultiMoyaProvider: MoyaProvider<MultiTarget> {
-    
     override public init(endpointClosure: @escaping EndpointClosure = MoyaProvider.defaultEndpointMapping,
                          requestClosure: @escaping RequestClosure = MultiMoyaProvider.defaultRequestMapping,
                          stubClosure: @escaping StubClosure =  MoyaProvider.neverStub ,

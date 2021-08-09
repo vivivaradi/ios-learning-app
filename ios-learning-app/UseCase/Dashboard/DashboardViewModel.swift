@@ -16,7 +16,6 @@ protocol DashboardViewModelType {
     
     func selectedItem(with id: String, type: DashboardItemViewModel)
     func deselectedItem()
-
 }
 
 class DashboardViewModel: DashboardViewModelType {
@@ -98,5 +97,4 @@ class DashboardViewModel: DashboardViewModelType {
         self.dashboardService.packageId.accept(nil)
         self.dashboardService.packageType.accept(nil)
     }
-    
 }

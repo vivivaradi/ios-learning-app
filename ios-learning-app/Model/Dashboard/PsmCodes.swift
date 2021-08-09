@@ -9,7 +9,6 @@
 import Foundation
 
 class PsmCodes: Codable {
-    
     var activation: String?
     var deactivation: String?
     

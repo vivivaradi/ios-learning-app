@@ -24,5 +24,4 @@ class NetworkManager: NetworkingManager {
     init() {
         self.provider = MultiMoyaProvider(stubClosure: MultiMoyaProvider.delayedStub(1))
     }
-
 }

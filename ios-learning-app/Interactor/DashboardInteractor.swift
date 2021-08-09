@@ -11,7 +11,6 @@ import RxSwift
 import RxRelay
 
 protocol DashboardInteractorType {
-    
     var dashboardRelay: PublishRelay<Void> { get }
     var dashboardDataResult: Observable<DashboardData> { get }
 

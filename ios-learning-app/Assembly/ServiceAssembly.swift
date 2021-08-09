@@ -14,5 +14,4 @@ class ServiceAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(DashboardServiceType.self, initializer: DashboardService.init).inObjectScope(.container)
     }
-    
 }

@@ -15,8 +15,6 @@ class DashboardViewController: UIViewController {
     
     var viewModel: DashboardViewModelType!
     
-    let bag = DisposeBag()
-    
     // MARK: - IBOutlet variables
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,6 +23,7 @@ class DashboardViewController: UIViewController {
     
     var dataSource: RxTableViewSectionedReloadDataSource<DashboardSectionViewModel>!
     var pullToRefresh: UIRefreshControl = UIRefreshControl()
+    let bag = DisposeBag()
     
     // MARK: - Configure ViewController
     
@@ -52,7 +51,6 @@ class DashboardViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: id) as UIViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
 // MARK: - UITableView configuration
@@ -101,7 +99,6 @@ extension DashboardViewController {
             }
         })
     }
-    
 }
 
 // MARK: - Pull to Refresh configuration
@@ -120,7 +117,6 @@ extension DashboardViewController {
                 guard let self = self else { return }
                 self.pullToRefresh.endRefreshing()
             }).disposed(by: bag)
-
     }
 }
 
@@ -156,7 +152,6 @@ extension DashboardViewController: UITableViewDelegate {
             }
             return nil
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

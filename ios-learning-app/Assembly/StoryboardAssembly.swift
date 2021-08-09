@@ -42,12 +42,10 @@ class DashboardAssembly: Assembly {
 }
 
 extension AppDelegate {
-    
     var autoUiAssemblies: [Assembly] {
         return [
             LoginAssembly(),
             DashboardAssembly()
         ]
-        
     }
 }
