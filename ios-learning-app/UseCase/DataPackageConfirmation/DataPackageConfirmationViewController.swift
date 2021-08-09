@@ -56,7 +56,7 @@ class DataPackageConfirmationViewController: UIViewController {
             }).disposed(by: bag)
         
         let tap = UITapGestureRecognizer()
-        backgroundView.addGestureRecognizer(tap)
+        self.myVodafoneLabel.addGestureRecognizer(tap)
         
         tap.rx.event
             .subscribe(onNext: { [weak self] _ in
@@ -73,6 +73,7 @@ class DataPackageConfirmationViewController: UIViewController {
         self.myVodafoneLabel.text = "My Vodafone"
         self.myVodafoneLabel.textColor = Color.white
         self.myVodafoneLabel.font = UIFont(name: Constants.roboto, size: 24)
+        self.myVodafoneLabel.isUserInteractionEnabled = true
         
         self.containerView.layer.cornerRadius = 10
         self.containerView.backgroundColor = Color.white

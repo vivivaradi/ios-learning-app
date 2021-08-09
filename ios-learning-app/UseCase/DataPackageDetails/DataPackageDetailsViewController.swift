@@ -50,7 +50,7 @@ class DataPackageDetailsViewController: UIViewController {
             }).disposed(by: bag)
         
         let tap = UITapGestureRecognizer()
-        backgroundView.addGestureRecognizer(tap)
+        self.myVodafoneLabel.addGestureRecognizer(tap)
         
         tap.rx.event
             .subscribe(onNext: { [weak self] _ in
@@ -61,7 +61,6 @@ class DataPackageDetailsViewController: UIViewController {
     
     private func setupStyle() {
         self.backgroundView.backgroundColor = Color.vodafoneRed
-        self.backgroundView.isUserInteractionEnabled = true
         
         self.logoImage.image = UIImage(named: "HeaderLogoPlaceholder")
         
@@ -74,6 +73,7 @@ class DataPackageDetailsViewController: UIViewController {
         self.myVodafoneLabel.text = "My Vodafone"
         self.myVodafoneLabel.textColor = Color.white
         self.myVodafoneLabel.font = UIFont(name: Constants.roboto, size: 24)
+        self.myVodafoneLabel.isUserInteractionEnabled = true
         
         self.dataPackageLabel.font = UIFont(name: Constants.roboto, size: 16)
         self.dataPackageLabel.textColor = Color.lightGrey

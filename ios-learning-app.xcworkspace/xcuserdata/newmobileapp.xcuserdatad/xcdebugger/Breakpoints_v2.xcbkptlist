@@ -151,8 +151,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "DataPackageDetailsViewController"
-            landmarkType = "3">
+            landmarkName = "setupData(item:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
