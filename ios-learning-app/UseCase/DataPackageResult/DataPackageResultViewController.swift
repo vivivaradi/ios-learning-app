@@ -46,12 +46,12 @@ class DataPackageResultViewController: UIViewController {
             }).disposed(by: bag)
         
         let tap = UITapGestureRecognizer()
-        self.myVodafoneLabel.addGestureRecognizer(tap)
+        self.logoImageView.addGestureRecognizer(tap)
         
         tap.rx.event
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
             }).disposed(by: bag)
     }
     
@@ -59,11 +59,11 @@ class DataPackageResultViewController: UIViewController {
         self.backgroundView.backgroundColor = Color.vodafoneRed
         
         self.logoImageView.image = UIImage(named: "HeaderLogoPlaceholder")
+        self.logoImageView.isUserInteractionEnabled = true
         
         self.myVodafoneLabel.text = "My Vodafone"
         self.myVodafoneLabel.textColor = Color.white
         self.myVodafoneLabel.font = UIFont(name: Constants.roboto, size: 24)
-        self.myVodafoneLabel.isUserInteractionEnabled = true
         
         self.containerView.layer.cornerRadius = 10
         self.containerView.backgroundColor = Color.white

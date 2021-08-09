@@ -19,7 +19,7 @@ class DataPackageDetailsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var myVodafoneLabel: UILabel!
     @IBOutlet weak var dataPackageLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -50,19 +50,21 @@ class DataPackageDetailsViewController: UIViewController {
             }).disposed(by: bag)
         
         let tap = UITapGestureRecognizer()
-        self.myVodafoneLabel.addGestureRecognizer(tap)
+        self.logoImageView.addGestureRecognizer(tap)
+        
         
         tap.rx.event
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
             }).disposed(by: bag)
     }
     
     private func setupStyle() {
         self.backgroundView.backgroundColor = Color.vodafoneRed
         
-        self.logoImage.image = UIImage(named: "HeaderLogoPlaceholder")
+        self.logoImageView.image = UIImage(named: "HeaderLogoPlaceholder")
+        self.logoImageView.isUserInteractionEnabled = true
         
         self.scrollView.layer.cornerRadius = 10
         self.scrollView.alwaysBounceVertical = false
@@ -73,7 +75,6 @@ class DataPackageDetailsViewController: UIViewController {
         self.myVodafoneLabel.text = "My Vodafone"
         self.myVodafoneLabel.textColor = Color.white
         self.myVodafoneLabel.font = UIFont(name: Constants.roboto, size: 24)
-        self.myVodafoneLabel.isUserInteractionEnabled = true
         
         self.dataPackageLabel.font = UIFont(name: Constants.roboto, size: 16)
         self.dataPackageLabel.textColor = Color.lightGrey
@@ -102,7 +103,7 @@ class DataPackageDetailsViewController: UIViewController {
         self.dataPackageLabel.text = "Data Package"
         self.titleLabel.text = item.name
         self.underTitleLabel.text = ""
-        self.contentLabel.text = item.description + "xfhésiogőrfiojhbősroibősroibőfiobjőhoifjbősoifjgbősoridjfbgőosfijgbőgosfijbőosijbőoifjgoőnfgboősinfdboőifsőboifnsőbonfgboőinfőgobinfgsőobindőfoibnofősgnbofingboőfginbofignbofnboignboignbőofgnőonoőnoosifngboőngfőosgffgghkdsdsdsdsdsdsdsssddsdsdsfdsfsfsdfdsfsfdsfdsfdsfdsfdsfdsfsfdsfdsfdsfdsdfdsfdsfdsdfsfdsdfdsfdsfdsfdsfdsffdfdfdsfdsafdsadsadsadsadasdsdfadfsdfsfdsafsafdsadfsafdsafdsadfsafdsadfsadfadfsfdsdfdfsdfsasdfsadsffdsadsadsadsdsaadsfadsfadsfasdasdasdasdfsadadsasdadsadsadsasdasdfasdasdasdfadsfasdasdasdasdfasdfasdasdasdasdfasdfasdasdasdfasdasdasdfadsffdsafdsafdafdsafdsafdsafdsadfsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsafdsafdsafdsafdsafdsafdsafdsadfasfdsafdsafdsafdsafsafdsafdsafsafsafsafdsafsafdsafdsafdsafdsafdsadfsfdsfdsafsdafdsafdsafsafdsafdsafsdasdfaafsdfdasfasfadsfdsadsfafdsafdsasaasdfasdffdsadsfasdfasdfasdfasdfadsasddasfasdfadsadsfasdadsffdsasdffadsasdasdasdasdasdadsfadsfadsfadsfadsadsdasfadfadsfadsfadsfadsadsfadsfadsfads"
+        self.contentLabel.text = item.description
         self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
     }
     

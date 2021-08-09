@@ -177,7 +177,7 @@
                         <outlet property="containerView" destination="4EK-fE-UHA" id="JLl-rs-vbI"/>
                         <outlet property="contentLabel" destination="JEI-v7-ok1" id="nIQ-7n-kUx"/>
                         <outlet property="dataPackageLabel" destination="JK2-qe-8Jf" id="U2k-rL-saj"/>
-                        <outlet property="logoImage" destination="Ng2-1d-Q0R" id="dei-el-1wD"/>
+                        <outlet property="logoImageView" destination="Ng2-1d-Q0R" id="dei-el-1wD"/>
                         <outlet property="myVodafoneLabel" destination="X7v-P4-qDw" id="1au-a5-xjB"/>
                         <outlet property="scrollView" destination="vDA-jn-bjN" id="tZW-5u-ntS"/>
                         <outlet property="titleLabel" destination="nlx-2A-Qv3" id="e6K-N2-KUT"/>
