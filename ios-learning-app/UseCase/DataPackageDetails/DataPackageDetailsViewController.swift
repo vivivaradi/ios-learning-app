@@ -48,10 +48,20 @@ class DataPackageDetailsViewController: UIViewController {
                 self.viewModel.storePackageName(name: self.titleLabel.text ?? "")
                 self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageConfirmationViewController")
             }).disposed(by: bag)
+        
+        let tap = UITapGestureRecognizer()
+        backgroundView.addGestureRecognizer(tap)
+        
+        tap.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigationController?.popToRootViewController(animated: true)
+            }).disposed(by: bag)
     }
     
     private func setupStyle() {
         self.backgroundView.backgroundColor = Color.vodafoneRed
+        self.backgroundView.isUserInteractionEnabled = true
         
         self.logoImage.image = UIImage(named: "HeaderLogoPlaceholder")
         

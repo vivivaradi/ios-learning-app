@@ -149,10 +149,10 @@
             filePath = "ios-learning-app/UseCase/DataPackageDetails/DataPackageDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "setupData(item:)"
-            landmarkType = "7">
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "DataPackageDetailsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

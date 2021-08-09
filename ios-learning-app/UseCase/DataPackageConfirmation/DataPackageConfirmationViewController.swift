@@ -54,6 +54,15 @@ class DataPackageConfirmationViewController: UIViewController {
                 guard let self = self else { return }
                 self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageResultViewController")
             }).disposed(by: bag)
+        
+        let tap = UITapGestureRecognizer()
+        backgroundView.addGestureRecognizer(tap)
+        
+        tap.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.navigationController?.popToRootViewController(animated: true)
+            }).disposed(by: bag)
     }
     
     func setupStyle() {
