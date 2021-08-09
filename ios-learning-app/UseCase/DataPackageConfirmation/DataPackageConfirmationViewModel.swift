@@ -28,6 +28,8 @@ class DataPackageConfirmationViewModel: DataPackageConfirmationViewModelType {
     init(dashboardService: DashboardServiceType) {
         self.dashboardService = dashboardService
         
-        self.packageData = self.dashboardService.packageName.asDriver()
+        self.packageData = self.dashboardService.packageName
+            .asDriver()
+            .startWith("")
     }
 }

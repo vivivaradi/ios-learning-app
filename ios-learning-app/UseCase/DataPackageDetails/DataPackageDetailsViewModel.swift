@@ -39,11 +39,13 @@ class DataPackageDetailsViewModel: DataPackageDetailsViewModelType {
                 .map { package in
                     return DataPackageDetailsItemViewModel(package: package)
                 }.asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
+                .startWith(DataPackageDetailsItemViewModel())
         case .contentItem:
             self.packageData = self.dashboardService.getContentPackage()
                 .map({ package in
                     return DataPackageDetailsItemViewModel(package: package)
                 }).asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
+                .startWith(DataPackageDetailsItemViewModel())
         default: packageData = Observable.empty().asDriver(onErrorJustReturn: DataPackageDetailsItemViewModel())
         }
     }

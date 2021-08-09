@@ -89,7 +89,7 @@ class DataPackageResultViewController: UIViewController {
         case "failure":
             self.resultImageView.image = UIImage(named: "FailureImage")
         default:
-            self.resultImageView.image = UIImage(named: "ImagePlaceholder")
+            print(item)
         }
     }
 }

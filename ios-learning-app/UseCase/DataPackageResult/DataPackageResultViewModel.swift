@@ -31,6 +31,6 @@ class DataPackageResultViewModel: DataPackageResultViewModelType {
             .map({ response in
                 return DataPackageResultItemViewModel(dataPurchaseResponse: response)
             }).asDriver(onErrorJustReturn: DataPackageResultItemViewModel())
-            
+            .startWith(DataPackageResultItemViewModel())
     }
 }
