@@ -18,15 +18,13 @@ class DataPackageDetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
-  
-    @IBOutlet weak var titleStackView: UIStackView!
-    @IBOutlet weak var contentStackView: UIStackView!
     @IBOutlet weak var myVodafoneLabel: UILabel!
     @IBOutlet weak var dataPackageLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var underTitleLabel: UILabel!
-    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var buyButton: ColorChangingButton!
     
     let bag = DisposeBag()
@@ -55,15 +53,13 @@ class DataPackageDetailsViewController: UIViewController {
     private func setupStyle() {
         self.backgroundView.backgroundColor = Color.vodafoneRed
         
-        self.contentStackView.backgroundColor = Color.white
-        self.contentStackView.layer.cornerRadius = 10
-        self.contentStackView.spacing = 32
-        self.contentStackView.layoutMargins = .init(top: 32, left: 16, bottom: 100, right: 16)
-        self.contentStackView.isLayoutMarginsRelativeArrangement = true
-        
-        self.titleStackView.spacing = 8
-        
         self.logoImage.image = UIImage(named: "HeaderLogoPlaceholder")
+        
+        self.scrollView.layer.cornerRadius = 10
+        self.scrollView.alwaysBounceVertical = false
+        self.scrollView.bounces = false
+        self.scrollView.backgroundColor = Color.white
+        self.scrollView.showsVerticalScrollIndicator = false
         
         self.myVodafoneLabel.text = "My Vodafone"
         self.myVodafoneLabel.textColor = Color.white
@@ -83,11 +79,11 @@ class DataPackageDetailsViewController: UIViewController {
         self.underTitleLabel.textAlignment = .center
         self.underTitleLabel.font = UIFont(name: Constants.roboto, size: 16)
         
-        self.contentTextView.font = UIFont(name: Constants.roboto, size: 16)
-        self.contentTextView.textColor = Color.darkGrey
-        self.contentTextView.textAlignment = .center
-        self.contentTextView.isEditable = false
-        self.contentTextView.isScrollEnabled = false
+        self.contentLabel.font = UIFont(name: Constants.roboto, size: 16)
+        self.contentLabel.textColor = Color.darkGrey
+        self.contentLabel.textAlignment = .center
+        self.contentLabel.numberOfLines = 0
+        self.contentLabel.lineBreakMode = .byWordWrapping
         
         self.buyButton.isEnabled = true
     }
@@ -95,7 +91,8 @@ class DataPackageDetailsViewController: UIViewController {
     func setupData(item: DataPackageDetailsItemViewModel) {
         self.dataPackageLabel.text = "Data Package"
         self.titleLabel.text = item.name
-        self.contentTextView.text = item.description + "xfhésiogőrfiojhbősroibősroibőfiobjőhoifjbősoifjgbősoridjfbgőosfijgbőgosfijbőosijbőoifjgoőnfgboősinfdboőifsőboifnsőbonfgboőinfőgobinfgsőobindőfoibnofősgnbofingboőfginbofignbofnboignboignbőofgnőonoőnoosifngboőngfőosgffgghkdsdsdsdsdsdsdsssddsdsdsfdsfsfsdfdsfsfdsfdsfdsfdsfdsfdsfsfdsfdsfdsfdsdfdsfdsfdsdfsfdsdfdsfdsfdsfdsfdsffdfdfdsfdsafdsadsadsadsadasdsdfadfsdfsfdsafsafdsadfsafdsafdsadfsafdsadfsadfadfsfdsdfdfsdfsasdfsadsffdsadsadsadsdsaadsfadsfadsfasdasdasdasdfsadadsasdadsadsadsasdasdfasdasdasdfadsfasdasdasdasdfasdfasdasdasdasdfasdfasdasdasdfasdasdasdfadsffdsafdsafdafdsafdsafdsafdsadfsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsafdsafdsafdsafdsafdsafdsafdsadfasfdsafdsafdsafdsafsafdsafdsafsafsafsafdsafsafdsafdsafdsafdsafdsadfsfdsfdsafsdafdsafdsafsafdsafdsafsdasdfaafsdfdasfasfadsfdsadsfafdsafdsasaasdfasdffdsadsfasdfasdfasdfasdfadsasddasfasdfadsadsfasdadsffdsasdffadsasdasdasdasdasdadsfadsfadsfadsfadsadsdasfadfadsfadsfadsfadsadsfadsfadsfads"
+        self.underTitleLabel.text = ""
+        self.contentLabel.text = item.description + "xfhésiogőrfiojhbősroibősroibőfiobjőhoifjbősoifjgbősoridjfbgőosfijgbőgosfijbőosijbőoifjgoőnfgboősinfdboőifsőboifnsőbonfgboőinfőgobinfgsőobindőfoibnofősgnbofingboőfginbofignbofnboignboignbőofgnőonoőnoosifngboőngfőosgffgghkdsdsdsdsdsdsdsssddsdsdsfdsfsfsdfdsfsfdsfdsfdsfdsfdsfdsfsfdsfdsfdsfdsdfdsfdsfdsdfsfdsdfdsfdsfdsfdsfdsffdfdfdsfdsafdsadsadsadsadasdsdfadfsdfsfdsafsafdsadfsafdsafdsadfsafdsadfsadfadfsfdsdfdfsdfsasdfsadsffdsadsadsadsdsaadsfadsfadsfasdasdasdasdfsadadsasdadsadsadsasdasdfasdasdasdfadsfasdasdasdasdfasdfasdasdasdasdfasdfasdasdasdfasdasdasdfadsffdsafdsafdafdsafdsafdsafdsadfsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsafdsafdsafdsafdsafdsafdsafdsadfasfdsafdsafdsafdsafsafdsafdsafsafsafsafdsafsafdsafdsafdsafdsafdsadfsfdsfdsafsdafdsafdsafsafdsafdsafsdasdfaafsdfdasfasfadsfdsadsfafdsafdsasaasdfasdffdsadsfasdfasdfasdfasdfadsasddasfasdfadsadsfasdadsffdsasdffadsasdasdasdasdasdadsfadsfadsfadsfadsadsdasfadfadsfadsfadsfadsadsfadsfadsfads"
         self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
     }
     
