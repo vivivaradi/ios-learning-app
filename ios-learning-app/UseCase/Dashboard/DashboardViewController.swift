@@ -77,8 +77,8 @@ extension DashboardViewController {
                     print(item)
                 case .refillItem(let item), .contentItem(let item):
                     self.viewModel.selectedItem(with: item.id, type: self.dataSource[indexPath])
+                    self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageDetailsViewController")
                 }
-                self.navigateTo(storyboard: "Dashboard", withIdentifier: "DataPackageDetailsViewController")
             }).disposed(by: bag)
     }
     

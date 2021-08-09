@@ -41,6 +41,9 @@ class RefillDataCell: UITableViewCell {
         self.containerView.layer.borderWidth = 0.5
 
         self.containerView.layer.borderColor = Color.borderColor.cgColor
+        
+        self.selectionStyle = .none
+        
         self.layoutIfNeeded()
        }
     
