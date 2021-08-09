@@ -52,7 +52,6 @@ class DataPackageDetailsViewController: UIViewController {
         let tap = UITapGestureRecognizer()
         self.logoImageView.addGestureRecognizer(tap)
         
-        
         tap.rx.event
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
