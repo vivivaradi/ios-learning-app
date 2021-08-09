@@ -30,8 +30,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "configureDataSource()"
             landmarkType = "7">
          </BreakpointContent>
@@ -117,8 +117,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "navigateTo(storyboard:withIdentifier:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -133,8 +133,8 @@
             filePath = "ios-learning-app/UseCase/Dashboard/DashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "navigateTo(storyboard:withIdentifier:)"
             landmarkType = "7">
          </BreakpointContent>
