@@ -14,12 +14,14 @@ struct DataPackageDetailsItemViewModel {
     let name: String
     let description: String
     let price: Int
+    let isDataValid: Bool
     
     init() {
-        id = ""
-        name = ""
-        description = ""
-        price = 0
+        self.id = ""
+        self.name = ""
+        self.description = ""
+        self.price = 0
+        self.isDataValid = false
     }
     
     init(package: RefillDataPackage) {
@@ -27,6 +29,7 @@ struct DataPackageDetailsItemViewModel {
         self.name = package.name ?? ""
         self.description = package.description ?? ""
         self.price = package.price ?? 0
+        self.isDataValid = !self.id.isEmpty
     }
     
     init(package: UnlimitedContentPackage) {
@@ -34,6 +37,7 @@ struct DataPackageDetailsItemViewModel {
         self.name = package.name ?? ""
         self.description = package.description ?? ""
         self.price = package.price ?? 0
+        self.isDataValid = !self.id.isEmpty
     }
     
     init(id: String, name: String, description: String, price: Int) {
@@ -41,6 +45,7 @@ struct DataPackageDetailsItemViewModel {
         self.name = name
         self.description = description
         self.price = price
+        self.isDataValid = true
     }
 }
 

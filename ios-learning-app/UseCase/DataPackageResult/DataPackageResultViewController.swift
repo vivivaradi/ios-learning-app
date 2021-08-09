@@ -87,12 +87,14 @@ class DataPackageResultViewController: UIViewController {
         self.dashboardButton.setTitle("Go to Dashboard", for: .normal)
         self.dashboardButton.setTitleColor(Color.white, for: .normal)
         self.dashboardButton.isEnabled = true
+        self.dashboardButton.isHidden = true
     }
     
     func setupData(item: DataPackageResultItemViewModel) {
         self.dataPackageLabel.text = "Data Package"
         self.resultLabel.text = item.title
         self.resultDescription.text = item.description
+        self.dashboardButton.isHidden = !item.isDataValid
         switch item.status {
         case "success":
             self.resultImageView.image = UIImage(named: "SuccessImage")

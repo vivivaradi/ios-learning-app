@@ -93,11 +93,15 @@ class DataPackageConfirmationViewController: UIViewController {
         self.noButton.setMainColor(color: Color.lightGrey)
         self.noButton.setTitle("No thanks", for: .normal)
         self.noButton.isEnabled = true
+        self.yesButton.isHidden = true
+        self.noButton.isHidden = true
     }
     
     func setupData(packageName: String?) {
         self.dataPackageLabel.text = "Data Package"
         self.confirmationTextLabel.text = "Are you sure you want to activate \(packageName ?? "")?"
+        self.yesButton.isHidden = packageName == nil
+        self.noButton.isHidden = packageName == nil
     }
     
     func navigateTo(storyboard name: String, withIdentifier id: String) {

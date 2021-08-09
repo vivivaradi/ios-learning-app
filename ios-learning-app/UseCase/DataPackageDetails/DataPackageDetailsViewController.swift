@@ -97,6 +97,7 @@ class DataPackageDetailsViewController: UIViewController {
         self.contentLabel.lineBreakMode = .byWordWrapping
         
         self.buyButton.isEnabled = true
+        self.buyButton.isHidden = true
     }
     
     func setupData(item: DataPackageDetailsItemViewModel) {
@@ -104,6 +105,7 @@ class DataPackageDetailsViewController: UIViewController {
         self.titleLabel.text = item.name
         self.underTitleLabel.text = ""
         self.contentLabel.text = item.description
+        self.buyButton.isHidden = !item.isDataValid
         self.buyButton.setTitle("Buy (\(item.price)Ft)", for: .normal)
     }
     

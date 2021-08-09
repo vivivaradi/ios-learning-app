@@ -12,23 +12,27 @@ struct DataPackageResultItemViewModel {
     let status: String
     let title: String
     let description: String
+    let isDataValid: Bool
     
     init() {
         self.status = ""
         self.title = ""
         self.description = ""
+        self.isDataValid = false
     }
     
     init(dataPurchaseResponse: DataPurchaseResponse) {
         self.status = dataPurchaseResponse.status ?? ""
         self.title = dataPurchaseResponse.title ?? ""
         self.description = dataPurchaseResponse.description ?? ""
+        self.isDataValid = !self.title.isEmpty
     }
     
     init(status: String, title: String, description: String) {
         self.status = status
         self.title = title
         self.description = description
+        self.isDataValid = true
     }
 }
 
